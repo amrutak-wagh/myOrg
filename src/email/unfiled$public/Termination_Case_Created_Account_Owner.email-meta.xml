@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>TECOM</letterhead>
+    <name>Termination Case Created - Account Owner</name>
+    <style>freeForm</style>
+    <subject>Termination Case Created - {!Case.CaseNumber}</subject>
+    <textOnly>Hi {!Case.Account},
+
+Following is the Case created for Lease Termination.
+{!Case.Link}
+
+Please have a look at it.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

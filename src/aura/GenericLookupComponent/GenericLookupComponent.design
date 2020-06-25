@@ -1,0 +1,8 @@
+<design:component>
+	<design:attribute name="accountId" label="Account Id" description="Account Id" />
+    <design:attribute name="ParentName" label="ParentName " description="ParentName" />
+    <design:attribute name="selectDefualt" label="selectDefualt" description="FieldLabel " />
+     <design:attribute name="FieldLabel" label="FieldLabel" description="FieldLabel " />
+     <design:attribute name="objectName" label="objectName" description="objectName " />
+     <design:attribute name="fieldName" label="fieldName" description="fieldName " />
+</design:component>

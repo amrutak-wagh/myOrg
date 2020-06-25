@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Turn Over Rent</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Turn Over Rents</value>
+    </caseValues>
+    <fields>
+        <label><!-- BreakPoint Frequency --></label>
+        <name>BreakPoint_Frequency__c</name>
+        <picklistValues>
+            <masterLabel>Annually</masterLabel>
+            <translation><!-- Annually --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Natural Breakpoint Percentage --></label>
+        <name>Natural_Breakpoint_Percentage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Natural Breakpoint --></label>
+        <name>Natural_Breakpoint__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Overage From Date --></label>
+        <name>Overage_From_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overage Offset Account Charge Code 1 --></label>
+        <name>Overage_Offset_Account_Charge_Code_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overage Offset Account Charge Code 2 --></label>
+        <name>Overage_Offset_Account_Charge_Code_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overage Offset Account Charge Code 3 --></label>
+        <name>Overage_Offset_Account_Charge_Code_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overage Offset Account Charge Code 4 --></label>
+        <name>Overage_Offset_Account_Charge_Code_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overage Offset Account Charge Code 5 --></label>
+        <name>Overage_Offset_Account_Charge_Code_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Overage Offset Type --></label>
+        <name>Overage_Offset_Type__c</name>
+        <picklistValues>
+            <masterLabel>Fixed Offset</masterLabel>
+            <translation><!-- Fixed Offset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Offset Accounts</masterLabel>
+            <translation><!-- Offset Accounts --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Overage To Date --></label>
+        <name>Overage_To_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote --></label>
+        <name>Quote__c</name>
+        <relationshipLabel><!-- Turn Over Rents --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Retail Billing Frequency --></label>
+        <name>Retail_Billing_Frequency__c</name>
+        <picklistValues>
+            <masterLabel>Annually</masterLabel>
+            <translation><!-- Annually --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Retail End Date --></label>
+        <name>Retail_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Retail Start Date --></label>
+        <name>Retail_Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales End Of Year --></label>
+        <name>Sales_End_Of_Year__c</name>
+        <picklistValues>
+            <masterLabel>April</masterLabel>
+            <translation><!-- April --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>August</masterLabel>
+            <translation><!-- August --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>December</masterLabel>
+            <translation><!-- December --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Febrary</masterLabel>
+            <translation><!-- Febrary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>January</masterLabel>
+            <translation><!-- January --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>July</masterLabel>
+            <translation><!-- July --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>June</masterLabel>
+            <translation><!-- June --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>March</masterLabel>
+            <translation><!-- March --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>May</masterLabel>
+            <translation><!-- May --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>November</masterLabel>
+            <translation><!-- November --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>October</masterLabel>
+            <translation><!-- October --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>September</masterLabel>
+            <translation><!-- September --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sales Report Frequency --></label>
+        <name>Sales_Report_Frequency__c</name>
+        <picklistValues>
+            <masterLabel>Annually</masterLabel>
+            <translation><!-- Annually --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SemiAnnually</masterLabel>
+            <translation><!-- SemiAnnually --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sales Type --></label>
+        <name>Sales_Type__c</name>
+        <picklistValues>
+            <masterLabel>Accessories &amp; Footwear</masterLabel>
+            <translation><!-- Accessories &amp; Footwear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Artists-Artisans</masterLabel>
+            <translation><!-- Artists-Artisans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F&amp;B, Cold Kitchen</masterLabel>
+            <translation><!-- F&amp;B, Cold Kitchen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F&amp;B, Hot Kitchen</masterLabel>
+            <translation><!-- F&amp;B, Hot Kitchen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>F&amp;B, Licensed</masterLabel>
+            <translation><!-- F&amp;B, Licensed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facility</masterLabel>
+            <translation><!-- Facility --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fashion</masterLabel>
+            <translation><!-- Fashion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food-Grocery</masterLabel>
+            <translation><!-- Food-Grocery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gym</masterLabel>
+            <translation><!-- Gym --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health &amp; Beauty</masterLabel>
+            <translation><!-- Health &amp; Beauty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home &amp; Electricals</masterLabel>
+            <translation><!-- Home &amp; Electricals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Accessories</masterLabel>
+            <translation><!-- Home Accessories --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leisure</masterLabel>
+            <translation><!-- Leisure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Local Services</masterLabel>
+            <translation><!-- Local Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Applicable</masterLabel>
+            <translation><!-- Not Applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nursery</masterLabel>
+            <translation><!-- Nursery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performing Arts</masterLabel>
+            <translation><!-- Performing Arts --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

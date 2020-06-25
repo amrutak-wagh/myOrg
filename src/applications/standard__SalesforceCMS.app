@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <label>Salesforce CMS</label>
+    <navType>Console</navType>
+    <tabs>standard-CmsAuthorHome</tabs>
+    <tabs>Payment_Schedule__c</tabs>
+    <tabs>Land_Use__c</tabs>
+    <tabs>Request_Title__c</tabs>
+    <tabs>DOA_Approver__c</tabs>
+    <tabs>Courier_Request__c</tabs>
+    <tabs>Turn_Over_Rent__c</tabs>
+    <tabs>Payment_Term__c</tabs>
+    <tabs>Outstanding_Payments__c</tabs>
+    <uiType>Lightning</uiType>
+    <workspaceConfig>
+        <mappings>
+            <tab>Courier_Request__c</tab>
+        </mappings>
+        <mappings>
+            <tab>DOA_Approver__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Land_Use__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Outstanding_Payments__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Payment_Schedule__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Payment_Term__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Request_Title__c</tab>
+        </mappings>
+        <mappings>
+            <tab>Turn_Over_Rent__c</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-CmsAuthorHome</tab>
+        </mappings>
+    </workspaceConfig>
+</CustomApplication>

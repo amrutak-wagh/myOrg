@@ -1,0 +1,8 @@
+Hi {!Contact.LastName},<br/><br/>
+
+Your Application Rejected Rollowing Reasons <br/>
+{!DescriptionforReasons}<br/>
+
+Please Open This Link.<br/>
+
+https://4cdev-tecomtest.cs3.force.com/test/s/?ConId={!Contact.Id}&MailId={!Contact.Email}&isManager={!isOpen}<br/>

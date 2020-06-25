@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apexPluginCalls>
+        <name>FlowHandler</name>
+        <label>FlowHandler</label>
+        <locationX>491</locationX>
+        <locationY>324</locationY>
+        <apexClass>FlowHandler</apexClass>
+    </apexPluginCalls>
+    <interviewLabel>Dubai Govt {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>GOVERNMENT OF DUBAI</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>GOVERNMENT_OF_DUBAI</name>
+        <label>GOVERNMENT OF DUBAI</label>
+        <locationX>306</locationX>
+        <locationY>173</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>GOVERNMENT_OF_DUBAI_c_c</targetReference>
+        </connector>
+        <fields>
+            <name>members_see_note_below</name>
+            <fieldText>4. Member(s) (see Note 3 below)</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Full_Name</name>
+            <dataType>String</dataType>
+            <fieldText>Full Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Passport_No_Registration_No</name>
+            <dataType>String</dataType>
+            <fieldText>Passport No. / Registration No.</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Nationality</name>
+            <dataType>String</dataType>
+            <fieldText>Nationality</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Number_of_Shares</name>
+            <dataType>String</dataType>
+            <fieldText>Number of Shares</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>board_of_directors</name>
+            <fieldText>5. Board of Directors (see Note 4 below) – Page 2 of 3</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Full_Name_c</name>
+            <dataType>String</dataType>
+            <fieldText>Full Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Passport_No</name>
+            <dataType>String</dataType>
+            <fieldText>Passport No.</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Nationality_c</name>
+            <dataType>String</dataType>
+            <fieldText>Nationality</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>general_manager</name>
+            <fieldText>6. General Manager (see Note 5 below)</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Full_Name_c_c</name>
+            <dataType>String</dataType>
+            <fieldText>Full Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Passport_No_C</name>
+            <dataType>String</dataType>
+            <fieldText>Passport No.</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Nationalitys_c</name>
+            <dataType>String</dataType>
+            <fieldText>Nationality</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Resident_in_UAE_Yes_No</name>
+            <dataType>String</dataType>
+            <fieldText>Resident in UAE (Yes/ No)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>GOVERNMENT_OF_DUBAI_C</name>
+        <label>GOVERNMENT OF DUBAI</label>
+        <locationX>276</locationX>
+        <locationY>56</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>GOVERNMENT_OF_DUBAI</targetReference>
+        </connector>
+        <fields>
+            <name>setting_up_a_business_corporate_entity</name>
+            <fieldText>Setting up a Business – Corporate Entity(Page 1 of 3)</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>business_form_see_note_below</name>
+            <fieldText>1. Business Form (see Note 1 below)</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>proposed_legal_form_of_business_c</name>
+            <fieldText>Proposed Legal Form of Business</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>FZ_LLC</name>
+            <dataType>Boolean</dataType>
+            <fieldText>FZ-LLC</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Branch_of_Foreign_Company</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Branch of Foreign Company</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Branch_of_UAE_Company</name>
+            <dataType>Boolean</dataType>
+            <fieldText>Branch of UAE Company</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Proposed_Name_of_Business_first_choice</name>
+            <dataType>String</dataType>
+            <fieldText>Proposed Name of Business (first choice)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Proposed_Name_of_Business_second_choice</name>
+            <dataType>String</dataType>
+            <fieldText>Proposed Name of Business (second choice)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Proposed_Name_of_Business_second_choice_c</name>
+            <dataType>String</dataType>
+            <fieldText>Proposed Name of Business (second choice)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>if_legal_form</name>
+            <fieldText>If Legal Form is a FZ-LLC then complete Sections 3, 4, 5, 6 and 7
+If Legal Form is a Branch then complete Sections 2, 3, 6 and 7</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>parent_company_details</name>
+            <fieldText>2. Parent Company Details</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Parent_Company_Name</name>
+            <dataType>String</dataType>
+            <fieldText>Parent Company Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>RegistrationNo</name>
+            <dataType>String</dataType>
+            <fieldText>RegistrationNo.</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Date_ofIncorporation</name>
+            <dataType>String</dataType>
+            <fieldText>Date ofIncorporation</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>StatutorySeat_Place_of_Registration</name>
+            <dataType>String</dataType>
+            <fieldText>StatutorySeat   (Place of Registration)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>licence_segment_and_activities</name>
+            <fieldText>3. Licence Segment and Activities (see Note 2 below)</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Business_Segment</name>
+            <dataType>String</dataType>
+            <fieldText>Business Segment</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Activity_Name_s</name>
+            <dataType>String</dataType>
+            <fieldText>Activity Name(s)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Activity_Number_s</name>
+            <dataType>String</dataType>
+            <fieldText>Activity Number(s)</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <screens>
+        <name>GOVERNMENT_OF_DUBAI_c_c</name>
+        <label>GOVERNMENT OF DUBAI</label>
+        <locationX>479</locationX>
+        <locationY>190</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <connector>
+            <targetReference>FlowHandler</targetReference>
+        </connector>
+        <fields>
+            <name>negotiator_legal_representative</name>
+            <fieldText>7. Negotiator/Legal Representative (see Note 6 below)</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Full_Names_c</name>
+            <dataType>String</dataType>
+            <fieldText>Full Name</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Full_Name_r</name>
+            <fieldText>Full Name</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Address</name>
+            <dataType>String</dataType>
+            <fieldText>Address</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Mobile_Number</name>
+            <dataType>String</dataType>
+            <fieldText>Mobile Number</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>by_signing_below</name>
+            <fieldText>By signing below, I / we hereby certify that:</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>an_authorized_c</name>
+            <fieldText>•	I / we am/ are an authorized party who has the capacity and authority to make this application to the Dubai Development Authority; and 
+•	I / we accept to settle all fee(s) that are payable as a result of this application; and 
+•	All information provided is correct to the best of my/our knowledge.</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>Name_of_Authorized_Signatory_Signatories_c</name>
+            <fieldText>Name of Authorized Signatory / Signatories</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <fields>
+            <name>Signature_Signatures_and_Date_c</name>
+            <fieldText>Signature/ Signatures and Date</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>true</showHeader>
+    </screens>
+    <startElementReference>GOVERNMENT_OF_DUBAI_C</startElementReference>
+    <status>Active</status>
+    <textTemplates>
+        <name>FI</name>
+        <text>{!FZ_LLC}</text>
+    </textTemplates>
+    <textTemplates>
+        <name>FIZ</name>
+        <text>{!FZ_LLC}</text>
+    </textTemplates>
+    <textTemplates>
+        <name>ZZF</name>
+        <text>{!FIZ}</text>
+    </textTemplates>
+    <variables>
+        <name>FI_c</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <elementReference>FIZ</elementReference>
+        </value>
+    </variables>
+</Flow>

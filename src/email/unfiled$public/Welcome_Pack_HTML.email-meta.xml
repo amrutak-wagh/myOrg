@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Welcome Pack HTML</name>
+    <style>none</style>
+    <subject>Welcome to TECOM</subject>
+    <textOnly>Dear {!Lead.LastName} {!Lead.FirstName},
+
+On behalf of the whole team here at TECOM, I would like to extend a warm welcome to our communities. We have prepared an interactive welcome pack as per the attached to support your transition to TECOM. It has been designed to provide important details related to day-to-day life in and around TECOM. If you would like me to come to your office and walk through it with your team, please let me know as I would be happy to do so.
+
+
+Best Regards,
+
+{!Lead.OwnerFullName} Partner Relations Manager
+M:	{!Lead.OwnerPhone}
+T:	+971 4 433 3000
+PO Box: 333 300
+www.tecom.com
+
+A MEMBER OF TECOM GROUP
+
+NOTICE OF CONFIDENTIALITY: The information contained in and transmitted with this e-mail message is PRIVILEGED AND/OR CONFIDENTIAL. It is intended only for the individual or entity designated above. You are hereby notified that any dissemination, distribution, copying or use of or reliance on the information contained in and transmitted with this e-mail message by or to anyone other than the recipient designated above is unauthorized and is strictly prohibited. If you are not the named recipient of this e-mail message or have otherwise received this e-mail message in error, please delete the message immediately and notify the sender immediately via return e-mail at  {!Opportunity.OwnerEmail} or via telephone at +971 4 433 3000. Unauthorized interception or use of this e-mail or the information contained therein may be a violation of law.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

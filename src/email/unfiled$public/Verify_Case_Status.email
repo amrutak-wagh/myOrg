@@ -1,0 +1,7 @@
+Hi {!Contact.Name}
+
+You have submitted a new case. Please click on the link below to know the status.
+https://4cdev-tecomtest.cs3.force.com/customerdev/s/casedetailverificationpage?id={!Contact.Encrypted_Contact_Id__c}
+
+
+Thanks

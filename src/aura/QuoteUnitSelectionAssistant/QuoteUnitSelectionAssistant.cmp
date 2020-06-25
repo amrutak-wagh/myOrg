@@ -1,0 +1,256 @@
+<aura:component controller="QuoteUnitSelectionAssistantController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+    <aura:attribute name="checkboxesCheckedList" type="List"/>
+    <aura:handler name="init" value="this" action="{!c.doInit}"/>
+    <aura:attribute name ="categoryList" type="List"/>
+    <aura:attribute name ="recordId" type="String" default=""/>
+    <aura:attribute name="options" type="List" default=""/>
+    <aura:attribute name="buildingList" type="List" default=""/>
+    <aura:attribute name="fromArea" type="Integer" />
+    <aura:attribute name="toArea" type="Integer" />
+    <aura:attribute name="activeSections" type="List" default="['Office','Business Center']" />
+    <aura:attribute name="selectedBuilding" type="String" />
+    <aura:attribute name="unitList" type="List" />
+    <aura:attribute name="floorList" type="List" default=""/>
+    <aura:attribute name="selectedFloor" type="String" />
+    <aura:attribute name="lineItemList" type="List" />
+    <aura:attribute name="isWaiting" type="Boolean" default="true" />
+    <aura:attribute name ="disableBuildingPicklist" type ="Boolean" default="false"/>
+    <aura:attribute name ="build" type ="String"/>
+    <aura:attribute name ="removeBuild" type ="String"/>
+    <aura:attribute name ="selectedUnitSet" type = "List"/>
+    <aura:attribute name ="lineItemObj" type ="Object"/>
+    <aura:attribute name="isExpansion" type="Boolean" default="false" description="Boolean variable for expansion process screen as don't need to insert anything." />
+    <aura:attribute name="excludedUnits" type="List" default="[]" description="List of already selected items." />
+    <aura:attribute name="newlyItems" type="List" default="[]" description="List of items that has been added." />
+            <div class="slds-grid slds-wrap">
+                <!--left side-->
+                
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_4-of-12 left-wrap" >
+                    <lightning:card>
+                        <aura:set attribute="title">
+                            <div class="text-center">
+                                Category Filter
+                            </div>
+                        </aura:set>
+                        <div class="">
+                            <lightning:accordion allowMultipleSectionsOpen="true" activeSectionName="{! v.activeSections }">
+                                <aura:iteration items="{!v.categoryList}" var="category">
+                                    <lightning:accordionSection name="{!category.unitCategory.Name}" label="{!category.unitCategory.Name}">
+                                        <aura:iteration items="{!category.subCategory}" var="subCategory">
+                                            <lightning:input aura:id="categoryCheckBox" class="subCategoryCheckboxes" type="checkbox" label="{!subCategory.label}" name="input1" value="{!subCategory.value}" onchange="{!c.subCategoryValues}"/>
+                                        </aura:iteration>
+                                    </lightning:accordionSection>
+                                </aura:iteration>
+                            </lightning:accordion>
+                        </div> 
+                    </lightning:card> 
+                </div>        
+                <!--right side-->
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_8-of-12">
+                    
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_6-of-12 p20">
+                            <table >
+                                <tr>
+                                    <td class="w30"><div style="margin-top: 20px; text-align: right; padding-right: 15px;">Building</div></td>
+                                    <td>
+                                        <lightning:select aura:id="select" name="select" label="" onchange="{! c.floorForBuilding }" value="{!v.selectedBuilding}" disabled ="{!v.disableBuildingPicklist}">
+                                            <option value="">Choose Building</option>
+                                            <aura:iteration items="{!v.buildingList}" var="building">
+                                                <option value="{!building.value}">{!building.label}</option>
+                                            </aura:iteration>
+                                        </lightning:select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_6-of-12 p20">
+                            <table >
+                                <tr>
+                                    <td class="w30"><div style="margin-top: 20px; text-align: right; padding-right: 15px;">Floor</div></td>
+                                    <td>
+                                        <lightning:select aura:id="select1" name="select1" label="" value="{!v.selectedFloor}" >
+                                            <option value="">Choose Floor</option>
+                                            <aura:iteration items="{!v.floorList}" var="floor">
+                                                <option value="{!floor.value}">{!floor.label}</option>
+                                            </aura:iteration>
+                                        </lightning:select>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_6-of-12 p20">
+                            <table >
+                                <tr>
+                                    <td class="w30"><div style="margin-top: 20px; text-align: right; padding-right: 15px;">Area(from)</div></td>
+                                    <td><lightning:input type="number" name="input1" label="" value="{!v.fromArea}" /></td>
+                                </tr>
+                            </table>
+                        </div>
+                        
+                        <div class="slds-col slds-size_1-of-1 slds-medium-size_6-of-12 slds-large-size_6-of-12 p20 ">
+                            <table >
+                                <tr>
+                                    <td class="w30"><div style="margin-top: 20px; text-align: right; padding-right: 15px;">Area(to)</div></td>
+                                    <td><lightning:input type="number" name="input1" label="" value="{!v.toArea}"/></td>
+                                </tr>
+                            </table>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 p20 btn-wrap">
+                        <lightning:button variant="brand" label="Search" title="Search" onclick="{! c.displayUnits }"/>
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12 table-wrap">
+                        <aura:if isTrue="{! empty(v.unitList) }">
+                            <h3 style="text-align:center;" class="slds-text-heading_medium">No Units to Display</h3>
+                        </aura:if>
+                        <aura:if isTrue="{! not(empty(v.unitList)) }">
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Action">Action</div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Unit Number">Unit Name</div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Sub Category">Sub Category</div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Area(sq. ft)">Area(sq. ft)</div>
+                                        </th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.unitList}" var ="unitRow">
+                                        <tr class="slds-hint-parent" data-id="{!unitRow.Name}">
+                                            <th data-label="Action" scope="row">
+                                                <div class="slds-truncate" title="Add">
+                                                    <a href="javascript:void(0);" data-building ="{!unitRow.Building__c}" data-id ="{!unitRow.Id}" data-name ="{!unitRow.Name}"  onclick="{!c.getLineItems}" tabindex="-1">Add</a>
+                                                </div>
+                                            </th>
+                                            <td><div class="slds-truncate" title="{!unitRow.Name}">{!unitRow.Name}</div></td>
+                                            <td><div class="slds-truncate" title="{!unitRow.Unit_Sub_Category__r.Name}">{!unitRow.Unit_Sub_Category__r.Name}</div></td>
+                                            <td><div class="slds-truncate" title="{!unitRow.Area_ft__c}">{!unitRow.Area_ft__c}</div></td>
+                                        </tr>
+                                    </aura:iteration>
+                                    
+                                </tbody>
+                            </table>
+                        </aura:if>
+                        
+                    </div>
+                </div>
+                
+                <!--full side-->
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_12-of-12 slds-large-size_12-of-12">
+                    <aura:if isTrue="{! empty(v.lineItemList) }">
+                        <!--h3 class="slds-text-heading_medium">Click on Search to create Line Items</h3-->
+                    </aura:if>
+                    <aura:if isTrue="{! not(empty(v.lineItemList)) }">
+                        <lightning:card>
+                            <aura:set attribute="title">
+                                <div class="text-center">
+                                    Selected Products
+                                </div>
+                            </aura:set>
+                            
+                            <aura:set attribute="footer">
+                                <!-- Adeel, do not show save/cancel button for expansions -->
+                                <aura:if isTrue="{!!v.isExpansion}">
+                                    <div class="text-center">
+                                        <lightning:button variant="Neutral" label="Cancel" title="Cancel" onclick="{! c.handleCancel }" />
+                                        <!-- Destructive variant: Identifies a potentially negative action -->
+                                        <lightning:button variant="brand" label="Save" title="Save" onclick="{!c.onSave}"/>
+                                    </div>
+                                </aura:if>
+                            </aura:set>
+
+                            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                                <thead>
+                                    <tr class="slds-line-height_reset">
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Action">Action</div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Unit Number">Unit Name</div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Sub Category">Sub Category</div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Area(sq. ft)">Area(sq. ft)</div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Best Rate">Best Rate</div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Offered Rate">Offered Rate</div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Total Best Rate">Total Best Rate</div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Total Offered Price">Total Offered Price</div>
+                                        </th>
+                                        <th class="" scope="col">
+                                            <div class="slds-truncate" title="Discount">Discount</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.lineItemList}" var="lineItem">
+                                        <tr class="slds-hint-parent">
+                                            <th data-label="Action" scope="row">
+                                                <div class="slds-truncate" title="Remove">
+                                                    <a href="javascript:void(0);" data-id="{!lineItem.unitId}" onclick="{!c.removeQuoteLines}" tabindex="-1">Remove</a>
+                                                </div>
+                                            </th>
+                                            <td><div class="slds-truncate" title="{!lineItem.unitName}">{!lineItem.unitName}</div></td>
+                                            <td><div class="slds-truncate" title="{!lineItem.subCategory}">{!lineItem.subCategory}</div></td>
+                                            <td><div class="slds-truncate" title="{!lineItem.quoteLineItem.Area__c}">{!lineItem.quoteLineItem.Area__c}</div></td>
+                                            <td><div class="slds-truncate" title="{!lineItem.quoteLineItem.Best_Rate__c}">{!lineItem.quoteLineItem.Best_Rate__c}</div></td>
+                                            <td><div class="slds-truncate removeLabel" title="{!lineItem.quoteLineItem.Offer_Price__c}"><lightning:input type="number" name="input1"  value="{!lineItem.quoteLineItem.Offer_Price__c}" class="{!lineItem.unitId}" onblur="{!c.updateTotalOfferPrice}"/></div></td>
+                                            <td><div class="slds-truncate" title="{!lineItem.quoteLineItem.Total_Best_Rate__c}">{!lineItem.quoteLineItem.Total_Best_Rate__c}</div></td>
+                                            <td><div class="slds-truncate" title="{!lineItem.quoteLineItem.Total_Offered_Price__c}">{!lineItem.quoteLineItem.Total_Offered_Price__c}</div></td>
+                                            <td>
+                                                <div class="slds-truncate" >
+                                                    <aura:if isTrue="{!greaterthanorequal(lineItem.quoteLineItem.Total_Best_Rate__c , lineItem.quoteLineItem.Total_Offered_Price__c)}">
+                                                        <lightning:formattedNumber value="{!(lineItem.quoteLineItem.Total_Best_Rate__c - lineItem.quoteLineItem.Total_Offered_Price__c)/lineItem.quoteLineItem.Total_Best_Rate__c *100}" maximumFractionDigits="2"/>%
+                                                        <!--{!(lineItem.quoteLineItem.Total_Best_Rate__c - lineItem.quoteLineItem.Total_Offered_Price__c)/lineItem.quoteLineItem.Total_Best_Rate__c *100} -->
+														<aura:set attribute="else">
+                                                         Upsell   
+                                                        </aura:set>
+                                                    </aura:if>
+                                                    
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </aura:iteration>
+                                    
+                                </tbody>
+                            </table>
+                            
+                            
+                        </lightning:card>
+                    </aura:if>
+                    
+                    
+                </div>
+                
+            </div>
+            
+    <aura:if isTrue="{!v.isWaiting}">
+        <div class="slds-spinner_container" aura:id="uploadSpinner">
+            <div class="slds-spinner slds-spinner_brand slds-spinner--medium" aria-hidden="false" role="alert">
+              <lightning:spinner size="medium" variant="brand" alternativeText="Loading" />  
+            </div>
+        </div>
+    </aura:if>
+    <!--/div-->
+</aura:component>

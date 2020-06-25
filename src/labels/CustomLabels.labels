@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>AXS_Empost_Sticker_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AXS Empost Sticker URL</shortDescription>
+        <value>https://axs.force.com/apex/grbrcd3?id=</value>
+    </labels>
+    <labels>
+        <fullName>AXS_Envelope_Sticker_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>AXS Envelope Sticker URL</shortDescription>
+        <value>https://axs.force.com/apex/grbrcd2?id=</value>
+    </labels>
+    <labels>
+        <fullName>Account_Related_Contact_Role</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account Related Contact Role</shortDescription>
+        <value>Please select Contact from associated Account.</value>
+    </labels>
+    <labels>
+        <fullName>Account_Success</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Account_Success</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>CCL_Generation_Template_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CCL Generation Template Id</shortDescription>
+        <value>a0mQ0000005kFBtIAM</value>
+    </labels>
+    <labels>
+        <fullName>Cannot_delete_QLI_if_opportunity_type_is_renewal_and_Expansion</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Cannot delete QLI if opportunity type is renewal and Expansion</shortDescription>
+        <value>Quote Line Items cannot be deleted if Opportunity type is Renewal and Sub-type is Expansion.</value>
+    </labels>
+    <labels>
+        <fullName>CaseFieldSetName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CaseFieldSetName</shortDescription>
+        <value>CaseDetailFields</value>
+    </labels>
+    <labels>
+        <fullName>Case_Lease_Termination_RT_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Lease Termination RT ID</shortDescription>
+        <value>012Q000000017E7IAI</value>
+    </labels>
+    <labels>
+        <fullName>Case_On_Boarding_Premise_RT_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case On-Boarding Premise RT Id</shortDescription>
+        <value>012Q00000009U7ZIAU</value>
+    </labels>
+    <labels>
+        <fullName>Case_Premise_Handover_RT_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case Premise Handover RT Id</shortDescription>
+        <value>012Q00000009Ul0IAE</value>
+    </labels>
+    <labels>
+        <fullName>Contact_Type_Error_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Contact Type Error Message</shortDescription>
+        <value>Contact With Similar Type Value Already Exist for this Account</value>
+    </labels>
+    <labels>
+        <fullName>Customer_Community_Profile_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Customer Community Profile ID</shortDescription>
+        <value>00eQ0000000MVHZIA4</value>
+    </labels>
+    <labels>
+        <fullName>Default_Business_Hour_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Default Business Hour Id</shortDescription>
+        <value>01m1U000000vt14</value>
+    </labels>
+    <labels>
+        <fullName>Document_DDA_Name_Reservation_Record_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Work Order DDA Name Reservation Record ID</shortDescription>
+        <value>012Q00000005SlqIAE</value>
+    </labels>
+    <labels>
+        <fullName>First_Contact_Type_Error_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>First Contact Type Error Message</shortDescription>
+        <value>Select Billing,Leasing Contact,Licensing Contact,Manager Incharge in Type field</value>
+    </labels>
+    <labels>
+        <fullName>Land_Product_Record_Type_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Land Product Record Type Id</shortDescription>
+        <value>012Q00000005R6F</value>
+    </labels>
+    <labels>
+        <fullName>Lease_Product_Record_Type_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lease Product Record Type ID</shortDescription>
+        <value>012Q00000009TuQ</value>
+    </labels>
+    <labels>
+        <fullName>Next_Arrow</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Next Arrow</shortDescription>
+        <value>&gt;&gt;</value>
+    </labels>
+    <labels>
+        <fullName>Non_Lease_Product_Record_Type_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Non Lease Product Record Type ID</shortDescription>
+        <value>012Q00000005R6G</value>
+    </labels>
+    <labels>
+        <fullName>OIC_Attachment_Binary_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OIC Attachment Binary Endpoint</shortDescription>
+        <value>https://tcmstgQSic-tecomoic.gbcom-south-1.oraclecloud.com:443/ic/api/integration/v1/flows/rest/TECOM_TO_DDA_PROCES_ATTACH/1.0/processattachments</value>
+    </labels>
+    <labels>
+        <fullName>OIC_HSEStatus_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OIC_HSEStatus_Endpoint</shortDescription>
+        <value>callout:OIC_Integration/TECO_SF_LEAS_HSE_STAT_TO_YARD/1.0/lease/hsestatuschange</value>
+    </labels>
+    <labels>
+        <fullName>OIC_Lease_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OIC Lease Endpoint</shortDescription>
+        <value>callout:OIC_Integration/TECOM_LEASE_IMPORT_TO_YARDI/1.0/importleasedetails</value>
+    </labels>
+    <labels>
+        <fullName>OIC_Lease_Items_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OIC Lease Items Endpoint</shortDescription>
+        <value>https://tcmstgQSic-tecomoic.gbcom-south-1.oraclecloud.com:443/ic/api/integration/v1/flows/rest/TECOM_TO_DDA_PROCE_LEASE_ITEMS/1.0/processleaseitems</value>
+    </labels>
+    <labels>
+        <fullName>OIC_NAR_Request_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OIC NAR Request Endpoint</shortDescription>
+        <value>https://tcmstgQSic-tecomoic.gbcom-south-1.oraclecloud.com:443/ic/api/integration/v1/flows/rest/TECOM_TO_DDA_CREAT_APPRO_REQUE/1.0/createnameapprovalrequest</value>
+    </labels>
+    <labels>
+        <fullName>OIC_Service_Request_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OIC Service Request Endpoint</shortDescription>
+        <value>https://tcmstgQSic-tecomoic.gbcom-south-1.oraclecloud.com:443/ic/api/integration/v1/flows/rest/TECOM_TO_DDA_CREAT_NEW_SERVI/1.0/createnewservicerequest</value>
+    </labels>
+    <labels>
+        <fullName>OIC_Termination_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OIC Termination Endpoint</shortDescription>
+        <value>callout:OIC_Termination/TECOM_SF_TERMI_LEASE_TO_YARDI/1.0/lease/terminationimport</value>
+    </labels>
+    <labels>
+        <fullName>OracleCustomerCreation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OracleCustomerCreation</shortDescription>
+        <value>https://tcmstgQSic-tecomoic.gbcom-south-1.oraclecloud.com:443/ic/api/integration/v1/flows/rest/REM_CREAT_ACCOU_EBS_PARTY_CUST/1.0/createcustomer</value>
+    </labels>
+    <labels>
+        <fullName>Premise_Product_Record_Type_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Premise Product Record Type Id</shortDescription>
+        <value>012Q00000009TuQ</value>
+    </labels>
+    <labels>
+        <fullName>Previous_Arrow</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Previous Arrow</shortDescription>
+        <value>&lt;&lt;</value>
+    </labels>
+    <labels>
+        <fullName>Rate_Of_Mechanism_Blank_Error</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Rate Of Mechanism Blank Error</shortDescription>
+        <value>The rate mechanism is not filled in on the associated price schedule. Please contact your system administrator.</value>
+    </labels>
+    <labels>
+        <fullName>Registeration_Page_Document_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Registeration Page Document Message</shortDescription>
+        <value>All other documents will be required in the later stage</value>
+    </labels>
+    <labels>
+        <fullName>RequestBinEndpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>RequestBinEndpoint</shortDescription>
+        <value>https://enn20s4rt6vms.x.pipedream.net/</value>
+    </labels>
+    <labels>
+        <fullName>Under_Approval_Quote_Line_Items_Validation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Under Approval Quote Line Items Validation</shortDescription>
+        <value>The quote line items cannot be deleted for &quot;Under Approval&quot; quotes.</value>
+    </labels>
+    <labels>
+        <fullName>Unit_Sub_Category_Combination_Not_Found</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unit Sub Category Combination Not Found</shortDescription>
+        <value>Unable to find the unit sub category for the given combination.</value>
+    </labels>
+    <labels>
+        <fullName>Validate_Already_Approved_Quote</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Validate Already Approved Quote</shortDescription>
+        <value>One quote is already is approved you cannot submit further quotes for approval for this opportunity.</value>
+    </labels>
+    <labels>
+        <fullName>WorkOrderFieldSetName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>WorkOrderFieldSetName</shortDescription>
+        <value>WorkOrderFS</value>
+    </labels>
+    <labels>
+        <fullName>Work_Order_Brand_Approval_RT_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Work Order Brand Approval RT Id</shortDescription>
+        <value>012Q00000005SllIAE</value>
+    </labels>
+    <labels>
+        <fullName>Work_Order_DDA_Name_Reservation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Work_Order_DDA_Name_Reservation</shortDescription>
+        <value>012Q00000005Slq</value>
+    </labels>
+    <labels>
+        <fullName>Work_Order_Record_Type_Id_HSE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Work Order Record Type Id - HSE</shortDescription>
+        <value>012Q00000005SlvIAE</value>
+    </labels>
+    <labels>
+        <fullName>Work_Order_Security_Clearance_RT_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Work Order Security Clearance RT Id</shortDescription>
+        <value>012Q00000005SlgIAE</value>
+    </labels>
+</CustomLabels>

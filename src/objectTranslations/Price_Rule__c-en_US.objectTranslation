@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Price Rule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Price Rules</value>
+    </caseValues>
+    <fields>
+        <label><!-- Asset Class Operator --></label>
+        <name>Asset_Class_Operator__c</name>
+        <picklistValues>
+            <masterLabel>equal</masterLabel>
+            <translation><!-- equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>include</masterLabel>
+            <translation><!-- include --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Asset Class Value --></label>
+        <name>Asset_Class_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Breakpoint --></label>
+        <name>Breakpoint__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Operator --></label>
+        <name>Building_Operator__c</name>
+        <picklistValues>
+            <masterLabel>equal</masterLabel>
+            <translation><!-- equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>include</masterLabel>
+            <translation><!-- include --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Building Value --></label>
+        <name>Building_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Park Operator --></label>
+        <name>Business_Park_Operator__c</name>
+        <picklistValues>
+            <masterLabel>equal</masterLabel>
+            <translation><!-- equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>include</masterLabel>
+            <translation><!-- include --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Business Park Value --></label>
+        <name>Business_Park_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cooling Submeter Operator --></label>
+        <name>Cooling_Submeter_Operator__c</name>
+        <picklistValues>
+            <masterLabel>equal</masterLabel>
+            <translation><!-- equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>include</masterLabel>
+            <translation><!-- include --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cooling Submeter Value --></label>
+        <name>Cooling_Submeter_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current RERA Index Operator --></label>
+        <name>Current_RERA_Index_Operator__c</name>
+        <picklistValues>
+            <masterLabel>equal</masterLabel>
+            <translation><!-- equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation><!-- less than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>more than</masterLabel>
+            <translation><!-- more than --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Current RERA Index Value --></label>
+        <name>Current_RERA_Index_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Floor Operator --></label>
+        <name>Floor_Operator__c</name>
+        <picklistValues>
+            <masterLabel>equal</masterLabel>
+            <translation><!-- equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>include</masterLabel>
+            <translation><!-- include --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Floor Value --></label>
+        <name>Floor_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lease Term Operator --></label>
+        <name>Lease_Term_Operator__c</name>
+        <picklistValues>
+            <masterLabel>between</masterLabel>
+            <translation><!-- between --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation><!-- less than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>more than</masterLabel>
+            <translation><!-- more than --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- in months --></help>
+        <label><!-- Lease Term Value --></label>
+        <name>Lease_Term_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ownership Status Operator --></label>
+        <name>Ownership_Status_Operator__c</name>
+        <picklistValues>
+            <masterLabel>equal</masterLabel>
+            <translation><!-- equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>include</masterLabel>
+            <translation><!-- include --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ownership Status Value --></label>
+        <name>Ownership_Status_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Performance Revenue --></label>
+        <name>Performance_Revenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pricing Group Operator --></label>
+        <name>Pricing_Group_Operator__c</name>
+        <picklistValues>
+            <masterLabel>equal</masterLabel>
+            <translation><!-- equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>include</masterLabel>
+            <translation><!-- include --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pricing Group Value --></label>
+        <name>Pricing_Group_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Category Operator --></label>
+        <name>Product_Category_Operator__c</name>
+        <picklistValues>
+            <masterLabel>equal</masterLabel>
+            <translation><!-- equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>include</masterLabel>
+            <translation><!-- include --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Category Value --></label>
+        <name>Product_Category_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Sub-Category Operator --></label>
+        <name>Product_Sub_Category_Operator__c</name>
+        <picklistValues>
+            <masterLabel>equal</masterLabel>
+            <translation><!-- equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>include</masterLabel>
+            <translation><!-- include --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Sub-Category Value --></label>
+        <name>Product_Sub_Category_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rent Cap Operator --></label>
+        <name>Rent_Cap_Operator__c</name>
+        <picklistValues>
+            <masterLabel>between</masterLabel>
+            <translation><!-- between --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation><!-- less than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>more than</masterLabel>
+            <translation><!-- more than --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Rent Cap Value --></label>
+        <name>Rent_Cap_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Utility Submeter Operator --></label>
+        <name>Utility_Submeter_Operator__c</name>
+        <picklistValues>
+            <masterLabel>equal</masterLabel>
+            <translation><!-- equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>include</masterLabel>
+            <translation><!-- include --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Utility Submeter Value --></label>
+        <name>Utility_Submeter_Value__c</name>
+    </fields>
+    <layouts>
+        <layout>Price Rule Layout</layout>
+        <sections>
+            <label><!-- Commercial Attributes --></label>
+            <section>Commercial Attributes</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Other --></label>
+            <section>Other</section>
+        </sections>
+        <sections>
+            <label><!-- Physical Attributes --></label>
+            <section>Physical Attributes</section>
+        </sections>
+        <sections>
+            <label><!-- Transactional Attributes --></label>
+            <section>Transactional Attributes</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

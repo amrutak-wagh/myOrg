@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Request Title</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Request Titles</value>
+    </caseValues>
+    <fields>
+        <label><!-- Approval Status --></label>
+        <name>Approval_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Arabic Name --></label>
+        <name>Arabic_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Area of Distribution --></label>
+        <name>Area_of_Distribution__c</name>
+        <picklistValues>
+            <masterLabel>Africa</masterLabel>
+            <translation><!-- Africa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Asia</masterLabel>
+            <translation><!-- Asia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bahrain</masterLabel>
+            <translation><!-- Bahrain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cyprus</masterLabel>
+            <translation><!-- Cyprus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Europe</masterLabel>
+            <translation><!-- Europe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GCC</masterLabel>
+            <translation><!-- GCC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>KSA</masterLabel>
+            <translation><!-- KSA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kuwait</masterLabel>
+            <translation><!-- Kuwait --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Middle east</masterLabel>
+            <translation><!-- Middle east --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oman</masterLabel>
+            <translation><!-- Oman --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAE</masterLabel>
+            <translation><!-- UAE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Worldwide</masterLabel>
+            <translation><!-- Worldwide --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Background --></label>
+        <name>Background__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Plan Review and Comments --></label>
+        <name>Business_Plan_Review_and_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- DDA Request Tile Id --></label>
+        <name>DDA_Request_Tile_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution Company --></label>
+        <name>Distribution_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution Type --></label>
+        <name>Distribution_Type__c</name>
+        <picklistValues>
+            <masterLabel>Controlled</masterLabel>
+            <translation><!-- Controlled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Estimated revenue --></label>
+        <name>Estimated_revenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Franchise Duration From --></label>
+        <name>Franchise_Duration_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Franchise Duration To --></label>
+        <name>Franchise_Duration_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Franchise Name --></label>
+        <name>Franchise_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Frequency --></label>
+        <name>Frequency__c</name>
+        <picklistValues>
+            <masterLabel>Annually</masterLabel>
+            <translation><!-- Annually --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bi-Annually</masterLabel>
+            <translation><!-- Bi-Annually --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bi-Monthly</masterLabel>
+            <translation><!-- Bi-Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bi-Weekly</masterLabel>
+            <translation><!-- Bi-Weekly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Daily</masterLabel>
+            <translation><!-- Daily --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fortnightly</masterLabel>
+            <translation><!-- Fortnightly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Periodical Supplement</masterLabel>
+            <translation><!-- Periodical Supplement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Three Times a Year</masterLabel>
+            <translation><!-- Three Times a Year --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weekly</masterLabel>
+            <translation><!-- Weekly --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Genre --></label>
+        <name>Genre__c</name>
+        <picklistValues>
+            <masterLabel>Agriculture</masterLabel>
+            <translation><!-- Agriculture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Animal</masterLabel>
+            <translation><!-- Animal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Animal Care</masterLabel>
+            <translation><!-- Animal Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Architecture</masterLabel>
+            <translation><!-- Architecture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Art &amp; Culture</masterLabel>
+            <translation><!-- Art &amp; Culture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Automotive</masterLabel>
+            <translation><!-- Automotive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banking &amp; Investment</masterLabel>
+            <translation><!-- Banking &amp; Investment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Beauty</masterLabel>
+            <translation><!-- Beauty --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broadcast</masterLabel>
+            <translation><!-- Broadcast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business</masterLabel>
+            <translation><!-- Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calendar</masterLabel>
+            <translation><!-- Calendar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Children</masterLabel>
+            <translation><!-- Children --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Community</masterLabel>
+            <translation><!-- Community --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction</masterLabel>
+            <translation><!-- Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cooking</masterLabel>
+            <translation><!-- Cooking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Selling</masterLabel>
+            <translation><!-- Direct Selling --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Directory</masterLabel>
+            <translation><!-- Directory --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Economy</masterLabel>
+            <translation><!-- Economy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electrical</masterLabel>
+            <translation><!-- Electrical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Environment</masterLabel>
+            <translation><!-- Environment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Family</masterLabel>
+            <translation><!-- Family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fashion</masterLabel>
+            <translation><!-- Fashion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Knowledge</masterLabel>
+            <translation><!-- Financial Knowledge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fitness</masterLabel>
+            <translation><!-- Fitness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Guide</masterLabel>
+            <translation><!-- Guide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health</masterLabel>
+            <translation><!-- Health --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>History</masterLabel>
+            <translation><!-- History --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT</masterLabel>
+            <translation><!-- IT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industry</masterLabel>
+            <translation><!-- Industry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insurance</masterLabel>
+            <translation><!-- Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Interior design</masterLabel>
+            <translation><!-- Interior design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Landscaping</masterLabel>
+            <translation><!-- Landscaping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal</masterLabel>
+            <translation><!-- Legal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Liesure</masterLabel>
+            <translation><!-- Liesure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lifestyle</masterLabel>
+            <translation><!-- Lifestyle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Machinery</masterLabel>
+            <translation><!-- Machinery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maps</masterLabel>
+            <translation><!-- Maps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marine</masterLabel>
+            <translation><!-- Marine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mechanical</masterLabel>
+            <translation><!-- Mechanical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Media</masterLabel>
+            <translation><!-- Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical</masterLabel>
+            <translation><!-- Medical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>News</masterLabel>
+            <translation><!-- News --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office Supplies</masterLabel>
+            <translation><!-- Office Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oil &amp; Gas</masterLabel>
+            <translation><!-- Oil &amp; Gas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Others</masterLabel>
+            <translation><!-- Others --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pets</masterLabel>
+            <translation><!-- Pets --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plumbing</masterLabel>
+            <translation><!-- Plumbing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Politics</masterLabel>
+            <translation><!-- Politics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safety</masterLabel>
+            <translation><!-- Safety --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social</masterLabel>
+            <translation><!-- Social --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sports</masterLabel>
+            <translation><!-- Sports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Teen</masterLabel>
+            <translation><!-- Teen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tourism</masterLabel>
+            <translation><!-- Tourism --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training</masterLabel>
+            <translation><!-- Training --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities Supplier</masterLabel>
+            <translation><!-- Utilities Supplier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Water Irrigation</masterLabel>
+            <translation><!-- Water Irrigation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Weddings</masterLabel>
+            <translation><!-- Weddings --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Youth</masterLabel>
+            <translation><!-- Youth --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>property</masterLabel>
+            <translation><!-- property --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is Approved by NMC --></label>
+        <name>Is_Approved_by_NMC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Name Confirmed --></label>
+        <name>Is_Name_Confirmed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Proposed Name 1 Approved --></label>
+        <name>Is_Proposed_Name_1_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Proposed Name 2 Approved --></label>
+        <name>Is_Proposed_Name_2_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Proposed Name 3 Approved --></label>
+        <name>Is_Proposed_Name_3_Approved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Language --></label>
+        <name>Language__c</name>
+        <picklistValues>
+            <masterLabel>Arabic</masterLabel>
+            <translation><!-- Arabic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chinese</masterLabel>
+            <translation><!-- Chinese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English</masterLabel>
+            <translation><!-- English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English &amp; Arabic</masterLabel>
+            <translation><!-- English &amp; Arabic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Farsi</masterLabel>
+            <translation><!-- Farsi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Farsi &amp; Arabic</masterLabel>
+            <translation><!-- Farsi &amp; Arabic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French</masterLabel>
+            <translation><!-- French --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>German</masterLabel>
+            <translation><!-- German --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hindi</masterLabel>
+            <translation><!-- Hindi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Korean</masterLabel>
+            <translation><!-- Korean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Malayalam</masterLabel>
+            <translation><!-- Malayalam --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Russian</masterLabel>
+            <translation><!-- Russian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sinhala</masterLabel>
+            <translation><!-- Sinhala --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tagalog</masterLabel>
+            <translation><!-- Tagalog --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Urdu</masterLabel>
+            <translation><!-- Urdu --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- No. of similar Genre --></label>
+        <name>No_of_similar_Genre__c</name>
+    </fields>
+    <fields>
+        <label><!-- No. of similar Genre deleted in the year --></label>
+        <name>No_of_similar_Genre_deleted_in_the_year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Printing Company --></label>
+        <name>Printing_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposed Name 1 --></label>
+        <name>Proposed_Name_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposed Name 2 --></label>
+        <name>Proposed_Name_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Proposed Name 3 --></label>
+        <name>Proposed_Name_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Publication in brief --></label>
+        <name>Publication_in_brief__c</name>
+    </fields>
+    <fields>
+        <label><!-- Recommendations --></label>
+        <name>Recommendations__c</name>
+    </fields>
+    <fields>
+        <label><!-- Selling Price --></label>
+        <name>Selling_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Targeted Audience --></label>
+        <name>Targeted_Audience__c</name>
+        <picklistValues>
+            <masterLabel>Businessmen</masterLabel>
+            <translation><!-- Businessmen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Businesswomen</masterLabel>
+            <translation><!-- Businesswomen --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Children</masterLabel>
+            <translation><!-- Children --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Work Order --></label>
+        <name>Work_Order__c</name>
+        <relationshipLabel><!-- Request Titles --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

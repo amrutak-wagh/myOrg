@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Unit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Units</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Units --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Active? --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allow Inventory Lock --></label>
+        <name>Allow_Inventory_Lock__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allowed Visas --></label>
+        <name>Allowed_Visas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Area Validated --></label>
+        <name>Area_Validated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Area (ft²) --></label>
+        <name>Area_ft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Asset Class Name --></label>
+        <name>Asset_Class_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building --></label>
+        <name>Building__c</name>
+        <relationshipLabel><!-- Units --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Business Park --></label>
+        <name>Business_Park__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category Combination --></label>
+        <name>Category_Combination__c</name>
+    </fields>
+    <fields>
+        <label><!-- Common Area (ft²) --></label>
+        <name>Common_Area_ft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Connected Load (KW) --></label>
+        <name>Connected_Load_KW__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cooling Charge --></label>
+        <name>Cooling_Charge__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cooling Load (BTU) --></label>
+        <name>Cooling_Load_BTU__c</name>
+    </fields>
+    <fields>
+        <label><!-- Core/NonCore --></label>
+        <name>Core_NonCore__c</name>
+        <picklistValues>
+            <masterLabel>Core</masterLabel>
+            <translation><!-- Core --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Core</masterLabel>
+            <translation><!-- Non-Core --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- DEWA Account No --></label>
+        <name>DEWA_Account_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- DEWA Account --></label>
+        <name>DEWA_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- DEWA Charge --></label>
+        <name>DEWA_Charge__c</name>
+    </fields>
+    <fields>
+        <label><!-- DEWA Premises No --></label>
+        <name>DEWA_Premises_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- DM DEWA Number --></label>
+        <name>DM_DEWA_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ejari Reference Number --></label>
+        <name>Ejari_Reference_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Electrical Load --></label>
+        <name>Electrical_Load__c</name>
+    </fields>
+    <fields>
+        <label><!-- Empower Account No --></label>
+        <name>Empower_Account_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Excel ID --></label>
+        <name>Excel_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude Chiller Charges --></label>
+        <name>Exclude_Chiller_Charges__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude Cooling Charges Common Area --></label>
+        <name>Exclude_Cooling_Charges_Common_Area__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude Cooling Charges --></label>
+        <name>Exclude_Cooling_Charges__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude DEWA Charges Common Area --></label>
+        <name>Exclude_DEWA_Charges_Common_Area__c</name>
+    </fields>
+    <fields>
+        <label><!-- Exclude From Directory --></label>
+        <name>Exclude_From_Directory__c</name>
+    </fields>
+    <fields>
+        <label><!-- Extract Air (CFM) --></label>
+        <name>Extract_Air_CFM__c</name>
+    </fields>
+    <fields>
+        <label><!-- FCC Attached --></label>
+        <name>FCC_Attached__c</name>
+    </fields>
+    <fields>
+        <label><!-- Floor Arabic --></label>
+        <name>Floor_Arabic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Floor English --></label>
+        <name>Floor_English__c</name>
+    </fields>
+    <fields>
+        <label><!-- Floor Name --></label>
+        <name>Floor_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Floor Number --></label>
+        <name>Floor_Number__c</name>
+        <picklistValues>
+            <masterLabel>Basement Level 1</masterLabel>
+            <translation><!-- Basement Level 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Basement Level 2</masterLabel>
+            <translation><!-- Basement Level 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eight Floor</masterLabel>
+            <translation><!-- Eight Floor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eleventh Floor</masterLabel>
+            <translation><!-- Eleventh Floor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fifth Floor</masterLabel>
+            <translation><!-- Fifth Floor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>First Floor</masterLabel>
+            <translation><!-- First Floor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fourteenth Floor</masterLabel>
+            <translation><!-- Fourteenth Floor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fourth Floor</masterLabel>
+            <translation><!-- Fourth Floor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ground Floor</masterLabel>
+            <translation><!-- Ground Floor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mezzanine</masterLabel>
+            <translation><!-- Mezzanine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ninth Floor</masterLabel>
+            <translation><!-- Ninth Floor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Second Floor</masterLabel>
+            <translation><!-- Second Floor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seventh Floor</masterLabel>
+            <translation><!-- Seventh Floor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sixth Floor</masterLabel>
+            <translation><!-- Sixth Floor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tenth Floor</masterLabel>
+            <translation><!-- Tenth Floor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Third Floor</masterLabel>
+            <translation><!-- Third Floor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thirteenth Floor</masterLabel>
+            <translation><!-- Thirteenth Floor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Twelfth Floor</masterLabel>
+            <translation><!-- Twelfth Floor --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Floor Type --></label>
+        <name>Floor_Type__c</name>
+        <picklistValues>
+            <masterLabel>01</masterLabel>
+            <translation><!-- 01 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>02</masterLabel>
+            <translation><!-- 02 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>03</masterLabel>
+            <translation><!-- 03 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>04</masterLabel>
+            <translation><!-- 04 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>05</masterLabel>
+            <translation><!-- 05 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>06</masterLabel>
+            <translation><!-- 06 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>07</masterLabel>
+            <translation><!-- 07 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>08</masterLabel>
+            <translation><!-- 08 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>09</masterLabel>
+            <translation><!-- 09 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11</masterLabel>
+            <translation><!-- 11 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>12</masterLabel>
+            <translation><!-- 12 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>13</masterLabel>
+            <translation><!-- 13 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>14</masterLabel>
+            <translation><!-- 14 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B1</masterLabel>
+            <translation><!-- B1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B2</masterLabel>
+            <translation><!-- B2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GF</masterLabel>
+            <translation><!-- GF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MF</masterLabel>
+            <translation><!-- MF --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- GFA Verified --></label>
+        <name>GFA_Verified__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inventory Status --></label>
+        <name>Inventory_Status__c</name>
+        <picklistValues>
+            <masterLabel>Available</masterLabel>
+            <translation><!-- Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TBC</masterLabel>
+            <translation><!-- TBC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is Leasable --></label>
+        <name>Is_Leasable__c</name>
+    </fields>
+    <fields>
+        <label><!-- No of Beds --></label>
+        <name>No_of_Beds__c</name>
+    </fields>
+    <fields>
+        <label><!-- Non PMLA --></label>
+        <name>Non_PMLA__c</name>
+    </fields>
+    <fields>
+        <label><!-- OC Autonumber --></label>
+        <name>OC_Autonumber__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Category --></label>
+        <name>Old_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Unit Area --></label>
+        <name>Old_Unit_Area__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Units --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Other Areas(Non GFA) --></label>
+        <name>Other_Areas_Non_GFA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other GFA Areas --></label>
+        <name>Other_GFA_Areas__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parking Area (ft²) --></label>
+        <name>Parking_Area_ft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pre-Booking Date-Soft Booking --></label>
+        <name>Pre_Booking_Date_Soft_Booking__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pre-Booking Date --></label>
+        <name>Pre_Booking_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price --></label>
+        <name>Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Created --></label>
+        <name>Product_Created__c</name>
+    </fields>
+    <fields>
+        <label><!-- Soft-Booking Date --></label>
+        <name>Soft_Booking_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Available</masterLabel>
+            <translation><!-- Available --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leased</masterLabel>
+            <translation><!-- Leased --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Soft Booked</masterLabel>
+            <translation><!-- Soft Booked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unavailable</masterLabel>
+            <translation><!-- Unavailable --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Supply Air (CFM) --></label>
+        <name>Supply_Air_CFM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transactional Unit --></label>
+        <name>Transactional_Unit__c</name>
+        <picklistValues>
+            <masterLabel>Bed</masterLabel>
+            <translation><!-- Bed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sqft</masterLabel>
+            <translation><!-- Sqft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit</masterLabel>
+            <translation><!-- Unit --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- UnitId --></label>
+        <name>UnitId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Code-YARDI --></label>
+        <name>Unit_Code_YARDI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Name Arabic --></label>
+        <name>Unit_Name_Arabic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Name --></label>
+        <name>Unit_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit No Arabic --></label>
+        <name>Unit_No_Arabic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit No. English --></label>
+        <name>Unit_No_English__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit No. --></label>
+        <name>Unit_No__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Number --></label>
+        <name>Unit_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Sub Category Name --></label>
+        <name>Unit_Sub_Category_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Sub Category --></label>
+        <name>Unit_Sub_Category__c</name>
+        <relationshipLabel><!-- Units --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Unit Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dimensions --></label>
+            <section>Dimensions</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Unit Layout - Backup</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please enter the Unit Price --></errorMessage>
+        <name>Price_Must_be_Entered</name>
+    </validationRules>
+</CustomObjectTranslation>

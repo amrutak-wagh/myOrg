@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groupingStringEnum>WorkStatusCategory</groupingStringEnum>
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+        <groupingString>New</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>In Progress</fullName>
+        <default>false</default>
+        <label>In Progress</label>
+        <groupingString>InProgress</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Pending Review</fullName>
+        <default>false</default>
+        <label>Pending Review</label>
+        <groupingString>OnHold</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Approved</fullName>
+        <default>false</default>
+        <label>Approved</label>
+        <groupingString>Completed</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Rejected</fullName>
+        <default>false</default>
+        <label>Rejected</label>
+        <groupingString>Completed</groupingString>
+    </standardValue>
+    <standardValue>
+        <fullName>Draft</fullName>
+        <default>false</default>
+        <label>Draft</label>
+        <groupingString>New</groupingString>
+    </standardValue>
+</StandardValueSet>

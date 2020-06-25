@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Land Use</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Land Use</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- GFA Sqft --></label>
+        <name>GFA_Sqft__c</name>
+    </fields>
+    <fields>
+        <label><!-- GFA Sqmt --></label>
+        <name>GFA_Sqmt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Level 1 --></label>
+        <name>Level_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Level 2 --></label>
+        <name>Level_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Level 3 --></label>
+        <name>Level_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot YARDI Id --></label>
+        <name>Plot_YARDI_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot --></label>
+        <name>Plot__c</name>
+        <relationshipLabel><!-- Land Use --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Rate__c --></label>
+        <name>Rate_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Split Percent --></label>
+        <name>Split_Percent__c</name>
+    </fields>
+    <fields>
+        <label><!-- YARDI Id --></label>
+        <name>YARDI_Id__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

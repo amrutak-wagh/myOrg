@@ -1,0 +1,1192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Document_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Custom object used as a placeholder to associate files with records. This object has a lookup to Account, and the rest of the relationships managed using a Lightning component.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>ReadWrite</externalSharingModel>
+    <fields>
+        <fullName>Acceptance_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Acceptance Type</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Internal</fullName>
+                    <default>false</default>
+                    <label>Internal</label>
+                </value>
+                <value>
+                    <fullName>External</fullName>
+                    <default>false</default>
+                    <label>External</label>
+                </value>
+                <value>
+                    <fullName>N/A</fullName>
+                    <default>false</default>
+                    <label>N/A</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Documents</relationshipLabel>
+        <relationshipName>Documents</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Documents</relationshipLabel>
+        <relationshipName>Documents</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Category_Item_Title__c</fullName>
+        <externalId>false</externalId>
+        <label>Category Item Title</label>
+        <length>150</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Signed Lease Agreement</fullName>
+                    <default>false</default>
+                    <label>Signed Lease Agreement</label>
+                </value>
+                <value>
+                    <fullName>Tenant Statement</fullName>
+                    <default>false</default>
+                    <label>Tenant Statement</label>
+                </value>
+                <value>
+                    <fullName>Credit Note</fullName>
+                    <default>false</default>
+                    <label>Credit Note</label>
+                </value>
+                <value>
+                    <fullName>Legal</fullName>
+                    <default>false</default>
+                    <label>Legal</label>
+                </value>
+                <value>
+                    <fullName>Rent Increase Notifications</fullName>
+                    <default>false</default>
+                    <label>Rent Increase Notifications</label>
+                </value>
+                <value>
+                    <fullName>Final Settlements</fullName>
+                    <default>false</default>
+                    <label>Final Settlements</label>
+                </value>
+                <value>
+                    <fullName>Collection</fullName>
+                    <default>false</default>
+                    <label>Collection</label>
+                </value>
+                <value>
+                    <fullName>Invoice</fullName>
+                    <default>false</default>
+                    <label>Invoice</label>
+                </value>
+                <value>
+                    <fullName>Unit Takeover Form</fullName>
+                    <default>false</default>
+                    <label>Unit Takeover Form</label>
+                </value>
+                <value>
+                    <fullName>Insurance</fullName>
+                    <default>false</default>
+                    <label>Insurance</label>
+                </value>
+                <value>
+                    <fullName>Lease Agreement</fullName>
+                    <default>false</default>
+                    <label>Lease Agreement</label>
+                </value>
+                <value>
+                    <fullName>Lease Agreement -Special Terms</fullName>
+                    <default>false</default>
+                    <label>Lease Agreement -Special Terms</label>
+                </value>
+                <value>
+                    <fullName>PSA with Visa Matrix Ready for Collection</fullName>
+                    <default>false</default>
+                    <label>PSA with Visa Matrix Ready for Collection</label>
+                </value>
+                <value>
+                    <fullName>New Lease -Ready for Collection</fullName>
+                    <default>false</default>
+                    <label>New Lease -Ready for Collection</label>
+                </value>
+                <value>
+                    <fullName>New Lease -Ready for collection-7Reminde</fullName>
+                    <default>false</default>
+                    <label>New Lease -Ready for collection-7Reminde</label>
+                </value>
+                <value>
+                    <fullName>New Lease -Ready for collection-14Remind</fullName>
+                    <default>false</default>
+                    <label>New Lease -Ready for collection-14Remind</label>
+                </value>
+                <value>
+                    <fullName>New Lease -Ready for Colllection-21Remin</fullName>
+                    <default>false</default>
+                    <label>New Lease -Ready for Colllection-21Remin</label>
+                </value>
+                <value>
+                    <fullName>New Lease-Space Leased Notification</fullName>
+                    <default>false</default>
+                    <label>New Lease-Space Leased Notification</label>
+                </value>
+                <value>
+                    <fullName>Printed Lease Agreement</fullName>
+                    <default>false</default>
+                    <label>Printed Lease Agreement</label>
+                </value>
+                <value>
+                    <fullName>Reminder Letter 1</fullName>
+                    <default>false</default>
+                    <label>Reminder Letter 1</label>
+                </value>
+                <value>
+                    <fullName>Reminder Letter 2</fullName>
+                    <default>false</default>
+                    <label>Reminder Letter 2</label>
+                </value>
+                <value>
+                    <fullName>Reminder Letter 3</fullName>
+                    <default>false</default>
+                    <label>Reminder Letter 3</label>
+                </value>
+                <value>
+                    <fullName>Lease Doc</fullName>
+                    <default>false</default>
+                    <label>Lease Doc</label>
+                </value>
+                <value>
+                    <fullName>Lease Amendment</fullName>
+                    <default>false</default>
+                    <label>Lease Amendment</label>
+                </value>
+                <value>
+                    <fullName>Audited Sales Report</fullName>
+                    <default>false</default>
+                    <label>Audited Sales Report</label>
+                </value>
+                <value>
+                    <fullName>First Inspection Report</fullName>
+                    <default>false</default>
+                    <label>First Inspection Report</label>
+                </value>
+                <value>
+                    <fullName>Second Inspection Report</fullName>
+                    <default>false</default>
+                    <label>Second Inspection Report</label>
+                </value>
+                <value>
+                    <fullName>FILE NOTE</fullName>
+                    <default>false</default>
+                    <label>FILE NOTE</label>
+                </value>
+                <value>
+                    <fullName>Sublease Lease Agreement</fullName>
+                    <default>false</default>
+                    <label>Sublease Lease Agreement</label>
+                </value>
+                <value>
+                    <fullName>Second Amendment</fullName>
+                    <default>false</default>
+                    <label>Second Amendment</label>
+                </value>
+                <value>
+                    <fullName>Assignment</fullName>
+                    <default>false</default>
+                    <label>Assignment</label>
+                </value>
+                <value>
+                    <fullName>Ejari Receipt</fullName>
+                    <default>false</default>
+                    <label>Ejari Receipt</label>
+                </value>
+                <value>
+                    <fullName>Lease Receipt</fullName>
+                    <default>false</default>
+                    <label>Lease Receipt</label>
+                </value>
+                <value>
+                    <fullName>Ejari Certificate</fullName>
+                    <default>false</default>
+                    <label>Ejari Certificate</label>
+                </value>
+                <value>
+                    <fullName>Trade License</fullName>
+                    <default>false</default>
+                    <label>Trade License</label>
+                </value>
+                <value>
+                    <fullName>Bank Assignment</fullName>
+                    <default>false</default>
+                    <label>Bank Assignment</label>
+                </value>
+                <value>
+                    <fullName>Tax Invoice</fullName>
+                    <default>false</default>
+                    <label>Tax Invoice</label>
+                </value>
+                <value>
+                    <fullName>Deed of Surrender</fullName>
+                    <default>false</default>
+                    <label>Deed of Surrender</label>
+                </value>
+                <value>
+                    <fullName>Asset Removal NOC</fullName>
+                    <default>false</default>
+                    <label>Asset Removal NOC</label>
+                </value>
+                <value>
+                    <fullName>Renewal Reminder</fullName>
+                    <default>false</default>
+                    <label>Renewal Reminder</label>
+                </value>
+                <value>
+                    <fullName>CCL</fullName>
+                    <default>false</default>
+                    <label>CCL</label>
+                </value>
+                <value>
+                    <fullName>PSA</fullName>
+                    <default>false</default>
+                    <label>PSA</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Id for the contact record which is associated to the document</description>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Documents</relationshipLabel>
+        <relationshipName>Documents</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DDA_Document_Id__c</fullName>
+        <description>This field is used to store dda document id as external id.</description>
+        <externalId>true</externalId>
+        <label>DDA Document Id</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Document_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Accepted</fullName>
+                    <default>false</default>
+                    <label>Accepted</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>File_Attached__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>File Attached</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Integration_Error_Message__c</fullName>
+        <externalId>false</externalId>
+        <label>Integration Error Message</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Integration_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Integration Status</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Ready</fullName>
+                    <default>false</default>
+                    <label>Ready</label>
+                </value>
+                <value>
+                    <fullName>Processing</fullName>
+                    <default>false</default>
+                    <label>Processing</label>
+                </value>
+                <value>
+                    <fullName>Synced</fullName>
+                    <default>false</default>
+                    <label>Synced</label>
+                </value>
+                <value>
+                    <fullName>Failed</fullName>
+                    <default>false</default>
+                    <label>Failed</label>
+                </value>
+                <value>
+                    <fullName>NA</fullName>
+                    <default>false</default>
+                    <label>NA</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Is_Mandatory__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Mandatory</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Linked_File_Id__c</fullName>
+        <externalId>false</externalId>
+        <label>Linked File Id</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Documents</relationshipLabel>
+        <relationshipName>Documents</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ParentId__c</fullName>
+        <externalId>false</externalId>
+        <label>ParentId</label>
+        <length>20</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Physically_Received__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Physically Received</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Physically_Received_at__c</fullName>
+        <externalId>false</externalId>
+        <label>Physically Received at</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Public_link__c</fullName>
+        <externalId>false</externalId>
+        <label>Public link</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Quote__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Quote</label>
+        <referenceTo>Quote</referenceTo>
+        <relationshipLabel>Documents</relationshipLabel>
+        <relationshipName>Documents</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Verified__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Verified</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Verified_at__c</fullName>
+        <externalId>false</externalId>
+        <label>Verified at</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Work_Order__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Work Order</label>
+        <referenceTo>WorkOrder</referenceTo>
+        <relationshipLabel>Documents</relationshipLabel>
+        <relationshipName>Documents</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Document</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Document Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Documents</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>External_Document</fullName>
+        <active>true</active>
+        <label>External Document</label>
+        <picklistValues>
+            <picklist>Acceptance_Type__c</picklist>
+            <values>
+                <fullName>External</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Asset Removal NOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Audited Sales Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bank Assignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CCL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Collection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Note</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deed of Surrender</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ejari Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ejari Receipt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FILE NOTE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Final Settlements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First Inspection Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease Agreement -Special Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease Amendment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease Doc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease Receipt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Lease -Ready for Collection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Lease -Ready for Colllection-21Remin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Lease -Ready for collection-14Remind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Lease -Ready for collection-7Reminde</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Lease-Space Leased Notification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSA with Visa Matrix Ready for Collection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printed Lease Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reminder Letter 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reminder Letter 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reminder Letter 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal Reminder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Increase Notifications</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Second Amendment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Second Inspection Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Signed Lease Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sublease Lease Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax Invoice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tenant Statement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade License</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unit Takeover Form</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Document_Status__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Integration_Status__c</picklist>
+            <values>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Processing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Synced</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Internal_Document</fullName>
+        <active>true</active>
+        <label>Internal Document</label>
+        <picklistValues>
+            <picklist>Acceptance_Type__c</picklist>
+            <values>
+                <fullName>External</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Internal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>N%2FA</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Asset Removal NOC</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Assignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Audited Sales Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bank Assignment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>CCL</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Collection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Credit Note</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deed of Surrender</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ejari Certificate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ejari Receipt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>FILE NOTE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Final Settlements</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>First Inspection Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease Agreement -Special Terms</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease Amendment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease Doc</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lease Receipt</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Legal</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Lease -Ready for Collection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Lease -Ready for Colllection-21Remin</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Lease -Ready for collection-14Remind</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Lease -Ready for collection-7Reminde</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New Lease-Space Leased Notification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>PSA with Visa Matrix Ready for Collection</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printed Lease Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reminder Letter 1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reminder Letter 2</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Reminder Letter 3</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal Reminder</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rent Increase Notifications</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Second Amendment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Second Inspection Report</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Signed Lease Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sublease Lease Agreement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tax Invoice</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tenant Statement</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Trade License</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unit Takeover Form</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Document_Status__c</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Integration_Status__c</picklist>
+            <values>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>NA</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Processing</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Synced</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Add_Files</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Add Files</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/APXTConga4__Conga_Composer
+?serverUrl={!API.Partner_Server_URL_370}
+&amp;Id={!Document__c.Id}
+&amp;TemplateId=a0mQ0000005kFBt,a0mQ0000005pX6kIAE
+&amp;QueryId=[RelatedRecords]a0eQ0000003zHK0IAM,[Quotes]a0eQ0000003zHKFIA2
+&amp;SC0=1
+&amp;SC1=SalesforceFile</url>
+    </webLinks>
+</CustomObject>

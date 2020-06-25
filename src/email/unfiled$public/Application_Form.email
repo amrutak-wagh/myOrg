@@ -1,0 +1,13 @@
+Hi {!Contact.LastName},<br/><br/>
+
+Welcome to the TECOM community. <br/>
+
+Please click on the following link to fill out the Application form for your lease interest:<br/>
+
+https://4cdev-tecomtest.cs3.force.com/test/s/registration?Id={!Contact.Encrypted_Contact_Id__c}<br/>
+
+You will receive a separate E-Mail with a verification code, which you require to access the application form.<br/><br/>
+
+Best Regards, <br/>
+
+TECOM

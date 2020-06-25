@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Building</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Buildings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Code --></label>
+        <name>Building_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Height (ft) --></label>
+        <name>Building_Height_ft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Image --></label>
+        <name>Building_Image__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Levels Above Ground --></label>
+        <name>Building_Levels_Above_Ground__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Levels Mezzanine --></label>
+        <name>Building_Levels_Mezzanine__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Levels Underground --></label>
+        <name>Building_Levels_Underground__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Name Arabic --></label>
+        <name>Building_Name_Arabic__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Name English --></label>
+        <name>Building_Name_English__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Owner Name --></label>
+        <name>Building_Owner_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Park --></label>
+        <name>Business_Park__c</name>
+        <relationshipLabel><!-- Buildings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Commercial Name --></label>
+        <name>Commercial_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Connected KW --></label>
+        <name>Connected_KW__c</name>
+    </fields>
+    <fields>
+        <label><!-- Connected TR --></label>
+        <name>Connected_TR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Connected water capacity (IGl) --></label>
+        <name>Connected_water_capacity_IGl__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detailed Name --></label>
+        <name>Detailed_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Development Status --></label>
+        <name>Development_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction Resumed</masterLabel>
+            <translation><!-- Construction Resumed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction on hold</masterLabel>
+            <translation><!-- Construction on hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Developed</masterLabel>
+            <translation><!-- Developed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not applicable</masterLabel>
+            <translation><!-- Not applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Under Development</masterLabel>
+            <translation><!-- Under Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Undeveloped</masterLabel>
+            <translation><!-- Undeveloped --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ejari Owner Number --></label>
+        <name>Ejari_Owner_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Geolocation --></label>
+        <name>Geolocation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Integration Status --></label>
+        <name>Integration_Status__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- LEED Certification --></label>
+        <name>LEED_Certification__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Legal Entity --></label>
+        <name>Legal_Entity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ownership Type --></label>
+        <name>Ownership_Type__c</name>
+        <picklistValues>
+            <masterLabel>DED - PMS</masterLabel>
+            <translation><!-- DED - PMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not applicable</masterLabel>
+            <translation><!-- Not applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PMLA</masterLabel>
+            <translation><!-- PMLA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TECOM - PMS</masterLabel>
+            <translation><!-- TECOM - PMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TECOM Owned</masterLabel>
+            <translation><!-- TECOM Owned --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- PMLA Agreement Date --></label>
+        <name>PMLA_Agreement_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- PMLA Lease Share --></label>
+        <name>PMLA_Lease_Share__c</name>
+    </fields>
+    <fields>
+        <label><!-- PMLA Service Share --></label>
+        <name>PMLA_Service_Share__c</name>
+    </fields>
+    <fields>
+        <label><!-- PMLA Share Unit --></label>
+        <name>PMLA_Share_Unit__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Plot --></label>
+        <name>Plot__c</name>
+        <relationshipLabel><!-- Buildings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Property Code-YARDI --></label>
+        <name>Property_Code_YARDI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Property Name English --></label>
+        <name>Property_Name_English__c</name>
+    </fields>
+    <fields>
+        <label><!-- Property Name --></label>
+        <name>Property_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Property Type --></label>
+        <name>Property_Type__c</name>
+        <picklistValues>
+            <masterLabel>Mixed</masterLabel>
+            <translation><!-- Mixed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not applicable</masterLabel>
+            <translation><!-- Not applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office</masterLabel>
+            <translation><!-- Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parking</masterLabel>
+            <translation><!-- Parking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Property Category --></label>
+        <name>Property__c</name>
+        <picklistValues>
+            <masterLabel>Land</masterLabel>
+            <translation><!-- Land --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mixed</masterLabel>
+            <translation><!-- Mixed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not applicable</masterLabel>
+            <translation><!-- Not applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office</masterLabel>
+            <translation><!-- Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parking</masterLabel>
+            <translation><!-- Parking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sector --></label>
+        <name>Sector__c</name>
+        <relationshipLabel><!-- Buildings --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Total Basement Area --></label>
+        <name>Total_Basement_Area__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Common Area (ft2) --></label>
+        <name>Total_Common_Area_ft2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Leasable Area (ft2) --></label>
+        <name>Total_Leasable_Area_ft2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Services Area (ft2) --></label>
+        <name>Total_Services_Area_ft2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unique Key --></label>
+        <name>Unique_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zone --></label>
+        <name>Zone__c</name>
+    </fields>
+    <layouts>
+        <layout>Building Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

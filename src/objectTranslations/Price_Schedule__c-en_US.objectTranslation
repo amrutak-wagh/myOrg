@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Price Schedule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Price Schedules</value>
+    </caseValues>
+    <fields>
+        <label><!-- Charge Type --></label>
+        <name>Charge_Type__c</name>
+        <relationshipLabel><!-- Price Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grace Period Format --></label>
+        <name>Grace_Period_Format__c</name>
+        <picklistValues>
+            <masterLabel>days</masterLabel>
+            <translation><!-- days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>months</masterLabel>
+            <translation><!-- months --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Grace Period Mechanism --></label>
+        <name>Grace_Period_Mechanism__c</name>
+        <picklistValues>
+            <masterLabel>end</masterLabel>
+            <translation><!-- end --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>every</masterLabel>
+            <translation><!-- every --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>initial</masterLabel>
+            <translation><!-- initial --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Grace Period --></label>
+        <name>Grace_Period__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initial Best Rate Operator --></label>
+        <name>Initial_Best_Rate_Operator__c</name>
+        <picklistValues>
+            <masterLabel>between</masterLabel>
+            <translation><!-- between --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation><!-- less than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>more than</masterLabel>
+            <translation><!-- more than --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Initial Best Rate Value --></label>
+        <name>Initial_Best_Rate_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Best Rate Operator --></label>
+        <name>Last_Best_Rate_Operator__c</name>
+        <picklistValues>
+            <masterLabel>between</masterLabel>
+            <translation><!-- between --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation><!-- less than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>more than</masterLabel>
+            <translation><!-- more than --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Last Best Rate Value --></label>
+        <name>Last_Best_Rate_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Passing Rate Operator --></label>
+        <name>Last_Passing_Rate_Operator__c</name>
+        <picklistValues>
+            <masterLabel>between</masterLabel>
+            <translation><!-- between --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation><!-- less than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>more than</masterLabel>
+            <translation><!-- more than --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Last Passing Rate Value --></label>
+        <name>Last_Passing_Rate_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Term --></label>
+        <name>Payment_Term__c</name>
+        <relationshipLabel><!-- Price Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Only for renewal/downsize --></help>
+        <label><!-- Percent Increase --></label>
+        <name>Percent_Increase__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price Rule --></label>
+        <name>Price_Rule__c</name>
+        <relationshipLabel><!-- Price Schedules --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Rate Cap --></label>
+        <name>Rate_Cap__c</name>
+    </fields>
+    <fields>
+        <help><!-- Only for renewal/downsize --></help>
+        <label><!-- Rate Increase Mechanism --></label>
+        <name>Rate_Increase_Mechanism__c</name>
+        <picklistValues>
+            <masterLabel>Fixed Percentage</masterLabel>
+            <translation><!-- Fixed Percentage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fixed Rate</masterLabel>
+            <translation><!-- Fixed Rate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Use RERA Index</masterLabel>
+            <translation><!-- Use RERA Index --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Rate --></label>
+        <name>Rate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Only for renewal/downsize --></help>
+        <label><!-- Renewal/Downsize Rate To Use --></label>
+        <name>Renewal_Downsize_Rate_To_Use__c</name>
+        <picklistValues>
+            <masterLabel>Initial Best Rate</masterLabel>
+            <translation><!-- Initial Best Rate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Last Best Rate</masterLabel>
+            <translation><!-- Last Best Rate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Last Passing Rate</masterLabel>
+            <translation><!-- Last Passing Rate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Service Charge Mechanism --></label>
+        <name>Service_Charge_Mechanism__c</name>
+        <picklistValues>
+            <masterLabel>Base-year Stop</masterLabel>
+            <translation><!-- Base-year Stop --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gross-up</masterLabel>
+            <translation><!-- Gross-up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inclusive</masterLabel>
+            <translation><!-- Inclusive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pass-through</masterLabel>
+            <translation><!-- Pass-through --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Leased Area Operator --></label>
+        <name>Total_Leased_Area_Operator__c</name>
+        <picklistValues>
+            <masterLabel>between</masterLabel>
+            <translation><!-- between --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation><!-- less than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>more than</masterLabel>
+            <translation><!-- more than --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total Leased Area Value --></label>
+        <name>Total_Leased_Area_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction Type --></label>
+        <name>Transaction_Type__c</name>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal</masterLabel>
+            <translation><!-- Renewal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Transactional Unit --></label>
+        <name>Transactional_Unit__c</name>
+        <picklistValues>
+            <masterLabel>Sq ft</masterLabel>
+            <translation><!-- Sq ft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unit</masterLabel>
+            <translation><!-- Unit --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Price Schedule Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Default Values --></label>
+            <section>Default Values</section>
+        </sections>
+        <sections>
+            <label><!-- Rate --></label>
+            <section>Rate</section>
+        </sections>
+        <sections>
+            <label><!-- Rate Increase (for Renewal/Downsize) --></label>
+            <section>Rate Increase (for Renewal/Downsize)</section>
+        </sections>
+        <sections>
+            <label><!-- Volume Based Discount --></label>
+            <section>Volume Based Discount</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please specify Grace Period (Period) and Grace Period Mechanism. --></errorMessage>
+        <name>Specify_Grace_period</name>
+    </validationRules>
+</CustomObjectTranslation>

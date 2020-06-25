@@ -1,0 +1,101 @@
+<aura:component controller="DisplayContactAndChildCompController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">	
+ 
+ <!--Attributes used in the component markup-->
+ <aura:handler name="init" value="this" action="{!c.doInit}"/>
+ <aura:attribute name="recordId" type="Id" />  
+ <aura:attribute name="wrapperInfo" type="Object"/> 
+ <aura:attribute name="caseFieldSet" type="string" default ="CaseDetailFields"/>
+ <aura:attribute name="workOrderFieldSet" type="string" default="WorkOrderFS"/>
+ <aura:attribute name="gridColumns" type="List" access="PRIVATE" />
+ <aura:attribute name="gridData" type="Object" access="PRIVATE" />
+ <aura:attribute name="gridExpandedRows" type="List" access="PRIVATE" />
+ <aura:attribute name="case" type="Case"/>
+ <aura:attribute name="caseFields" type="String[]" default="CaseNumber,Status"/>
+ <aura:attribute name="recordLoadError" type="String"/> 
+ <aura:attribute name="mapIdRecordTypeId" type="Map"/>
+ <aura:attribute name="caseRecord" type="Object"/>    
+ <aura:attribute name="loaded" type="Boolean" default="false" /> 
+ <aura:attribute name="progressBarValue" type="String" default ="1"/> 
+    <!--Shows the case details in a card as 2 column display. Fields are used from fieldset-->
+    
+    <div style="margin-top:20px;margin-left:35px;margin-right:35px;">
+        <lightning:progressIndicator currentStep="{!v.progressBarValue}" type="path" variant="base">
+            <lightning:progressStep label="New" value="1"/>
+            <lightning:progressStep label="In Progress" value="2"/>
+            <lightning:progressStep label="Closed - Approved" value="3"/>
+            <lightning:progressStep label="Closed - Rejected" value="4"/>
+        </lightning:progressIndicator>
+    </div>
+    <div style="margin-top:35px;margin-left:35px;margin-right:35px;">
+        <lightning:card iconName="standard:case" title="{! 'Case Details'}">
+            <div class="slds-p-left_large slds-p-right_medium">
+                <lightning:recordViewForm recordId="{!v.recordId}" 
+                                          objectApiName="Case">
+                    <div class="slds-grid">
+                        
+                        <div class="slds-col slds-size_2-of-3">
+                            <aura:iteration items="{!v.caseFields}" var = "field" indexVar="index">
+                                <aura:if isTrue="{!index%2==0}">
+                            <lightning:outputField fieldName="{!field}" />
+                                </aura:if>
+                            </aura:iteration>
+                        </div>
+                        <div class="slds-col slds-size_1-of-3">
+                            <aura:iteration items="{!v.caseFields}" var = "field" indexVar="index">
+                                <aura:if isTrue="{!index%2==1}">
+                            <lightning:outputField fieldName="{!field}" />
+                            </aura:if>
+                            </aura:iteration>
+                        </div>
+                        
+                    </div>
+                </lightning:recordViewForm>
+                
+            </div>
+        </lightning:card>
+    </div>
+    <div style ="margin-top:35px;margin-left:35px;margin-right:35px;">
+        <lightning:card title="PMS Details" iconName="standard:user" >
+           <div class="slds-p-left_large slds-p-right_medium">
+                <lightning:recordViewForm recordId="{!v.caseRecord.Account.OwnerId}" 
+                                          objectApiName="User">
+                    <div class="slds-grid">
+                        
+                        <div class="slds-col slds-size_2-of-3">
+                            
+                            <lightning:outputField fieldName="Name" />
+                            <lightning:outputField fieldName="Phone" />    
+                        </div>
+                        <div class="slds-col slds-size_1-of-3">
+                            
+                            <lightning:outputField fieldName="Email" />
+                            
+                        </div>
+                        
+                    </div>
+                </lightning:recordViewForm>
+            </div>
+        </lightning:card>
+    </div>
+    <!--Shows the Work Order related to case in tree grid format-->
+    <div class="exampleHolder">
+        <aura:if isTrue="{! v.loaded }">
+            <div  style="margin-top:35px;margin-left:35px;margin-right:35px;">
+                <lightning:card  title="{! 'Work Order Details'}">
+                    <lightning:treeGrid maxColumnWidth="100%" rowNumberOffset="0" minColumnWidth="50px"
+                                        columns="{! v.gridColumns }"
+                                        data="{! v.gridData }"
+                                        keyField="id" hideCheckboxColumn="true" onrowaction="{!c.createWorkOrderRecord}"
+                                        />
+                </lightning:card>
+            </div>
+            <aura:set attribute="else">
+                <lightning:spinner alternativeText="Loading" />
+            </aura:set>
+        </aura:if>
+    </div>
+        
+    
+    <!--<div class="slds-text-heading_medium" style="margin-top:35px;margin-left:35px;margin-right:35px;">Work Order Details</div>-->
+        
+</aura:component>

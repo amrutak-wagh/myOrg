@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>TECOM</letterhead>
+    <name>Land - Lead Follow Up 3 months</name>
+    <style>freeForm</style>
+    <subject>Follow Up required: Lead will be disqualified in 3 months</subject>
+    <textOnly>Dear {!Lead.OwnerFullName},
+
+This lead will be closed in 3 months.
+Please follow up on this lead.
+
+Thank you,
+TECOM team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

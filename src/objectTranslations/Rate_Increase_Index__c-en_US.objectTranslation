@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Rate Increase Index</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Rate Increase Indexes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Business Park --></label>
+        <name>Business_Park__c</name>
+        <relationshipLabel><!-- Rate Increase Indexes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Current Rate (From) --></label>
+        <name>Current_Rate_From__c</name>
+    </fields>
+    <fields>
+        <help><!-- End of the rate range --></help>
+        <label><!-- Current Rate (To) --></label>
+        <name>Current_Rate_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Duration (Years) --></label>
+        <name>Duration_Years__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date (From) --></label>
+        <name>Effective_Date_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date (To) --></label>
+        <name>Effective_Date_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Percent Increase --></label>
+        <name>Percent_Increase__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price Schedule --></label>
+        <name>Price_Schedule__c</name>
+        <relationshipLabel><!-- Rate Increase Indexes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unit Sub-Category --></label>
+        <name>Unit_Sub_Category__c</name>
+        <relationshipLabel><!-- Rate Increase Indexes --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>RERA Index Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Rate Increase Index Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Used for increases from an existing rate --></description>
+        <label><!-- RERA --></label>
+        <name>RERA</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used for increases during an amount of time (e.g. revisions) --></description>
+        <label><!-- Rate Increase --></label>
+        <name>Rate_Increase</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

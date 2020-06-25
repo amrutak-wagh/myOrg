@@ -1,0 +1,142 @@
+.THIS .slds-text-bold{
+    font-weight:bold;
+}
+
+.THIS .slds-content-wrap{
+	min-height: 450px;
+}
+
+.THIS .slds-accordion {
+	width: 100%;
+}
+
+.THIS input.error-input, .THIS .error-input select {
+    border: 1px solid #c23934 !important;
+}
+
+.THIS .field, .THIS select, .THIS textarea, .THIS .input[type="date"], .THIS input.input, .THIS .slds-input{
+	border: 1px solid #97999b !important;
+}
+
+.THIS input.error-input, .THIS .error-input select{
+    border: 1px solid #c23934 !important;
+}
+
+.THIS .label-hidden label{
+    display: none;
+}
+
+.THIS select.slds-select{
+    height: 36px;
+}
+
+.THIS .slds-radio-input-left, .THIS .slds-checkbox-input-left{
+    float: left;
+    margin-top: 2px !important;
+}
+
+.THIS input.file{
+    display: block;
+}
+
+.THIS .slds-checkbox-input-left{
+    margin-right: 5px;
+}
+
+.THIS .slds-form-element__label{
+	font-size: 13px;
+}
+
+.THIS .slds-section-title{
+	border-bottom: 1px solid #ccc;
+    font-size: 20px;
+    font-weight: bold;
+    margin:15px 0px 15px 0px;
+}
+
+.THIS .slds-btn-small{
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.THIS .slds-add-new-member-btn{
+	font-size: 14px;
+    font-weight: normal;
+    float: right;
+}
+
+.THIS .slds-accordion__summary{
+    background: #F4F6F9;
+    padding: 10px 15px;
+    border-radius: 2px;
+}
+
+.THIS .slds-accordion__section{
+	padding: 0px;
+}
+
+.THIS .slds-accordion__list-item {
+	margin-bottom: 5px;
+	border: 0px;
+}
+
+.THIS .slds-accordion__content{
+	padding: 0px 15px 0px 15px;
+}
+
+.THIS .slds-summary-section-title{
+    border-bottom: 1px solid #cccccc;
+    font-weight: bold;
+    margin-bottom: 10px;    
+    font-size: 14px;
+}
+
+.THIS .slds-summary-wrap .slds-col{
+    margin-bottom: 7px;
+    margin-top: 7px;
+}
+
+.THIS .document-label{
+    margin-top: 10px;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 3px;
+    margin-bottom: 3px;
+    font-weight: bold;
+}
+
+.THIS .slds-fileuploaded-btn{
+    margin-bottom: -5px;
+    color: green;
+}
+
+.THIS .slds-fileuploaded-btn .slds-button__icon{
+    float: left;
+    margin-top: 7px;
+}
+
+.THIS .document-upload-input{
+    margin-bottom: 10px;
+}
+
+.THIS .slds-additional-documents .slds-form-element__label{
+    display: none;
+}
+
+.THIS .slds-additional-documents .slds-form-element__control{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.THIS span.error_msg{
+    color: rgb(194, 57, 52);
+    font-size: .75rem;
+    margin-top: .125rem;
+    display: block;
+}
+
+.THIS .slds-footer{
+    border-top: 1px solid #cccccc;
+    margin-top: 20px;
+    padding-top: 20px;
+}

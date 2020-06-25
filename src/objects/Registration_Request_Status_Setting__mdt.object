@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>This setting is used in license registration request to manage statuses and toolbar.</description>
+    <fields>
+        <fullName>Convert_To_Trust_Account__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Convert To Trust Account</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Legal_Framework__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Legal Framework</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Move_To_Next_Status__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Move To Next Status</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Status</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Validate_Lease_Items__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <fieldManageability>DeveloperControlled</fieldManageability>
+        <label>Validate Lease Items</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>Registration Request Status Setting</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>MasterLabel</columns>
+        <columns>DeveloperName</columns>
+        <columns>NamespacePrefix</columns>
+        <columns>Status__c</columns>
+        <columns>Legal_Framework__c</columns>
+        <columns>Convert_To_Trust_Account__c</columns>
+        <columns>Move_To_Next_Status__c</columns>
+        <columns>Validate_Lease_Items__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <pluralLabel>Registration Request Status Settings</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

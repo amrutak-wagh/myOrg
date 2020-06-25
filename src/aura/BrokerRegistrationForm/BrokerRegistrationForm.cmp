@@ -1,0 +1,642 @@
+<aura:component implements="forceCommunity:availableForAllPageTypes" access="global" controller="CustomerRegistrationController" >
+    <!-- <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" /> <!-- cVerificationCode -->
+
+    <aura:attribute name="members" type="LIST" description="List of all members" />
+    <aura:attribute name="contactInfo" type="Object" description="Object wrapper which will contains all of possible values." />
+    <aura:attribute name="currentStep" type="Integer" default="-1" description="Active item to show/hide the section + wizard menu" />
+    <aura:attribute name="contactId" type="String" description="Contact Id of the current user" />
+    <aura:attribute name="accountId" type="String" description="Account Id of the current account." />
+    <aura:attribute name="activeMemberSections" type="List" description="List of sections that needs to be opened when you see the members section/add new member" />
+    <aura:attribute name="validationObject" type="Object" description="Object to store the validation messages." />
+
+    <lightning:spinner aura:id="loader" alternativeText="Loading" size="medium" variant="brand" />
+
+    <aura:attribute access="private" type="List" name="selectedSegment" default="[]"/>
+    <aura:attribute access="private" type="List" name="selectedActivity" default="[]"/>
+    <aura:attribute access="private" type="List" name="selectedCountry" default="[]"/>
+    
+    <aura:attribute access="global" type="String" name="excludedRecord" default="[]" />
+
+    <ltng:require styles="{!$Resource.MultilineErrorCSS}" />
+
+    <div class="{!v.currentStep > 0 ? 'slds-wrapper' : 'slds-wrapper slds-hide'}">
+        <div class="slds-content-wrap">
+            <div class="slds-grid slds-hide">
+            	<div class="slds-col slds-text-align_center">
+                    <div class="slds-text-heading_medium slds-text-title_caps slds-text-bold slds-text-heading_large">Customer Registration</div>
+                </div>
+            </div> <!-- @END:title -->
+        
+            <div class="slds-grid">
+                <div class="slds-col slds-size_1-of-1">
+                    <div class="slds-path slds-custom-nav">
+                        <div class="slds-grid slds-path__track slds-p-left_none slds-p-right_none">
+                            <div class="slds-grid slds-path__scroller-container">
+                                <div class="slds-path__scroller" role="application">
+                                    <div class="slds-path__scroller_inner">
+                                        <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal">
+                                            <li class="{!v.currentStep > 1 ? 'slds-path__item slds-is-complete': v.currentStep == 1 ? 'slds-path__item slds-is-current slds-is-active' : 'slds-path__item slds-is-incomplete'}" role="presentation"> 
+                                                <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" role="option" tabindex="-1">
+                                                    <span class="slds-path__stage">
+                                                        <lightning:icon iconName="utility:check" variant="check" size="xx-small"/>
+                                                        <span class="slds-assistive-text">Business Form</span>
+                                                    </span>
+                                                    <span class="slds-path__title">Business Form</span>
+                                                </a>
+                                            </li>
+                                            <!-- Do not show company details for FZ-LLC --> 
+                                            <aura:if isTrue="{!and(v.contactInfo.proposedLegalFormOfBusiness != 'FZ-LLC Natural Person', v.contactInfo.proposedLegalFormOfBusiness != 'FZ-LLC Corporate')}">
+                                                <li class="{!v.currentStep > 2 ? 'slds-path__item slds-is-complete': v.currentStep == 2 ? 'slds-path__item slds-is-current slds-is-active' : 'slds-path__item slds-is-incomplete'}" role="presentation"> 
+                                                    <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" role="option" tabindex="-1">
+                                                        <span class="slds-path__stage">
+                                                            <lightning:icon iconName="utility:check" variant="check" size="xx-small"/>
+                                                            <span class="slds-assistive-text">Company Details</span>
+                                                        </span>
+                                                        <span class="slds-path__title">Company Details</span>
+                                                    </a>
+                                                </li>
+                                            </aura:if>
+                                            <li class="{!v.currentStep > 3 ? 'slds-path__item slds-is-complete': v.currentStep == 3 ? 'slds-path__item slds-is-current slds-is-active' : 'slds-path__item slds-is-incomplete'}" role="presentation"> 
+                                                <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" role="option" tabindex="-1">
+                                                    <span class="slds-path__stage">
+                                                        <lightning:icon iconName="utility:check" variant="check" size="xx-small"/>
+                                                        <span class="slds-assistive-text">License Segment and Activities</span>
+                                                    </span>
+                                                    <span class="slds-path__title">License Segment and Activities</span>
+                                                </a>
+                                            </li>
+                                            <li class="{!v.currentStep > 4 ? 'slds-path__item slds-is-complete': v.currentStep == 4 ? 'slds-path__item slds-is-current slds-is-active' : 'slds-path__item slds-is-incomplete'}" role="presentation"> 
+                                                <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" role="option" tabindex="-1">
+                                                    <span class="slds-path__stage">
+                                                        <lightning:icon iconName="utility:check" variant="check" size="xx-small"/>
+                                                        <span class="slds-assistive-text">Members</span>
+                                                    </span>
+                                                    <span class="slds-path__title">Members</span>
+                                                </a>
+                                            </li>
+                                            <li class="{!v.currentStep > 5 ? 'slds-path__item slds-is-complete': v.currentStep == 5 ? 'slds-path__item slds-is-current slds-is-active' : 'slds-path__item slds-is-incomplete'}" role="presentation"> 
+                                                <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" role="option" tabindex="-1">
+                                                    <span class="slds-path__stage">
+                                                        <lightning:icon iconName="utility:check" variant="check" size="xx-small"/>
+                                                        <span class="slds-assistive-text">Additional Documents</span>
+                                                    </span>
+                                                    <span class="slds-path__title">Additional Documents</span>
+                                                </a>
+                                            </li>
+                                            <li class="{!v.currentStep > 6 ? 'slds-path__item slds-is-complete': v.currentStep == 6 ? 'slds-path__item slds-is-current slds-is-active' : 'slds-path__item slds-is-incomplete'}" role="presentation"> 
+                                                <a aria-selected="false" class="slds-path__link" href="javascript:void(0);" role="option" tabindex="-1">
+                                                    <span class="slds-path__stage">
+                                                        <lightning:icon iconName="utility:check" variant="check" size="xx-small"/>
+                                                        <span class="slds-assistive-text">Summary</span>
+                                                    </span>
+                                                    <span class="slds-path__title">Summary</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- @END:path/wizard -->
+
+            <aura:if isTrue="{!v.currentStep == 1}">
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-1 slds-section">
+                        <div class="slds-section-title">Business Form</div>
+                        <p>Please select if you already hold a license from Department of Economic Development (DED) or wish to request a license from Dubai Development Authority (DDA).</p>
+                    </div>
+                </div> <!-- @END:section-title -->
+
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                        <label for="Name" class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>License Type</label>
+                        <aura:iteration var="type" items="{!v.contactInfo.licenseTypeWrapper}">
+                            <ui:inputRadio value="{!v.contactInfo.selectedLicenseType == type.value ? true : false}" class="slds-radio-input-left" aura:id="licenseType" name="licenseType" label="{!type.label}" text="{!type.value}" change="{!c.updateLicenseType}" disabled="{!v.contactInfo.disableLicenseTypeSelection}"/>
+                        </aura:iteration>
+                    </div>
+
+                    <!-- Section to show only for DDA License Type -->
+                    <aura:if isTrue="{!v.contactInfo.selectedLicenseType == 'DDA'}">                        
+                        <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                            <label for="Name" class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Proposed Legal Form of Business</label>
+                            <aura:iteration var="legalForm" items="{!v.contactInfo.businessLegalFormsWrapper}">
+                                <ui:inputRadio value="{!v.contactInfo.proposedLegalFormOfBusiness == legalForm.value ? true : false}" class="slds-radio-input-left" aura:id="legalForm" name="legalForm" label="{!legalForm.label}" text="{!legalForm.value}" change="{!c.updateBusinessLegalForm}"/>
+                            </aura:iteration>
+                        </div>
+
+                        <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_medium">
+                            <label class="slds-form-element__label slds-no-flex"><abbr class="slds-required" title="required">*</abbr>Proposed Name of Business (first choice)</label>
+                            <ui:inputText value="{!v.contactInfo.ProposedNameofBusiness1stchoice}" class="field" />
+                            <!-- <span class="error_msg">This field is required.</span> -->
+                        </div>
+                        <div class="slds-col">&nbsp;</div>
+
+                        <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_medium">
+                            <label class="slds-form-element__label slds-no-flex"><abbr class="slds-required" title="required">*</abbr>Proposed Name of Business (second choice)</label>
+                            <ui:inputText value="{!v.contactInfo.ProposedNameofBusiness2ndchoice}" class="field" />
+                        </div>
+                        <div class="slds-col">&nbsp;</div>
+
+                        <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_medium">
+                            <label class="slds-form-element__label slds-no-flex"><abbr class="slds-required" title="required">*</abbr>Proposed Name of Business (third choice)</label>
+                            <ui:inputText value="{!v.contactInfo.ProposedNameofBusiness3rdchoice}" class="field" />
+                        </div>
+                    </aura:if>
+                </div>
+            </aura:if>
+            <!-- @END:Section1 - Business Selection -->
+
+            <!-- Section3 - Parent Company Details -->
+            <aura:if isTrue="{!v.currentStep == 2}">
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-1 slds-section">
+                        <div class="slds-section-title">Company Details</div>
+                    </div>
+                </div> <!-- @END:section-title -->
+
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                        <label for="Name" class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Parent Company Name</label>
+                        <ui:inputText class="field" value="{!v.contactInfo.parentCompanyName}"/>
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                        <label class="slds-form-element__label slds-no-flex"><abbr class="slds-required" title="required">*</abbr>Registration No. </label>
+                        <ui:inputText class="field" value="{!v.contactInfo.registrationNo}"/>
+                    </div>
+
+                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                        <label for="Name" class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Date of Incorporation</label>
+                        <ui:inputDate aura:id="EndDateField" value="{!v.contactInfo.dateOfIncorporation}" displayDatePicker="true" format="MM/dd/yyyy"/>
+                    </div>
+                    
+                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                        <label for="Name" class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>Statutory Seat(Place of Registration)</label>
+                        <lightning:select name="statutorySeat" class="label-hidden" variant="label-hidden" aura:id="statutorySeat" value="{!v.contactInfo.selectedtatutorySeat}">
+                            <aura:iteration items="{!v.contactInfo.statutorySeatWrapper}" var="country">
+                                <option text="{!country.label}" value="{!country.value}"/>
+                            </aura:iteration>
+                        </lightning:select>
+                    </div>
+                </div>
+            </aura:if>
+            <!-- @END:Section3 - Parent Company Details -->
+
+            <!-- Section4 - License Segment and Activities -->
+            <aura:if isTrue="{!v.currentStep == 3}">
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-1 slds-section">
+                        <div class="slds-section-title">Licence Segment and Activities</div>
+                        <p>Each business registered in the Dubai Development Authority Free Zone must obtain a licence from the Dubai Development Authority that specifies the nature of the business to be carried out. Segment and Activity choices are set out at:  <a href="https://dda.gov.ae/wp-content/uploads/legaldatabase/Decision%20No%201%20of%202014%20concerning%20Licensing%20Categories.pdf" target="_blank">https://dda.gov.ae/wp-content/uploads/legaldatabase/Decision No 1 of 2014 concerning Licensing Categories.pdf</a></p>
+                    </div>
+                </div> <!-- @END:section-title -->
+
+                <div class="slds-grid slds-wrap">
+                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                       <c:Lookup aura:id="Segment__c" 
+                              selection="{!v.selectedSegment}"
+                              onSearch="{!c.searchSegments}" 
+                              label="Business Segment" 
+                              placeholder="Search Business Segment" 
+                              isMultiEntry="true"
+                              sObjectName="Segment__c"
+                              icon="custom:custom65"
+                              />
+                    </div>
+                    <div class="slds-col">&nbsp;</div>
+                    
+                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                        <c:Lookup aura:id="Segment_Activity__c" 
+                              selection="{!v.selectedActivity}"
+                              onSearch="{!c.searchActivities}" 
+                              label="Activity Name(s)" 
+                              placeholder="Search Activities" 
+                              isMultiEntry="true"
+                              sObjectName="Activity_Custom__c"
+                              icon="custom:custom33"
+                              selectedSegments="{!v.selectedSegment}"
+                              />
+                    </div>
+
+                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                        <label for="Name" class="slds-form-element__label">Activity Number(s)</label>
+                        <ui:inputText class="field" disabled="true" value="{!v.selectedActivity.length}" />
+                    </div>
+                    
+                </div>
+            </aura:if>
+            <!-- @END:Section4 - License Segment and Activities -->
+
+            <!-- Section5 - Members -->
+            <aura:if isTrue="{!v.currentStep == 4}">
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-1 slds-section">
+                        <div class="slds-section-title">
+                            <span>Member(s)</span>
+                            <lightning:button onclick="{!c.addNewMember}" variant="brand" label="Add New Member" title="Add New Member" class="slds-btn-small slds-add-new-member-btn"/>
+                        </div>
+                    </div>
+                </div> <!-- @END:section-title -->
+
+                <div class="slds-grid slds-wrap">
+                    <lightning:accordion  allowMultipleSectionsOpen="true" activeSectionName="{!v.activeMemberSections}">
+                        <aura:iteration items="{!v.contactInfo.members}" var="m">
+                            <lightning:accordionSection name="{!'member_section_'+m.index}" label="{!m.firstName == '' ? 'New Member' : m.fistName + ' ' + m.lastName}">
+                                <aura:set attribute="actions">
+                                    <lightning:button variant="destructive" value="{!m.index}" onclick="{!c.deleteMember}" label="Delete" title="Delete" class="slds-btn-small"/>
+                                </aura:set>
+                            <aura:set attribute="body">
+                                <div class="slds-grid slds-wrap">
+                                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                                        <label for="Name" class="slds-form-element__label"><abbr class="slds-required" title="required">*</abbr>First Name</label>
+                                        <ui:inputText value="{!m.firstName}" class="{!m.validator.missingFirstName ? 'error-input field' : 'field'}"/>
+                                        <span class="{!m.validator.missingFirstName ? 'error_msg' : 'slds-hide'}">First Name is required.</span>
+                                    </div>
+                                    
+                                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                                        <label class="slds-form-element__label slds-no-flex"><abbr class="slds-required" title="required">*</abbr>Last Name</label>
+                                        <ui:inputText value="{!m.lastName}" class="{!m.validator.missingLastName ? 'error-input field' : 'field'}"/>
+                                        <span class="{!m.validator.missingLastName ? 'error_msg' : 'slds-hide'}">Last Name is required.</span>
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                                        <label class="slds-form-element__label slds-no-flex"><abbr class="slds-required" title="required">*</abbr>Passport No.</label>
+                                        <ui:inputText value="{!m.passportNo}" class="{!m.validator.missingPassportNo ? 'error-input field' : 'field'}"/>
+                                        <span class="{!m.validator.missingPassportNo ? 'error_msg' : 'slds-hide'}">Passport Number is required.</span>
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                                        <label class="slds-form-element__label slds-no-flex">No of Shares</label>
+                                        <ui:inputText value="{!m.noShares}" class="{!m.validator.missingNoShares ? 'error-input field' : 'field'}"/>
+                                        <span class="{!m.validator.missingNoShares ? 'error_msg' : 'slds-hide'}">No of Shares is required.</span>
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                                        <label class="slds-form-element__label slds-no-flex"><abbr class="slds-required" title="required">*</abbr>Nationality</label>
+                                        <lightning:select name="memberCountry" label="Nationality" class="{!m.validator.missingNationality ? 'error-input label-hidden' : 'label-hidden'}" variant="label-hidden" aura:id="memberCountry" value="{!m.selectedCountry}">
+                                            <aura:iteration items="{!m.country}" var="country">
+                                                <option text="{!country.label}" value="{!country.value}"/>
+                                            </aura:iteration>
+                                        </lightning:select>
+                                        <span class="{!m.validator.missingNationality ? 'error_msg' : 'slds-hide'}">Nationality is required.</span>
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                                        <lightning:select name="residentInUAE" label="Resident in UAE (Yes/No)" aura:id="residentInUAE" value="{!m.residentInUAE}">
+                                            <option text="Yes" value="Yes"/>
+                                            <option text="No" value="No"/>
+                                        </lightning:select>
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                                        <label class="slds-form-element__label slds-no-flex">Mobile</label>
+                                        <ui:inputText value="{!m.mobilePhone}" class="field"/>
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                                        <label class="slds-form-element__label slds-no-flex"><abbr class="slds-required" title="required">*</abbr>Role</label>
+                                        <aura:iteration var="role" items="{!m.contactRole}">
+                                            <ui:inputCheckbox aura:id="checkbox" label="{!role.roleName}" value="{!role.isSelected}" class="slds-checkbox-input-left"/>
+                                        </aura:iteration>
+                                        <span class="{!m.validator.missingRole ? 'error_msg' : 'slds-hide'}">Role is required.</span>
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                                        <div class="slds-grid slds-wrap">
+                                            <div class="slds-col slds-size_1-of-1 slds-p-bottom_small">
+                                                <b>Address</b>
+                                                <lightning:select name="{!m.index}" label="Country" aura:id="memberCountry" value="{!m.mailingAddress.selectedCountry}" onchange="{!c.updateMailingStates}">
+                                                    <aura:iteration items="{!m.countryOptions}" var="country">
+                                                        <option text="{!country.label}" value="{!country.value}"/>
+                                                    </aura:iteration>
+                                                </lightning:select>
+                                            </div>
+
+                                            <div class="slds-col slds-size_1-of-1 slds-p-bottom_small">
+                                                <label class="slds-form-element__label slds-no-flex">Street</label>
+                                                <ui:inputTextArea rows="3" value="{!m.mailingAddress.street}" />
+                                            </div>
+
+                                            <div class="slds-col slds-size_1-of-1">
+                                                <div class="slds-grid slds-wrap">
+                                                    <div class="slds-col slds-size_1-of-2 slds-p-right_large slds-p-bottom_small">
+                                                        <label class="slds-form-element__label slds-no-flex">City</label>
+                                                        <ui:inputText value="{!m.mailingAddress.city}" />
+                                                    </div>
+
+                                                    <div class="slds-col slds-size_1-of-2 slds-p-bottom_small">
+                                                        <lightning:select name="memberState" label="State/Province" aura:id="memberState" disabled="{!m.mailingAddress.isStateDisabled}" value="{!m.mailingAddress.selectedState}">
+                                                            <aura:iteration items="{!m.stateOptions}" var="state">
+                                                                <option text="{!state.label}" value="{!state.value}"/>
+                                                            </aura:iteration>
+                                                        </lightning:select>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="slds-col slds-size_1-of-1 slds-p-bottom_small">
+                                                <label class="slds-form-element__label slds-no-flex">Zip/Postal Code</label>
+                                                <ui:inputText value="{!m.mailingAddress.postalCode}" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </aura:set>
+                            </lightning:accordionSection>
+                        </aura:iteration>
+                    </lightning:accordion>
+                </div>
+            </aura:if>
+            <!-- @END:Section5 - Members -->            
+
+            <!-- Section6 - Additional Documents -->
+            <aura:if isTrue="{!v.currentStep == 5}">
+                <h1 style="margin-top:25px;text-align:center;font-size:18px">{!$Label.c.Registeration_Page_Document_Message}</h1>
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-1 slds-section">
+                        <div class="slds-section-title">Additional Documents</div>
+                    </div>
+                </div> <!-- @END:section-title -->
+                <div class="slds-grid slds-wrap slds-additional-documents">
+                    <lightning:accordion  allowMultipleSectionsOpen="true">
+                    <aura:iteration items="{!v.contactInfo.members}" var="m">
+                            <lightning:accordionSection name="member_documents" label="{!m.firstName + ' ' + m.lastName + ' - Documents'}">
+                                <aura:set attribute="body">
+                                    <aura:iteration items="{!m.additionalDocuments}" var="doc">
+                                        <div class="slds-col slds-size_1-of-1">
+                                            <div class="slds-col slds-size_1-of-1">
+                                                <aura:if isTrue="{!doc.documentName == 'Copy of Passport'}">
+                                                    <p class="document-label mandatory">
+                                                            <abbr class="slds-required" title="required">*</abbr>
+                                                        	{!doc.documentName}</p>
+                                                    <aura:if isTrue="{!doc.uploadedFileId != null}">
+                                                        <div class="documentMandatory">
+                                                        <lightning:button aura:id="documentPassport1" iconName="utility:download" value="{!doc.uploadedFileId}" onclick="{!c.previewDocument}" variant="base" label="View Uploaded Document" class="slds-fileuploaded-btn mandatory"/>
+                                                        </div >
+                                                        </aura:if>
+                                                    <aura:set attribute="else">
+                                                        <p class="document-label">{!doc.documentName}</p>
+                                                        <aura:if isTrue="{!doc.uploadedFileId != null}">
+                                                            <lightning:button iconName="utility:download" value="{!doc.uploadedFileId}" onclick="{!c.previewDocument}" variant="base" label="View Uploaded Document" class="slds-fileuploaded-btn"/>
+                                                        </aura:if>
+                                                    </aura:set>
+                                                </aura:if>
+                                            
+                                            
+                                            <lightning:fileUpload label="" multiple="false" name="{!doc.documentId}"
+                                                                   recordId="{!doc.documentId}" 
+                                                                   onuploadfinished="{!c.handleMemberFileUpload}" />
+                                        </div>
+                                        </div>
+                                    </aura:iteration>
+                                </aura:set>
+                            </lightning:accordionSection>
+                    </aura:iteration>
+                    </lightning:accordion>
+
+                    <lightning:accordion  allowMultipleSectionsOpen="true" activeSectionName="account_documents">
+                        <lightning:accordionSection name="account_documents" label="{!v.contactInfo.accountName + ' - Documents'}">
+                            <aura:iteration items="{!v.contactInfo.additionalDocuments}" var="doc">
+                                <div class="slds-col slds-size_1-of-1">
+                                    <p class="document-label">{!doc.documentName}</p>
+                                    <aura:if isTrue="{!doc.uploadedFileId != null}">
+                                        <lightning:button  iconName="utility:download" value="{!doc.uploadedFileId}" onclick="{!c.previewDocument}" variant="base" label="View Uploaded Document" class="slds-fileuploaded-btn" />
+                                    </aura:if>
+                                     <lightning:fileUpload label="" multiple="false" name="{!doc.documentId}"
+                                                           recordId="{!doc.documentId}" 
+                                                           onuploadfinished="{!c.handleFileUpload}" />
+                                </div>
+                            </aura:iteration>
+                        </lightning:accordionSection>
+                    </lightning:accordion>
+                </div>
+            </aura:if>
+            <!-- @END:Section6 - Additional Documents -->
+
+            <!-- Section6 - Summary -->
+            <aura:if isTrue="{!v.currentStep == 6}">
+                <div class="slds-grid">
+                    <div class="slds-col slds-size_1-of-1 slds-section">
+                        <div class="slds-section-title">Summary</div>
+                    </div>
+                </div> <!-- @END:section-title -->
+
+                <lightning:accordion allowMultipleSectionsOpen="true" activeSectionName="BusinessForm">
+                    <lightning:accordionSection name="BusinessForm" label="Business Information">
+                        <aura:set attribute="body">
+                            <div class="slds-grid slds-wrap slds-summary-wrap business-form">
+                                <div class="slds-col slds-size_1-of-4">
+                                    License Type
+                                </div>
+
+                                <div class="slds-col slds-size_1-of-4">
+                                    {!v.contactInfo.selectedLicenseType}
+                                </div>
+
+                                <aura:if isTrue="{!v.contactInfo.selectedLicenseType == 'DDA'}">
+                                    <div class="slds-col slds-size_1-of-4">
+                                        Proposed Legal Form of Business
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        {!v.contactInfo.proposedLegalFormOfBusiness}
+                                    </div>
+                                </aura:if>
+
+                                <aura:if isTrue="{!or(v.contactInfo.proposedLegalFormOfBusiness == 'Branch of Foreign Company', v.contactInfo.proposedLegalFormOfBusiness == 'Branch of UAE Company')}">
+                                    <div class="slds-col slds-size_1-of-4">
+                                        Proposed Name of Business (first choice)
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        {!v.contactInfo.ProposedNameofBusiness1stchoice}
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        Proposed Name of Business (second choice)
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        {!v.contactInfo.ProposedNameofBusiness2ndchoice}
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        Proposed Name of Business (third choice)
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        {!v.contactInfo.ProposedNameofBusiness3rdchoice}
+                                    </div>
+                                </aura:if>
+                            </div>
+                        </aura:set>
+                    </lightning:accordionSection>
+                </lightning:accordion>
+
+                <aura:if isTrue="{!v.contactInfo.proposedLegalFormOfBusiness != 'FZ-LLC'}">
+                    <lightning:accordion allowMultipleSectionsOpen="true" activeSectionName="CompanyInformation">
+                        <lightning:accordionSection name="CompanyInformation" label="Company Information">
+                            <aura:set attribute="body">
+                                <div class="slds-grid slds-wrap slds-summary-wrap company-info slds-m-top_medium">
+                                    <div class="slds-col slds-size_1-of-4">
+                                        Parent Company Name
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        {!v.contactInfo.parentCompanyName}
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        Registration No. 
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        {!v.contactInfo.registrationNo}
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        Date of Incorporation
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        {!v.contactInfo.dateOfIncorporation}
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        Statutory Seat(Place of Registration)
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        {!v.contactInfo.selectedtatutorySeat}
+                                    </div>
+                                </div>
+                            </aura:set>
+                        </lightning:accordionSection>
+                    </lightning:accordion>
+                </aura:if> <!-- @END:company information -->
+
+                <lightning:accordion allowMultipleSectionsOpen="true" activeSectionName="LicenceSegmentandActivities">
+                    <lightning:accordionSection name="LicenceSegmentandActivities" label="Licence Segment and Activities">
+                        <aura:set attribute="body">
+                            <div class="slds-grid slds-wrap slds-summary-wrap company-info slds-m-top_medium">
+                                <div class="slds-col slds-size_1-of-4">
+                                    Activities
+                                </div>
+
+                                <div class="slds-col slds-size_1-of-3">
+                                    <aura:iteration items="{!v.contactInfo.activities}" var="a">
+                                        {!a.title},
+                                    </aura:iteration>
+                                </div>
+                            </div>
+                        </aura:set>
+                    </lightning:accordionSection>
+                </lightning:accordion> <!-- @END:activities -->
+
+                <lightning:accordion allowMultipleSectionsOpen="true" activeSectionName="Members">
+                    <lightning:accordionSection name="Members" label="Members">
+                        <aura:set attribute="body">
+                            <aura:iteration items="{!v.contactInfo.members}" var="m">
+                                <div class="slds-grid slds-wrap slds-summary-wrap company-info slds-m-top_medium">
+                                    <div class="slds-col slds-size_4-of-4 slds-summary-section-title">
+                                        {!m.firstName} {!m.lastName}
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        Name
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        {!m.firstName} {!m.lastName}
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        Passport No.
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        {!m.passportNo}
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        No of Shares
+                                    </div>
+
+                                    <div class="slds-col slds-size_1-of-4">
+                                        {!m.noShares}
+                                    </div>
+
+                                </div>
+                            </aura:iteration>
+                        </aura:set>
+                    </lightning:accordionSection>
+                </lightning:accordion> <!-- @END:activities -->
+            </aura:if>
+            <!-- @END:Section6 - Summary -->
+
+        </div> <!-- @END:slds-content-wrap -->
+
+        <div class="slds-grid slds-footer">
+            <div class="slds-col slds-text-align_right">
+                <aura:if isTrue="{!v.currentStep &lt; 6}">
+                    <lightning:button label="Save As Draft" variant="brand" title="Save As Draft" onclick="{!c.saveDraft}"/>
+                </aura:if>
+                <aura:if isTrue="{!v.currentStep > 1}">
+                    <lightning:button label="Back" title="Back" onclick="{!c.goBack}"/>
+                </aura:if>
+
+                <aura:if isTrue="{!v.currentStep == 6}">
+                    <lightning:button label="Submit" variant="brand" title="Submit" onclick="{!c.doSubmit}"/>                    
+                </aura:if>
+
+                <aura:if isTrue="{!v.currentStep &lt; 6}">
+                    <lightning:button label="Next" variant="brand" title="Next" onclick="{!c.goNext}"/>
+                </aura:if>
+            </div>
+        </div>
+    </div> <!-- @END:slds-wrapper -->
+
+    <aura:if isTrue="{!v.currentStep == 7}">
+        <div role="alertdialog" class="slds-modal slds-fade-in-open slds-modal--prompt">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header slds-theme--Success slds-theme--alert-texture">
+                    <h2 class="slds-text-heading--medium">Thank you!</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <p class="slds-m-bottom_medium">Your application form has been submitted. A summary report has been sent to your email. You will shortly hear from us.</p>
+                    <p class="slds-m-bottom_medium">In the meantime, if you have any questions, please contact #Email# or call #phone#</p>
+                    
+                    <p class="slds-m-bottom_medium">Best Regards,<br />TECOM Group</p>
+                </div>
+                <div class="slds-modal__footer slds-theme--default">
+                    <!-- <lightning:button value="Submit" onclick="{!c.cVerificationCode}" variant="brand" label="Submit"/> -->
+                </div>              
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+
+    <!-- Modal box to enter/confirm the verificaton code -->
+    <aura:if isTrue="{!v.currentStep == 0}">
+        <div role="alertdialog" class="slds-modal slds-fade-in-open slds-modal--prompt">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header slds-theme--Success slds-theme--alert-texture">
+                    <h2 class="slds-text-heading--medium">Verification Code</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <p>Please enter verification code which is sent to associated email address. <strong>
+                        <ui:inputText aura:id="confirmationCode" /></strong> 
+                    </p>
+                </div>
+                <div class="slds-modal__footer slds-theme--default">
+                    <lightning:button value="Submit" onclick="{!c.cVerificationCode}" variant="brand" label="Submit"/>                    
+                    <lightning:button value="Resend Code" onclick="{!c.resentVerificationCode}" variant="brand" label="Resend Code"/>
+                </div>              
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+</aura:component>

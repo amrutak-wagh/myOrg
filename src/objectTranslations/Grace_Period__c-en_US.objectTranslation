@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Grace Period</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Grace Periods</value>
+    </caseValues>
+    <fields>
+        <label><!-- Duration --></label>
+        <name>Duration__c</name>
+    </fields>
+    <fields>
+        <label><!-- Period --></label>
+        <name>Period__c</name>
+        <picklistValues>
+            <masterLabel>days</masterLabel>
+            <translation><!-- days --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>months</masterLabel>
+            <translation><!-- months --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Quote --></label>
+        <name>Quote__c</name>
+        <relationshipLabel><!-- Grace Periods --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Grace Period Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Grace period must fall within the duration of the lease. --></errorMessage>
+        <name>Grace_Period_must_fit_within_Quote_dates</name>
+    </validationRules>
+</CustomObjectTranslation>

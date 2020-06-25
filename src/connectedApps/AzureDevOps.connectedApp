@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>samuel.arroyo@weare4c.com</contactEmail>
+    <label>AzureDevOps</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>MIIDYjCCAkoCCQDXsTYIMLicGDANBgkqhkiG9w0BAQsFADBzMQswCQYDVQQGEwJHQjEPMA0GA1UECAwGTG9uZG9uMQ8wDQYDVQQHDAZMb25kb24xCzAJBgNVBAoMAjRDMQswCQYDVQQDDAI0QzEoMCYGCSqGSIb3DQEJARYZc2FtdWVsLmFycm95b0B3ZWFyZTRjLmNvbTAeFw0xOTAzMjIxNjU3MDdaFw0yMDAzMjExNjU3MDdaMHMxCzAJBgNVBAYTAkdCMQ8wDQYDVQQIDAZMb25kb24xDzANBgNVBAcMBkxvbmRvbjELMAkGA1UECgwCNEMxCzAJBgNVBAMMAjRDMSgwJgYJKoZIhvcNAQkBFhlzYW11ZWwuYXJyb3lvQHdlYXJlNGMuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAyvkW7TBe10NSquRLGvpzz9pNKulvVyI464XtltlFOjEY+ll08P4wDDmiG2CcESgqgWdYRRcQ/gzvLxob+DUWh91O4TNeeIgcbPhZpvbh2KYn8DslUM31cCQyA2En8AC/61CIEc8YqmADzpDErepwa5VhFFHMJm2MHxJQ2JXnCCay171WQu0C/nNf/ZEcYRyXGtv/S88B6u/m56oNYqEmGEojMZzFW/ICU3eLAhrZJktsYu1Yr8LBojNrTaY6nIMAl9tCb6uJLCCGHpVysTwo/sUaiG3T0CKW34nmUic2QpfKplH+5nT1wbTq1OHhJ71XELeAbqq+/DmCT9ozL2G5pwIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQCdp9xWXsmmhqtwF7Fegf11K3Et5E0mRLtuxYXMcYzEWho9UO+ia4tqZa4Wa8hZwG9vYt+h7x9UnpKpcuqRi6jEhtTblu0JYx6LxCSGYyX8H4FOXJmF/dno+pmQmDavLsVQlmr2705KpyFA9Mf6iQFubYXa2es+oubkr45LBHBklfMDoXv6R+90brLh4tZkusRAArHrWV8mX2pTfUeJeh7hgb1aUD1wlOxhe4Ee87zqXaZPDfdAY8AmJiwIyvJs8ptDnC1cpTu7TYArJj0XCB6RDvDXHwMkNFGW/HYkenOstmHbc+5SMo4ueldQSE5JLUWee68n7VtkxoCV7yhzZfFX</certificate>
+        <consumerKey>3MVG9pHRjzOBdkd.PCPM.4bIcWGOLIvcyx3Boou8.j8tITSUxsWA721rhUBJIYC2S8DIFJt1fqUalHgsqkZxe</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <profileName>System Administrator</profileName>
+    <profileName>Integration User Profile</profileName>
+</ConnectedApp>

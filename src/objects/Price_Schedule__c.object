@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Price_Schedule_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>false</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>false</enableSharing>
+    <enableStreamingApi>false</enableStreamingApi>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>Charge_Type__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Charge Type</label>
+        <referenceTo>Charge_Type__c</referenceTo>
+        <relationshipLabel>Price Schedules</relationshipLabel>
+        <relationshipName>Price_Schedules</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>End Date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Grace_Period_Format__c</fullName>
+        <externalId>false</externalId>
+        <label>Grace Period Format</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>days</fullName>
+                    <default>false</default>
+                    <label>days</label>
+                </value>
+                <value>
+                    <fullName>months</fullName>
+                    <default>false</default>
+                    <label>months</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Grace_Period_Mechanism__c</fullName>
+        <externalId>false</externalId>
+        <label>Grace Period Mechanism</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>initial</fullName>
+                    <default>false</default>
+                    <label>initial</label>
+                </value>
+                <value>
+                    <fullName>every</fullName>
+                    <default>false</default>
+                    <label>every</label>
+                </value>
+                <value>
+                    <fullName>end</fullName>
+                    <default>false</default>
+                    <label>end</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Grace_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Grace Period</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Initial_Best_Rate_Operator__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Best Rate Operator</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>less than</fullName>
+                    <default>false</default>
+                    <label>less than</label>
+                </value>
+                <value>
+                    <fullName>between</fullName>
+                    <default>false</default>
+                    <label>between</label>
+                </value>
+                <value>
+                    <fullName>more than</fullName>
+                    <default>false</default>
+                    <label>more than</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Initial_Best_Rate_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Initial Best Rate Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Best_Rate_Operator__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Best Rate Operator</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>less than</fullName>
+                    <default>false</default>
+                    <label>less than</label>
+                </value>
+                <value>
+                    <fullName>between</fullName>
+                    <default>false</default>
+                    <label>between</label>
+                </value>
+                <value>
+                    <fullName>more than</fullName>
+                    <default>false</default>
+                    <label>more than</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Last_Best_Rate_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Best Rate Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Last_Passing_Rate_Operator__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Passing Rate Operator</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>less than</fullName>
+                    <default>false</default>
+                    <label>less than</label>
+                </value>
+                <value>
+                    <fullName>between</fullName>
+                    <default>false</default>
+                    <label>between</label>
+                </value>
+                <value>
+                    <fullName>more than</fullName>
+                    <default>false</default>
+                    <label>more than</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Last_Passing_Rate_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Last Passing Rate Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payment_Term__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Payment Term</label>
+        <referenceTo>Payment_Term__c</referenceTo>
+        <relationshipLabel>Price Schedules</relationshipLabel>
+        <relationshipName>Price_Schedules</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Percent_Increase__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Only for renewal/downsize</inlineHelpText>
+        <label>Percent Increase</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Price_Rule__c</fullName>
+        <externalId>false</externalId>
+        <label>Price Rule</label>
+        <referenceTo>Price_Rule__c</referenceTo>
+        <relationshipLabel>Price Schedules</relationshipLabel>
+        <relationshipName>Price_Schedules</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Rate_Cap__c</fullName>
+        <externalId>false</externalId>
+        <label>Rate Cap</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Rate_Increase_Mechanism__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Only for renewal/downsize</inlineHelpText>
+        <label>Rate Increase Mechanism</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Fixed Rate</fullName>
+                    <default>true</default>
+                    <label>Fixed Rate</label>
+                </value>
+                <value>
+                    <fullName>Fixed Percentage</fullName>
+                    <default>false</default>
+                    <label>Fixed Percentage</label>
+                </value>
+                <value>
+                    <fullName>Use RERA Index</fullName>
+                    <default>false</default>
+                    <label>Use RERA Index</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Renewal_Downsize_Rate_To_Use__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Only for renewal/downsize</inlineHelpText>
+        <label>Renewal/Downsize Rate To Use</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Initial Best Rate</fullName>
+                    <default>false</default>
+                    <label>Initial Best Rate</label>
+                </value>
+                <value>
+                    <fullName>Last Best Rate</fullName>
+                    <default>false</default>
+                    <label>Last Best Rate</label>
+                </value>
+                <value>
+                    <fullName>Last Passing Rate</fullName>
+                    <default>false</default>
+                    <label>Last Passing Rate</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Service_Charge_Mechanism__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Charge Mechanism</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Base-year Stop</fullName>
+                    <default>false</default>
+                    <label>Base-year Stop</label>
+                </value>
+                <value>
+                    <fullName>Gross-up</fullName>
+                    <default>false</default>
+                    <label>Gross-up</label>
+                </value>
+                <value>
+                    <fullName>Pass-through</fullName>
+                    <default>false</default>
+                    <label>Pass-through</label>
+                </value>
+                <value>
+                    <fullName>Inclusive</fullName>
+                    <default>false</default>
+                    <label>Inclusive</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Total_Leased_Area_Operator__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Leased Area Operator</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>less than</fullName>
+                    <default>false</default>
+                    <label>less than</label>
+                </value>
+                <value>
+                    <fullName>between</fullName>
+                    <default>false</default>
+                    <label>between</label>
+                </value>
+                <value>
+                    <fullName>more than</fullName>
+                    <default>false</default>
+                    <label>more than</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Total_Leased_Area_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Leased Area Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Transaction_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Type</label>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Renewal</fullName>
+                    <default>false</default>
+                    <label>Renewal</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Transactional_Unit__c</fullName>
+        <externalId>false</externalId>
+        <label>Transactional Unit</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Sq ft</fullName>
+                    <default>false</default>
+                    <label>Sq ft</label>
+                </value>
+                <value>
+                    <fullName>Unit</fullName>
+                    <default>false</default>
+                    <label>Unit</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <label>Price Schedule</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Payment_Term__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Price Schedule Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Price Schedules</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Specify_Grace_period</fullName>
+        <active>true</active>
+        <description>Please specify Grace Period (Period) and Grace Period Mechanism.</description>
+        <errorConditionFormula>OR( 
+AND(Grace_Period__c &gt; 0, 
+ISBLANK(TEXT(  Grace_Period_Format__c ))), 
+
+AND(Grace_Period__c &gt; 0, 
+ISBLANK(TEXT(Grace_Period_Mechanism__c)) 
+) 
+)</errorConditionFormula>
+        <errorMessage>Please specify Grace Period (Period) and Grace Period Mechanism.</errorMessage>
+    </validationRules>
+    <visibility>Public</visibility>
+</CustomObject>

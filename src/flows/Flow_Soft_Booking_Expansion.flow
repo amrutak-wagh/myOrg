@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <description>Updates Soft_Booking_Extension_Submitted__c to true</description>
+        <name>Update_Soft_Booking_Extension_Submitted_Field</name>
+        <label>Update Soft Booking Extension Submitted Field</label>
+        <locationX>627</locationX>
+        <locationY>50</locationY>
+        <assignmentItems>
+            <assignToReference>vQuoteRec.Soft_Booking_Extension_Submitted__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Quote_Record</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <description>Checks whether the Quote Record is Softbooked or Not</description>
+        <name>Softbooked</name>
+        <label>Softbooked?</label>
+        <locationX>439</locationX>
+        <locationY>54</locationY>
+        <defaultConnector>
+            <targetReference>Non_Soft_Booked_Screen</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>vQuoteRec.Status</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Draft</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>vQuoteRec.Booking_expiry_Date__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Soft_Booking_Extension_Submitted_Field</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Softbooking_Extension_In_Progress</name>
+        <label>Softbooking Extension In Progress?</label>
+        <locationX>283</locationX>
+        <locationY>52</locationY>
+        <defaultConnector>
+            <targetReference>Softbooked</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not in Progress</defaultConnectorLabel>
+        <rules>
+            <name>In_Progress</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>vQuoteRec.Soft_Booking_Extension_Submitted__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Soft_Booking_Extension_In_Progress</targetReference>
+            </connector>
+            <label>In Progress</label>
+        </rules>
+    </decisions>
+    <interviewLabel>Flow - Soft Booking Expansion {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Flow - Soft Booking Expansion</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <recordLookups>
+        <name>Retrieve_the_Quote_Record</name>
+        <label>Retrieve the Quote Record</label>
+        <locationX>186</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Softbooking_Extension_In_Progress</targetReference>
+        </connector>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </filters>
+        <object>Quote</object>
+        <outputReference>vQuoteRec</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Status</queriedFields>
+        <queriedFields>Booking_expiry_Date__c</queriedFields>
+        <queriedFields>Soft_Booking_Extension_Submitted__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Quote_Record</name>
+        <label>Update Quote Record</label>
+        <locationX>781</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Soft_Booked_Screen</targetReference>
+        </connector>
+        <inputReference>vQuoteRec</inputReference>
+    </recordUpdates>
+    <screens>
+        <name>Non_Soft_Booked_Screen</name>
+        <label>Non Soft Booked Screen</label>
+        <locationX>448</locationX>
+        <locationY>349</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Non_Soft_Booked_Message</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: arial, sans-serif; color: rgb(218, 2, 2);&quot;&gt;Quote must be in draft status and already soft booked to be able to request extension&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Soft_Booked_Screen</name>
+        <label>Soft Booked Screen</label>
+        <locationX>937</locationX>
+        <locationY>50</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Soft_Booking_Message</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255); font-size: 12px; font-family: arial, sans-serif; color: rgb(16, 215, 12);&quot;&gt;Soft Booking Expansion has been successfully&amp;nbsp;submitted for approval&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <screens>
+        <name>Soft_Booking_Extension_In_Progress</name>
+        <label>Soft Booking Extension In Progress</label>
+        <locationX>292</locationX>
+        <locationY>349</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>Soft_Booking_Extension_In_Progress_Message</name>
+            <fieldText>&lt;p&gt;&lt;span style=&quot;color: rgb(234, 10, 10);&quot;&gt;This quote record is already undergoing soft booking extension&lt;/span&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>true</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <startElementReference>Retrieve_the_Quote_Record</startElementReference>
+    <status>Active</status>
+    <variables>
+        <description>Stores the ID  of the Quote Record</description>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>Retrieves the actual Quote Record</description>
+        <name>vQuoteRec</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Quote</objectType>
+    </variables>
+</Flow>

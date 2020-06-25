@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Work Order Template</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Work Order Templates</value>
+    </caseValues>
+    <fields>
+        <label><!-- Owner ID --></label>
+        <name>Owner_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Record Type ID --></label>
+        <name>Record_Type_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work Order Header --></label>
+        <name>Work_Order_Header__c</name>
+        <relationshipLabel><!-- Work Order Templates --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Work Order Number --></label>
+        <name>Work_Order_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work Order Type --></label>
+        <name>Work_Order__c</name>
+        <picklistValues>
+            <masterLabel>Parallel</masterLabel>
+            <translation><!-- Parallel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sequencial</masterLabel>
+            <translation><!-- Sequencial --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

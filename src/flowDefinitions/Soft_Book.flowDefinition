@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>21</activeVersionNumber>
+    <description>Launches from an Action button on the Quote record and checks if opportunity probability is &gt;=50% and updates the Products linked to Quote Line Items to Soft Booked.</description>
+    <masterLabel>Soft Book</masterLabel>
+</FlowDefinition>

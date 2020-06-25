@@ -1,0 +1,9 @@
+.THIS .slds-combobox__input-value, .THIS .slds-combobox__input{
+    border: 1px solid #97999b;
+    box-shadow:none !important;
+}
+
+.THIS .input-spinner{
+	right: 20px !important;
+    left: auto !important;
+}

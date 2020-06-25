@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Object used to store the DoA Approver Matrix.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableLicensing>false</enableLicensing>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <externalSharingModel>Private</externalSharingModel>
+    <fields>
+        <fullName>Additional_Payment_From__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Payments From</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Additional_Payment_To__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Payments To</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Park__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Business Park</label>
+        <referenceTo>Business_Park__c</referenceTo>
+        <relationshipLabel>DOA Approver</relationshipLabel>
+        <relationshipName>DOA_Approver</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Parking</fullName>
+                    <default>false</default>
+                    <label>Parking</label>
+                </value>
+                <value>
+                    <fullName>Business Center - Executive Desk</fullName>
+                    <default>false</default>
+                    <label>Business Center - Executive Desk</label>
+                </value>
+                <value>
+                    <fullName>Business Center - Executive Office</fullName>
+                    <default>false</default>
+                    <label>Business Center - Executive Office</label>
+                </value>
+                <value>
+                    <fullName>Business Center - Hot Desk</fullName>
+                    <default>false</default>
+                    <label>Business Center - Hot Desk</label>
+                </value>
+                <value>
+                    <fullName>Signage</fullName>
+                    <default>false</default>
+                    <label>Signage</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>DOA_Discount_Amount_From__c</fullName>
+        <externalId>false</externalId>
+        <label>DOA Discount Amount From</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DOA_Discount_Amount_To__c</fullName>
+        <externalId>false</externalId>
+        <label>DOA Discount Amount To</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Discount_Percent_From__c</fullName>
+        <externalId>false</externalId>
+        <label>Discount Percent From</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Discount_Percent_To__c</fullName>
+        <externalId>false</externalId>
+        <label>Discount Percent To</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>3</scale>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Grace_Period_From__c</fullName>
+        <externalId>false</externalId>
+        <label>Grace Period From</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Grace_Period_To__c</fullName>
+        <externalId>false</externalId>
+        <label>Grace Period To</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lease_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Renew</fullName>
+                    <default>false</default>
+                    <label>Renew</label>
+                </value>
+                <value>
+                    <fullName>Amendment</fullName>
+                    <default>false</default>
+                    <label>Amendment</label>
+                </value>
+                <value>
+                    <fullName>Modification</fullName>
+                    <default>false</default>
+                    <label>Modification</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Level_1_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Level 1 Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>DOA_Approver6</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Level_2_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Level 2 Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>DOA_Approver1</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Level_3_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Level 3 Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>DOA_Approver2</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Level_4_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Level 4 Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>DOA_Approver3</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Level_5_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Level 5 Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>DOA_Approver4</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Level_6_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Level 6 Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>DOA_Approver5</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Premise Lease Opportunity</fullName>
+                    <default>false</default>
+                    <label>Premise Lease Opportunity</label>
+                </value>
+                <value>
+                    <fullName>Land Lease Opportunity</fullName>
+                    <default>false</default>
+                    <label>Land Lease Opportunity</label>
+                </value>
+                <value>
+                    <fullName>Co-Work</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Co-Work</label>
+                </value>
+                <value>
+                    <fullName>DED - New Lease - Existing Customer</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DED - New Lease - Existing Customer</label>
+                </value>
+                <value>
+                    <fullName>DED - New Lease - New Customer</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>DED - New Lease - New Customer</label>
+                </value>
+                <value>
+                    <fullName>Downsize - DED</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Downsize - DED</label>
+                </value>
+                <value>
+                    <fullName>Expansion - DED</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Expansion - DED</label>
+                </value>
+                <value>
+                    <fullName>Lease Downsize</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Lease Downsize</label>
+                </value>
+                <value>
+                    <fullName>Lease Expansion</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Lease Expansion</label>
+                </value>
+                <value>
+                    <fullName>Lease Modification - Office</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Lease Modification - Office</label>
+                </value>
+                <value>
+                    <fullName>Lease Modification - Retail</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Lease Modification - Retail</label>
+                </value>
+                <value>
+                    <fullName>Lease Relocation</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Lease Relocation</label>
+                </value>
+                <value>
+                    <fullName>Lease Renewal</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Lease Renewal</label>
+                </value>
+                <value>
+                    <fullName>New Lease - DED</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>New Lease - DED</label>
+                </value>
+                <value>
+                    <fullName>New Lease - Retail</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>New Lease - Retail</label>
+                </value>
+                <value>
+                    <fullName>New Lease - Retail - DED</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>New Lease - Retail - DED</label>
+                </value>
+                <value>
+                    <fullName>Premise</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Premise</label>
+                </value>
+                <value>
+                    <fullName>Renewal - DED</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Renewal - DED</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Unit_Category__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Unit Category</label>
+        <referenceTo>Unit_Category__c</referenceTo>
+        <relationshipLabel>DOA Approver</relationshipLabel>
+        <relationshipName>DOA_Approver</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Unit_Sub_Category__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Unit Sub-Category</label>
+        <referenceTo>Unit_Sub_Category__c</referenceTo>
+        <relationshipLabel>DOA Approver</relationshipLabel>
+        <relationshipName>DOA_Approver</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>DOA Approver</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Business_Park__c</columns>
+        <columns>Lease_Type__c</columns>
+        <columns>Opportunity_Type__c</columns>
+        <columns>Unit_Category__c</columns>
+        <columns>Unit_Sub_Category__c</columns>
+        <columns>Discount_Percent_From__c</columns>
+        <columns>Discount_Percent_To__c</columns>
+        <columns>DOA_Discount_Amount_From__c</columns>
+        <columns>DOA_Discount_Amount_To__c</columns>
+        <columns>Grace_Period_From__c</columns>
+        <columns>Grace_Period_To__c</columns>
+        <columns>CREATED_DATE</columns>
+        <columns>CREATEDBY_USER</columns>
+        <columns>Category__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Business_Park__c</field>
+            <operation>equals</operation>
+            <value>D3</value>
+        </filters>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>A-{0000}</displayFormat>
+        <label>DOA Approv Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>DOA Approver</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

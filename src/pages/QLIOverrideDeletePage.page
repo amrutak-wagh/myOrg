@@ -1,0 +1,85 @@
+<!--
+ *  @description QLIOverrideDeletePage - Page which overrides QLI delete button.
+ *
+ *  2019-08-27  Amruta K   Restrict to delete if the Opportunity type is Renewal and Sub-type is Expansion.
+-->
+<apex:page standardController="QuoteLineItem" extensions="QLIOverrideDeleteExtension" action="{!checkOpportunity}" lightningStylesheets="true" docType="html-5.0" >
+    <script>
+    	function closePopUp() {
+        	document.getElementById("ErrorMessage").style.display = "none";
+            var qliId = '{!qliRecord.Id}';
+            window.parent.location.replace("https://tecomcorporatecrm--4cdev.lightning.force.com/lightning/r/QuoteLineItem/"+qliId+"/view");
+        }
+    	//Execute if QLI is successfully deleted. Added timeout and then redirect to display recent QLI's. 
+    	var isSuccess = '{!displaySuccess}';
+    //alert(isSuccess);
+    	if(isSuccess == 'true') {
+            window.setTimeout("redirectpageAfterSuccess();", 5000);
+            function redirectpageAfterSuccess() {
+                window.parent.location.href = 'https://tecomcorporatecrm--4cdev.lightning.force.com/lightning/o/QuoteLineItem/list?filterName=Recent';
+            }
+        }
+    	
+    	function closePopUpOnSuccessMessage() {
+            document.getElementById("SuccessMessage").style.display = "none";
+            window.parent.location.href = 'https://tecomcorporatecrm--4cdev.lightning.force.com/lightning/o/QuoteLineItem/list?filterName=Recent';
+        }
+    </script>
+    
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+    <apex:slds />
+    
+    <apex:form rendered="{!displayError}">
+        <apex:pageMessages id="msgs1"/>
+    <div class="demo-only" style="height:4rem" id="ErrorMessage">
+        <div class="slds-notify_container slds-is-relative">
+            <div class="slds-notify slds-notify_toast slds-theme_error" role="status">
+                <span class="slds-assistive-text">error</span>
+                <span class="slds-icon_container slds-icon-utility-error slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                    <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                        <use xlink="http://www.w3.org/2000/svg" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#error')}"></use>
+                    </svg>
+                </span>
+                <div class="slds-notify__content" >
+                    <h2 class="slds-text-heading_small ">Can’t delete this QLI because it's Opportunity has Type as Renewal and Sub Type is Expansion.</h2>
+                </div>
+                <div class="slds-notify__close" id="close">
+                    <button class="slds-button slds-button_icon slds-button_icon-inverse" title="Close" onclick="closePopUp();return false; ">
+                        <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                            <use xlink="http://www.w3.org/2000/svg" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+                        </svg>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    </apex:form>
+    <apex:form rendered="{!displaySuccess}">
+        <apex:pageMessages id="msgs2"/>
+        <div class="demo-only" style="height:4rem" id="SuccessMessage">
+            <div class="slds-notify_container slds-is-relative">
+                <div class="slds-notify slds-notify_toast slds-theme_success" role="status">
+                    <span class="slds-assistive-text">success</span>
+                    <span class="slds-icon_container slds-icon-utility-success slds-m-right_small slds-no-flex slds-align-top" title="Description of icon when needed">
+                        <svg class="slds-icon slds-icon_small" aria-hidden="true">
+                            <use xlink="http://www.w3.org/2000/svg" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#success')}"></use>
+                        </svg>
+                    </span>
+                    <div class="slds-notify__content">
+                        <h2 class="slds-text-heading_small ">Quote Line Item has been deleted. </h2>
+                    </div>
+                    <div class="slds-notify__close">
+                        <button class="slds-button slds-button_icon slds-button_icon-inverse" title="Close" onclick="closePopUpOnSuccessMessage();return false; ">
+                            <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                                <use xlink="http://www.w3.org/2000/svg" xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#close')}"></use>
+                            </svg>
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </apex:form>
+    </html>
+</apex:page>

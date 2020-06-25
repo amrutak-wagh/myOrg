@@ -1,0 +1,93 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="ExpansionController">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="pageTitle" type="String" default="Expansion Process - Opportunity Details" />
+    <aura:attribute name="showLoader" type="Boolean" default="true" />
+    <aura:attribute name="opportunityLayout" type="Object" />
+    <aura:attribute name="quoteLayout" type="Object" />
+    <aura:attribute name="quoteId" type="String" description="Quote associated to opportunity." />
+    <aura:attribute name="quoteLineItems" type="Object"/>
+    <aura:attribute name="quoteLineItemsColumns" type="List" />
+    <aura:attribute name="selectedQuoteLineItems" type="Object" description="List of selected items."/>
+    <aura:attribute name="lineItemList" type="List" description="Newly entered quote line items." />
+    <aura:attribute name="buildingOptions" type="List" description="Building options for opportunity." />
+    <aura:attribute name="selectedBuilding" type="String" description="Selected building on opportunity." />
+    <aura:attribute name="addedItems" type="List" description="newly added items." />
+    <aura:attribute name="excludedUnits" type="List" default="[]" description="List of units which needs to be excluded on step 4" />
+    <aura:attribute name="step" type="Integer" default="1" />
+    <aura:attribute name="hideModalClass" type="String" default="false" />
+    <aura:attribute name="parent" type="Aura.Component"/>
+    <aura:attribute name="MinStartDate" type="Date" />
+    <aura:attribute name="opportunityInfo" type="Opportunity" />
+    
+ 
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <section role="dialog" tabindex="-1" aria-modal="true" class="{!v.hideModalClass + ' slds-modal slds-fade-in-open slds-modal_large'}">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <lightning:buttonIcon size="large" iconName="utility:close" variant="bare" onclick="{! c.cancel }" alternativeText="Close window." class="slds-modal__close slds-button_icon-inverse"/>
+                <h2 class="slds-text-heading_medium slds-hyphenate"><span>{!v.pageTitle}</span></h2>
+            </header>    
+
+            <div class="slds-modal__content">
+                <lightning:card class="slds-no-header slds-full-width slds-m-horizontal_medium">
+
+                <aura:if isTrue="{!v.showLoader}">
+                    <lightning:spinner variant="brand" />
+                </aura:if>
+                
+                <div class="slds-theme_default">
+                    <aura:if isTrue="{!v.step == 1}">
+                        <lightning:recordEditForm aura:id="oppForm" objectApiName="Opportunity">
+                            <h3 class="slds-section-title--divider">Lease Details</h3>
+                            <div class="slds-grid slds-gutters">
+                                <div class="slds-col slds-size_1-of-2 slds-m-top_small">
+                                    <lightning:input type="date" dateStyle="short" label="Lease Start Date" aura:id="LeaseStartDate" displayDatePicker="true" value="{!v.opportunityInfo.Lease_Start_Date__c}" min="{!v.MinStartDate}" format="MM/dd/yyyy" required="true"/>
+
+                                    <!-- <lightning:inputField aura:id="LeaseStartDate" fieldName="Lease_Start_Date__c" /> -->
+                                </div>
+
+                                <div class="slds-col slds-size_1-of-2 slds-m-top_small">
+                                    <lightning:input type="date" dateStyle="short" label="Lease End Date" aura:id="LeaseEndDate" displayDatePicker="true" value="{!v.opportunityInfo.Lease_End_Date__c}" format="MM/dd/yyyy" disabled="true"/>
+                                    <!-- <lightning:inputField aura:id="LeaseEndDate" fieldName="Lease_End_Date__c" disabled="true" /> -->
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="slds-grid slds-gutters">
+                                <div class="slds-col slds-size_1-of-2 slds-m-top_small">
+                                        <!-- <lightning:inputField aura:id="LeaseEndDate" fieldName="Lease_End_Date__c" disabled="true" /> -->
+                                         <lightning:select name="Expansion" label="Expansion Separate Amendment Terms" required="true" value="{!v.opportunityInfo.Expansion_Separate_Amendment_Terms__c}">
+                                            <option value="">Choose one...</option>
+                                            <option value="0">Combined Rates and Dates	</option>
+                                            <option value="-1">Separate Rates and Dates	</option>
+                                        </lightning:select>
+                                </div>
+                            </div>
+                        </lightning:recordEditForm>
+                    </aura:if> <!-- @END:step1 -->
+                    
+                    <aura:if isTrue="{!v.step == 2}">  
+                        <c:QuoteUnitSelectionAssistant 
+                                                   isExpansion="true"
+                                                   buildingList="{!v.buildingOptions}" 
+                                                   selectedBuilding="{!v.selectedBuilding}" 
+                                                   recordId="{!v.quoteId}"
+                                                   newlyItems="{!v.addedItems}"
+                                                   excludedUnits="{!v.excludedUnits}"
+                                                   />
+                    </aura:if> <!-- @END:step2 -->
+                </div>
+                    
+                </lightning:card>
+            </div>
+            
+            <div class="slds-modal__footer"> 
+                <aura:if isTrue="{!v.step > 1}">
+	                <lightning:button value="Back" label="Back" onclick="{!c.back}"/>
+                </aura:if>
+                <lightning:button value="{!if(v.step == 2, 'Save', 'Next')}" variant="brand" label="{!if(v.step == 2, 'Save', 'Next')}" onclick="{!c.next}"/>
+            </div>
+        </div>
+    </section>
+</aura:component>

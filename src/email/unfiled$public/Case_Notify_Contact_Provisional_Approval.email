@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Dear&nbsp;{!Contact.FirstName},&nbsp;<div><br></div><div>Your Provisional Approval Letter is ready for you. Please login to your portal account to view this document.&nbsp;</div><div><br></div><div>If you have any questions please do get in touch with us.&nbsp;</div><div><br></div><div>Kind regards,&nbsp;</div><div>TECOM Team</div>]]></td>
+</tr>
+</table>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>false</default>
+        <label>New</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Assigned</fullName>
+        <default>true</default>
+        <label>Assigned</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>1st Contact Completed</fullName>
+        <default>false</default>
+        <label>1st Contact Completed</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Disqualified</fullName>
+        <default>false</default>
+        <label>Disqualified</label>
+        <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - Converted</fullName>
+        <default>false</default>
+        <label>Closed - Converted</label>
+        <converted>true</converted>
+    </standardValue>
+</StandardValueSet>

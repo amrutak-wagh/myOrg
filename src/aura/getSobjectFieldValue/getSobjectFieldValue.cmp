@@ -1,0 +1,10 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+ <aura:handler name="init" value="this" action="{!c.doInit}"/>
+ <aura:attribute name="sObject" type="Object" />  
+ <aura:attribute name="fieldName" type="Object"/> 
+    <aura:attribute name="value" type="String"/>
+    <aura:attribute name="label" type="String"/>
+    <p class="slds-p-horizontal_small">
+        <b>{!v.label} </b>{!v.value}
+    </p>
+</aura:component>

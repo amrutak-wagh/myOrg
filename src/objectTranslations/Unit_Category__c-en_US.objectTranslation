@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Unit Category</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Unit Categories</value>
+    </caseValues>
+    <fields>
+        <label><!-- Asset Class --></label>
+        <name>Asset_Class__c</name>
+        <relationshipLabel><!-- Unit Categories --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Integration Flag --></label>
+        <name>Integration_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Push LeaseItems To DCCA --></label>
+        <name>Push_LeaseItems_To_DCCA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Commercial</masterLabel>
+            <translation><!-- Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industrial</masterLabel>
+            <translation><!-- Industrial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Residential</masterLabel>
+            <translation><!-- Residential --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Unit Category Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

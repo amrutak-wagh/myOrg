@@ -1,0 +1,38 @@
+<aura:component>
+	<aura:attribute name="quoteLine" type="Object" />
+    <aura:attribute name="changesMade" type="Boolean" default="false"/>
+    <aura:attribute name="changedLineItemList" type="List"/>
+    <div class="slds-page-header" style="cursor: pointer;background:white;" data-id="{!v.quoteLine.revisionObj.Id}" onclick="{!c.displayLineItem}">
+        <section class="slds-clearfix">
+            <div class="slds-float--left ">
+                <lightning:icon class="slds-show" iconName="utility:add" aura:id="panelDiv" size="x-small" alternativeText="Indicates add"/>
+                <lightning:icon class="slds-hide" iconName="utility:dash" aura:id="panelDiv" size="x-small" alternativeText="Indicates dash"/>
+            </div>
+            <div class="slds-grid slds-m-left--large">
+                <div class="slds-col--padded slds-size--1-of-3"> <b>Revision: </b> {!v.quoteLine.revisionObj.Revision_Number__c}</div>
+                <div class="slds-col--padded slds-size--1-of-3"> 
+                    <b>Date: </b>  
+                    <ui:outputDate value="{!v.quoteLine.revisionObj.Start_Date__c}" format="MM/dd/yyyy"/> -  <ui:outputDate value="{!v.quoteLine.revisionObj.End_Date__c}" format="dd/MM/yyyy"/> 
+                </div>
+                <div class="slds-col--padded slds-size--1-of-3"> <b>Total Offered: </b> {!v.quoteLine.revisionObj.Total_Offered_Price__c}</div>
+            </div>
+        </section>
+    </div>
+    
+    <div class="slds-hide slds-p-around--medium" aura:id="panelDiv">
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" >
+            <tbody>
+                <tr class="slds-hint-parent">
+                    <td style="width: 5%;">
+                        <div class="slds-truncate"/>
+                    </td>
+                    <td style="padding: 0rem 0rem;">
+                         <aura:iteration items="{!v.quoteLine.unitLineItemList}" var="item">
+                             <c:ManagePriceLineItem quoteLine="{!item}" changesMade="{!v.changesMade}" changedLineItemList="{!v.changedLineItemList}"/>
+                        </aura:iteration>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</aura:component>

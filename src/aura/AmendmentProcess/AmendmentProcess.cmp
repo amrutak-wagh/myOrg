@@ -1,0 +1,261 @@
+<aura:component controller="AmendmentProcessController" implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickActionWithoutHeader,lightning:availableForFlowScreens" access="global">
+    <aura:attribute name="opportunity" type="Opportunity"/>
+    <aura:attribute name="quote" type="Quote"/>
+    <aura:attribute name="quoteLineItems" type="Object"/>
+    <aura:attribute name="quoteLineItemsColumns" type="List" />
+    <aura:attribute name="removedQuoteLineItems" type="List"/>
+    <aura:attribute name="date" type="Date"/>
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="opportunityId" type="String" />
+    <aura:attribute name="quoteId" type="String" />
+    
+    <lightning:flow aura:id="flowData"/>
+    
+    <aura:attribute name="PageLayoutName" type="String" default="Opportunity-Opportunity Layout"/>
+    <aura:attribute name="PageLayout" type="Object" access="public" />
+    
+    
+    <aura:attribute name="displayOpp" type="Boolean" />
+    <aura:attribute name="displayChildOpp" type="Boolean" />
+    <aura:attribute name="displayQuote" type="Boolean" />
+    <aura:attribute name="displayQuoteLine" type="Boolean" />
+    <aura:attribute name="displayRemovedQuoteLine" type="Boolean" />
+    <aura:attribute name="noCheckboxSelected" type="Boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name ="selectedCheckboxes" type ="list"/>
+    
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    
+    <aura:attribute name="opportunityFields" type="String[]" default="Name,Parent_Opportunity__c,Type,Sub_Type__c,AccountId,Parent_Amendment_Id__c,Amount,Budget_Confirmed__c,Building_Name__c,Business_Park__c,CloseDate,Contact__c,ContactId,ContractId,CurrentGenerators__c,DeliveryInstallationStatus__c,Description,Discovery_Completed__c,ForecastCategoryName,Framework_Detail__c,HSE_Clearance_Date__c,HSE_Notes__c,HSE_Status__c,Is_renewal__c,LeadSource,Lease_End_Date__c,Lease_Start_Date__c,Lease_Type__c,Legal_Framework__c,License_Type__c,Loss_Reason__c,MainCompetitors__c,NextStep,CurrencyIsoCode,RecordTypeId,Opportunity_Type__c,OrderNumber__c,Pricebook2Id,CampaignId,IsPrivate,Probability,Proposed_Booking_Expiry_Extension__c,TotalOpportunityQuantity,Retail_Sales_Category__c,ROI_Analysis_Completed__c,Segment__c,Soft_Booking_Extension_Submitted__c,StageName,T_Code__c,TrackingNumber__c,Yardi_Integration_Error_Message__c,Yardi_Integration_Status__c,Yardi_Lease_Status__c"/>
+    <aura:attribute name="quoteFields" type="String[]" default="Name,IsSyncing,Type__c,OpportunityId,Termination_Date__c,AccountId,AdditionalAddress,AdditionalName,BillingAddress,BillingName,Booking_expiry_Date__c,Building__c,Cancellation_Reason__c,Category__c,CCL_Sign_Date__c,ContactId,ContractId,Description,Discount__c,Discount,Discount_Percentage__c,DOA_Approver__c,DOA_Discount__c,DOA_Discount_percent__c,Email,ExpirationDate,Fax,Grace_Period__c,Grace_Period_Period__c,Grace_Period_Mechanism__c,GrandTotal,Integration_Status__c,Lease_End_Date__c,Pricebook2Id,Lease_Start_Date__c,Legal_Terms_Changed__c,Level_1_Approver__c,Level_2_Approver__c,Level_3_Approver__c,Level_4_Approver__c,Level_5_Approver__c,Level_6_Approver__c,LineItemCount,Manually_submitted__c,Number_Of_Payments__c,Opportunity_Type__c,QuoteNumber,Unit_Sub_Category__c,Phone,Pre_Approval_Allowed__c,Previous_Quote__c,Product_Code__c,Price_List_Number_Of_Payments__c,Proposed_Booking_Expiry_Extension__c,Proposed_Booking_Expiry_Ext_Date__c,Proposed_End_Date__c,Proposed_Grace_Period__c,Proposed_Grace_Period_Months__c,Proposed_Start_Date__c,Quote_Approved_Via_Approval__c,Sales_Type__c,ShippingAddress,ShippingName,ShippingHandling,Soft_Book__c,Soft_Booking_Date_Time__c,Soft_Booking_Extension_Submitted__c,Status,Subtotal,Tax,Total_Best_Rate_Roll_Up_Summary__c,Total_Best_Rate_for_Proposed_GP__c,Total_Charge_Price__c,Total_Discount__c,Total_Discount_percent__c,Total_Negative_GP_Discount_Amount__c,Total_Offer_Price__c,Total_Offered_Price_Roll_Up_Summary__c,TotalPrice,Total_Quote_Amount__c,Total_Best_Rate__c,Total_Upselling_Discount_Amount__c,TurnOver_Rent__c,Yardi_Brand_Code__c,Yardi_Customer_Code__c,Yardi_Integration_Error_Message__c,Yardi_Integration_Status__c"/>
+    
+    <aura:attribute name="selectedQuoteLineItems" type="List" description="Selected quote line items." />
+    
+    <!--Display Opportunity details-->
+    <div class="slds-modal__container" style="width: 100%; padding-top: 0;">
+        <header class="slds-modal__header">
+            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Amendment Process</h2>
+        </header>
+        
+        <aura:if isTrue="{!v.displayOpp}">
+            <!--Spinner Starts-->
+            <aura:if isTrue="{!v.Spinner}">
+                <div aura:id="spinnerId" class="slds-spinner_container">
+                    <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </aura:if>
+            <!--Spinner Ends-->
+            <div class="min-h300">
+                <div class="slds-theme_default">
+                    <aura:if isTrue="{! v.opportunityId }">
+                        <lightning:recordViewForm recordId="{! v.opportunityId }" objectApiName="Opportunity">
+                            <aura:iteration items="{! v.PageLayout }" var="section">
+                                <aura:if isTrue="{! or(section.Label == 'Opportunity Details', section.Label == 'Lease Details')}">
+                                    <h3 class="slds-section-title--divider">{! section.Label }</h3>
+                                    <div class="slds-grid slds-gutters">
+                                        <aura:iteration items="{! section.Columns }" var="column">
+                                            <div class="slds-col">
+                                                <aura:iteration items="{! column.Fields }" var="field">
+                                                    <lightning:outputField fieldName="{! field.APIName }" />
+                                                </aura:iteration>
+                                            </div>
+                                        </aura:iteration>
+                                    </div>
+                                </aura:if>
+                            </aura:iteration>
+                        </lightning:recordViewForm>
+                    </aura:if>
+                </div>
+            </div>
+            
+            <div class="page-footer">
+                <div class="float-right"> <lightning:button variant="brand" label="Next" title="Next" onclick="{!c.getQuote}" /></div>
+            </div>
+        </aura:if>  
+        
+        
+        <!--Display Opportunity details-->
+        <aura:if isTrue="{!v.displayChildOpp}">
+            <div class="min-h300">
+                <div class="slds-theme_default">
+                    <aura:if isTrue="{! v.opportunityId }">
+                        <lightning:recordViewForm recordId="{! v.opportunityId }" objectApiName="Opportunity">
+                            <aura:iteration items="{! v.PageLayout }" var="section">
+                                <aura:if isTrue="{! or(section.Label == 'Opportunity Details', section.Label == 'Lease Details')}">
+                                    <h3 class="slds-section-title--divider">{! section.Label }</h3>
+                                    <div class="slds-grid slds-gutters">
+                                        <aura:iteration items="{! section.Columns }" var="column">
+                                            <div class="slds-col">
+                                                <aura:iteration items="{! column.Fields }" var="field">
+                                                    <lightning:outputField fieldName="{! field.APIName }" />
+                                                </aura:iteration>
+                                            </div>
+                                        </aura:iteration>
+                                    </div>
+                                </aura:if>
+                            </aura:iteration>
+                        </lightning:recordViewForm>
+                    </aura:if>
+                </div>
+            </div>
+            <div class="page-footer">
+                <div class="float-right"> <lightning:button variant="brand" label="Next" title="Next" onclick="{!c.getQuote}" /></div>
+            </div>
+        </aura:if> 
+        
+        
+        <!--Display Quote details-->
+        <aura:if isTrue="{!v.displayQuote}">
+            <!--Spinner Starts-->
+            <aura:if isTrue="{!v.Spinner}">
+                <div aura:id="spinnerId" class="slds-spinner_container">
+                    <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </aura:if>
+            <!--Spinner Ends-->
+            <div class="min-h300">
+                <table>
+                    <tr>
+                        <td style="width: 30%; max-width: 200px;padding-left: 5px; color: rgb(107, 109, 112); padding-top:30px;">Termination Date</td>
+                        <td style="padding-top:30px;"> <ui:inputDate  displayDatePicker="true" aura:id="terminationDate" value="{!v.date}" format="MM/dd/yyyy" label="" required="true"/>
+                        </td>
+                    </tr>
+                </table><br/>
+                
+                <aura:if isTrue="{! v.quoteId }">
+                    <lightning:recordViewForm recordId="{! v.quoteId }" objectApiName="Quote">
+                        <aura:iteration items="{! v.PageLayout }" var="section">
+                            <aura:if isTrue="{! or(section.Label == 'Mandatory Quote Information', section.Label == 'Quote Information')}">
+                                <h3 class="slds-section-title--divider">{! section.Label }</h3>
+                                <div class="slds-grid slds-gutters">
+                                    <aura:iteration items="{! section.Columns }" var="column">
+                                        <div class="slds-col">
+                                            <aura:iteration items="{! column.Fields }" var="field">
+                                                <lightning:outputField fieldName="{! field.APIName }" />
+                                            </aura:iteration>
+                                        </div>
+                                    </aura:iteration>
+                                </div>
+                            </aura:if>
+                            <aura:if isTrue="{! or(section.Label == 'Prices and Dates', section.Label == 'Discounts')}">
+                                <h3 class="slds-section-title--divider">{! section.Label }</h3>
+                                <div class="slds-grid slds-gutters">
+                                    <aura:iteration items="{! section.Columns }" var="column">
+                                        <div class="slds-col">
+                                            <aura:iteration items="{! column.Fields }" var="field">
+                                                <lightning:outputField fieldName="{! field.APIName }" />
+                                            </aura:iteration>
+                                        </div>
+                                    </aura:iteration>
+                                </div>
+                            </aura:if>
+                        </aura:iteration>
+                    </lightning:recordViewForm>
+                </aura:if>
+            </div>
+            <div class="page-footer">
+                <div class="float-left"><lightning:button variant="brand" label="Back" title="Back" onclick="{!c.getChildOpp}" /> </div>
+                <div class="float-right"><lightning:button variant="brand" label="Next" title="Next" onclick="{!c.getQuoteLineItems}" /></div>
+            </div>
+        </aura:if> 
+        
+        <!--Display QLI-->
+        <aura:if isTrue="{!v.displayQuoteLine}">
+            <!--Spinner Starts-->
+            <aura:if isTrue="{!v.Spinner}">
+                <div aura:id="spinnerId" class="slds-spinner_container">
+                    <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </aura:if>
+            <!--Spinner Ends-->
+			<p class="slds-m-top_medium slds-m-bottom_medium">Please select quote line items to be removed:</p>
+            <div class="min-h300">
+                <lightning:datatable
+                                     aura:id="quoteLineItems"
+                                     columns="{!v.quoteLineItemsColumns}"
+                                     data="{!v.quoteLineItems}"
+                                     keyField="id"
+                                     resizeColumnDisabled ="true"
+                                     class="slds-border_top"
+                                     onrowselection="{!c.updateQuoteLineItemSelection}"
+                                     selectedRows="{!v.selectedQuoteLineItems}"
+                                     />
+            </div>
+            <br/><br/>
+            <div class="page-footer">
+                <div class="float-left"><lightning:button variant="brand" label="Back" title="Back" onclick="{!c.getQuote}" /> </div>
+                <div class="float-right"><lightning:button variant="brand" label="Next" title="Next" onclick="{!c.proceedRemovedQuoteLineItems}" /></div>
+            </div>
+            
+        </aura:if> 
+        
+        
+        <!--Display Removed QLI-->
+        <aura:if isTrue="{!v.displayRemovedQuoteLine}">
+            <!--Spinner Starts-->
+            <aura:if isTrue="{!v.Spinner}">
+                <div aura:id="spinnerId" class="slds-spinner_container">
+                    <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </aura:if>
+            <!--Spinner Ends-->
+            
+            <p class="slds-m-top_medium slds-m-bottom_medium">Follwing quote line items will be removed with respective termination date:</p>
+            
+            <div class="min-h300">
+                <aura:if isTrue="{!v.removedQuoteLineItems.length == 0}">
+                    <p><b><center>No Quote Line Items removed...</center></b></p>
+                    
+                    <aura:set attribute="else">
+                        <table class="slds-table slds-table_bordered slds-table_striped slds-table_cell-buffer slds-table_fixed-layout">
+                            <thead>
+                                <tr class="slds-text-heading_label">
+                                    <th scope="col"><div class="slds-truncate" title="Quote Line Item">Quote Line Item</div></th>
+                                    <th scope="col"><div class="slds-truncate" title="Termination Date">Termination Date</div></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.removedQuoteLineItems}" var="qli">
+                                    <tr>
+                                        <td><div class="slds-truncate" title="{!qli.productName}">{!qli.productName}</div></td>
+                                        <td><div class="slds-truncate" title="{!qli.terminationDate}">{!qli.terminationDate}</div></td>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </aura:set>
+                </aura:if>
+            </div>
+            <div class="page-footer">
+                <div class="float-left"><lightning:button variant="brand" label="Back" title="Back" onclick="{!c.backToRemoveQLI}" /> </div>
+                <div class="float-right"><lightning:button variant="brand" label="Save" title="Save" onclick="{!c.save}" /> </div>
+            </div>
+        </aura:if>
+    </div> 
+    <!--  this tag sets modal width -->
+    <aura:html tag="style">
+        .slds-modal__container {
+        max-width: 70rem !important;
+        width: 100% !important;
+        }
+    </aura:html>       
+</aura:component>

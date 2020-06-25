@@ -1,0 +1,14 @@
+<aura:component implements="force:lightningQuickAction,force:hasRecordId" controller="SoftBookComponentController" >
+    <aura:attribute name="recordId" type="String" description="Record Id of quote" />
+    <aura:attribute name="isLoading" type="Boolean" default="true" description="Boolean to show the loader animation" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!-- To Show error message on multiple lines -->
+    <ltng:require styles="{!$Resource.LightningCSS}" />
+	<aura:if isTrue="{!v.isLoading}">
+        <div>
+            <lightning:card class="loading-card">
+                <lightning:spinner alternativeText="Loading" variant="brand"/>
+            </lightning:card>
+        </div>
+    </aura:if>    
+</aura:component>

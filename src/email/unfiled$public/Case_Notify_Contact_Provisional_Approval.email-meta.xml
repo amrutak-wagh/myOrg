@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>TECOM</letterhead>
+    <name>Case- Notify Contact Provisional Approval</name>
+    <style>freeForm</style>
+    <subject>Your Provisional Approval Letter is Ready!</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+Your Provisional Approval Letter is ready for you. Please login to your portal account to view this document.
+
+If you have any questions please do get in touch with us.
+
+Kind regards,
+TECOM Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

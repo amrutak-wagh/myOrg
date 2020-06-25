@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sector</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sectors</value>
+    </caseValues>
+    <fields>
+        <label><!-- Business Park --></label>
+        <name>Business_Park__c</name>
+        <relationshipLabel><!-- Sectors --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Number of Sector Parkings --></label>
+        <name>Number_of_Sector_Parkings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Paid_Parking_Available__c --></label>
+        <name>Paid_Parking_Available_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sector Yardi Id --></label>
+        <name>Sector_Yardi_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Standard Area --></label>
+        <name>Standard_Area__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

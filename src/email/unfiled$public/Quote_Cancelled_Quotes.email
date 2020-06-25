@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font face="arial"><span style="font-size: 12pt;">Dear&nbsp;{!Quote.OwnerFirstName},&nbsp;</span></font><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Your Quote&nbsp;{!Quote.Name} for {!Opportunity.Name} has been Cancelled.&nbsp;</div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style=""><font face="arial">{!Quote.Link}</font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">If the Unit becomes Available again you will be notified by email.&nbsp;</div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Kind regards,&nbsp;</div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">Salesforce Team</div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><br></div>]]></td>
+</tr>
+</table>

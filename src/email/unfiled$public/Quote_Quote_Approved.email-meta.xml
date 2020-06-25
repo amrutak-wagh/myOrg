@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>TECOM</letterhead>
+    <name>Quote: Quote Approved</name>
+    <style>freeForm</style>
+    <subject>Congratulations your Quote {!Quote.Name} has been Approved</subject>
+    <textOnly>Dear {!Quote.OwnerFirstName},
+
+Your Quote {!Quote.Name} has been Approved.
+
+{!Quote.Link}
+
+Kind regards,
+Salesforce Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,10 @@
+<aura:component implements="force:hasRecordId,force:lightningQuickActionWithoutHeader" access="global" controller="TerminationProcessContractController">
+    <aura:attribute name="isOpenFlow" type="boolean" default="true"/>
+	<aura:attribute name="contractId" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <lightning:card class="slds-no-header slds-full-width slds-m-horizontal_medium">
+	    <lightning:flow aura:id="terminationFlow" class="leaseTerminationFlow"/>
+	</lightning:card>
+    
+</aura:component>

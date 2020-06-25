@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>6</activeVersionNumber>
+    <description>Flow used to create Work Orders based on the Work Order Template custom metadatatype.</description>
+    <masterLabel>Create Work Orders From WorkOrder Template</masterLabel>
+</FlowDefinition>

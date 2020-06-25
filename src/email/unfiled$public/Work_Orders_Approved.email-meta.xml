@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>TECOM</letterhead>
+    <name>Work Orders Approved</name>
+    <style>freeForm</style>
+    <subject>Work orders approved</subject>
+    <textOnly>Hi {!WorkOrder.Account},
+
+All the work orders are approved related to Lease termination Case {!WorkOrder.Case}.
+
+Please have a look at it.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,19 @@
+<aura:component implements="forceCommunity:themeLayout">
+    <div class="wrapper">
+        <div class="slds-grid header">
+            <div class="slds-col slds-col--padded slds-size_1-of-2">
+                <img src="{!$Resource.DDDLogo}" />
+            </div>
+    
+            <div class="slds-col slds-col--padded slds-size_1-of-2 slds-text-align_right">
+                <img src="{!$Resource.GovermentLogo}" />
+            </div> 
+        </div> 
+        
+        <div class="slds-grid">
+            <div class="slds-col content">
+                {!v.body}
+            </div>
+        </div>
+    </div> <!-- @ENDS:wrapper -->
+</aura:component>

@@ -1,0 +1,87 @@
+<aura:component implements="force:hasRecordId,force:lightningQuickActionWithoutHeader,flexipage:availableForRecordHome" access="global" controller="ManagePriceRevisionsController">
+	<aura:attribute name="recordId" type="String" />
+    <aura:attribute name="selectedFilterValue" type="String" default="UnitProduct"/>
+    <aura:attribute name="allQuoteLineItemList" type="Object" />
+    <aura:attribute name="quoteLineItemList" type="List" />
+    <aura:attribute name="allQuoteLineItemMap" type="Map" />
+    <aura:attribute name="currentPageNumber" type="Integer" default="1"/>
+    <aura:attribute name="pageSize" type="Integer" default="2"/>
+    <aura:attribute name="totalPages" type="Integer" default="0"/>
+    <aura:attribute name="changesMade" type="Boolean" default="false"/>
+    <aura:attribute name="changedLineItemList" type="List"/>
+    <aura:attribute name="pageList" type="List"/>
+
+    <aura:attribute name="showLoader" type="Boolean" default="false" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:handler name="change" value="{!v.selectedFilterValue}" action="{!c.getLineItemsDetails}"/> 
+
+    <!--<section role="dialog" tabindex="-1" aria-modal="true" class="slds-modal slds-fade-in-open slds-modal_large"> -->
+        <div>
+            <!-- <header class="slds-modal__header">
+                <lightning:buttonIcon size="large" iconName="utility:close" variant="bare" onclick="{! c.cancel }" alternativeText="Close window." class="slds-modal__close slds-button_icon-inverse"/>
+                <h2 class="slds-text-heading_medium slds-hyphenate"><span>Manage Price Revision</span></h2>
+            </header>    -->
+			<div class="slds-modal__content">
+                <aura:if isTrue="{!v.showLoader}">
+                    <lightning:spinner variant="brand" alternativeText="Loading"/>
+                </aura:if>
+                <lightning:select name="select1" 
+                           label="Display Line Items by:" 
+                           required="true" 
+                           value="{!v.selectedFilterValue}" 
+                           class="selectClass">
+                    <option value="UnitProduct">Unit</option>
+                    <option value="Revision">Revision</option>
+                </lightning:select>
+                <div class="slds-p-around--large">
+                    <aura:if isTrue="{!v.quoteLineItemList.length > 0}"> 
+                        <div class="slds-grid slds-m-left--large" style="padding-bottom: 20px;">
+                            <div class="slds-col--padded slds-size--1-of-1" style="text-align:center;"> 
+                                <lightning:button variant="neutral" label="Cancel" class="mr20" onclick="{!c.cancel}"/>
+                                <lightning:button variant="brand" label="Save" class="ml20" onclick="{!c.saveLineItem}" disabled="{!!v.changesMade}"/>
+                            </div>
+
+                        </div>
+                      <aura:if  isTrue="{!v.selectedFilterValue == 'UnitProduct'}"> 
+                          <aura:iteration items="{!v.quoteLineItemList}" var="item">
+                             <c:ManagePriceLineItem quoteLine="{!item}" changesMade="{!v.changesMade}" changedLineItemList="{!v.changedLineItemList}"/>
+                          </aura:iteration>      
+                     </aura:if > 
+                        
+                     <aura:if  isTrue="{!v.selectedFilterValue == 'Revision'}"> 
+                         <aura:iteration items="{!v.quoteLineItemList}" var="item">
+                             <c:ManagePriceRevisionLineItem quoteLine="{!item}" changesMade="{!v.changesMade}" changedLineItemList="{!v.changedLineItemList}"/>
+                         </aura:iteration> 
+                      </aura:if > 
+                        
+                        <div class="slds-grid slds-m-left--large" style="padding-top: 20px;">
+                            <div class="slds-col--padded slds-size--1-of-1" style="text-align:center;"> 
+                              
+                                <a onclick="{!c.previous}" class="{! (v.currentPageNumber == 1) ? 'disabled mr20' : 'mr20'}">
+                                    {!$Label.c.Previous_Arrow}Previous
+                                </a>
+                                 <aura:iteration items="{!v.pageList}" var="item">
+                                    <span class="slds-p-horizontal_x-small">
+                                        <a onclick="{!c.navigateToPage}" name="{!item}"
+                                           class="{! (v.currentPageNumber == item) ? 'disabled ml5 mr5' : 'ml5 mr5'}">{!item}</a>
+                                    </span>
+                                </aura:iteration>
+                                <a onclick="{!c.next}" class="{! (v.currentPageNumber == v.totalPages) ? 'disabled ml20' : 'ml20'}">
+                                    Next{!$Label.c.Next_Arrow}
+                                </a>
+                                
+                            </div>
+                        </div>
+                   </aura:if> 
+                    
+                </div>
+            </div>
+        </div>
+  <!--  </section> -->
+    
+    
+    
+    
+</aura:component>

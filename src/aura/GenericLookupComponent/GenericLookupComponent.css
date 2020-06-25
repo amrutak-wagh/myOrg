@@ -1,0 +1,47 @@
+.THIS .slds-combobox__input-entity-icon,.THIS span.slds-icon_container.slds-icon-utility-down.slds-input__icon.slds-input__icon_right {
+    padding-top: 10px;
+}
+.THIS .slds-input-has-icon_right .slds-input {
+    padding-left: 30px;
+}
+.THIS .slds-pill-container .slds-button {}
+.THIS .newblock{display: block !important;}
+.THIS .slds-combobox__input-entity-icon{top: 64%!important;}
+.THIS .slds-input__icon_right{padding-top:19px!important}
+.THIS .verticalAlign {
+	cursor: pointer;
+	margin: 6px 0px 0px 6px!important;
+}
+.THIS .slds-pill-container 
+{
+margin-top: 17px;
+}
+.THIS .fullWidth {
+	width: 100% !important;
+}
+ 
+.THIS .recordListBox {
+	margin-top:0px !important;
+	overflow-y: scroll;
+}
+ 
+.THIS .inputBox input {
+	padding-left: 30px;
+}
+ 
+.THIS .inputIcon {
+	z-index: 99;
+}
+ 
+/* For Scrolling */
+.THIS ::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+.THIS ::-webkit-scrollbar-track {
+   display: none !important;
+}
+.THIS ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0,0,0,0.4);
+}

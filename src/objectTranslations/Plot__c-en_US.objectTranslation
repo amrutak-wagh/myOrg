@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Plot</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Plots</value>
+    </caseValues>
+    <fields>
+        <label><!-- Access Status --></label>
+        <name>Access_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Plots --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Construction Comm Dt --></label>
+        <name>Actual_Construction_Comm_Dt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Construction Comp Dt --></label>
+        <name>Actual_Construction_Comp_Dt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Actual Handover Date --></label>
+        <name>Actual_Handover_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- All PLU Inactive --></label>
+        <name>All_PLU_Inactive__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allocate Infrastructure Cost --></label>
+        <name>Allocate_Infrastructure_Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approved Exceptions --></label>
+        <name>Approved_Exceptions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Area sqft --></label>
+        <name>Area_sqft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Block --></label>
+        <name>Block__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Park Yardi --></label>
+        <name>Business_Park_Yardi__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Park --></label>
+        <name>Business_Park__c</name>
+        <relationshipLabel><!-- Plots --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Capped Irrigation Demand (M3/d) --></label>
+        <name>Capped_Irrigation_Demand_M3_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Capped Sewage Generation (M3/d) --></label>
+        <name>Capped_Sewage_Generation_M3_d__c</name>
+    </fields>
+    <fields>
+        <label><!-- Capped Water Demand (M3/day) --></label>
+        <name>Capped_Water_Demand_M3_day__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cause Reason --></label>
+        <name>Cause_Reason__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Class --></label>
+        <name>Class__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cluster/Phase --></label>
+        <name>Cluster_Phase__c</name>
+    </fields>
+    <fields>
+        <label><!-- Commission --></label>
+        <name>Commission__c</name>
+    </fields>
+    <fields>
+        <label><!-- Core / Non-Core --></label>
+        <name>Core_Non_Core__c</name>
+        <picklistValues>
+            <masterLabel>Core</masterLabel>
+            <translation><!-- Core --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non-Core</masterLabel>
+            <translation><!-- Non-Core --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- DM# --></label>
+        <name>DM__c</name>
+    </fields>
+    <fields>
+        <label><!-- DTMFZA Plot ID --></label>
+        <name>DTMFZA_Plot_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Development Status --></label>
+        <name>Development_Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction Resumed</masterLabel>
+            <translation><!-- Construction Resumed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction on hold</masterLabel>
+            <translation><!-- Construction on hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Developer</masterLabel>
+            <translation><!-- Developer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not applicable</masterLabel>
+            <translation><!-- Not applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Under Development</masterLabel>
+            <translation><!-- Under Development --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Undeveloped</masterLabel>
+            <translation><!-- Undeveloped --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- District Cooling Load (TR) --></label>
+        <name>District_Cooling_Load_TR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Drainage Network Status --></label>
+        <name>Drainage_Network_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Effective Date --></label>
+        <name>Effective_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Finance Attributues --></label>
+        <name>Finance_Attributues__c</name>
+    </fields>
+    <fields>
+        <label><!-- Front SetBack Max (m) --></label>
+        <name>Front_SetBack_Max_m__c</name>
+    </fields>
+    <fields>
+        <label><!-- Front SetBack Min (m) --></label>
+        <name>Front_SetBack_Min_m__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grant Rate --></label>
+        <name>Grant_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Infrastructure % Completion --></label>
+        <name>Infrastructure_Completion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Infrastructure Phasing (Year) --></label>
+        <name>Infrastructure_Phasing_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Infrastucture Cost Land (Amount) --></label>
+        <name>Infrastucture_Cost_Land_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inventory Status --></label>
+        <name>Inventory_Status__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is Leasable --></label>
+        <name>Is_Leasable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Land Disposal --></label>
+        <name>Land_Disposal__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location as per DLD --></label>
+        <name>Location_as_per_DLD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Master Community Chargeability --></label>
+        <name>Master_Community_Chargeability__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max Building Height --></label>
+        <name>Max_Building_Height__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max. Coverage --></label>
+        <name>Max_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Max. Height --></label>
+        <name>Max_Height__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Max Plot Coverage --></label>
+        <name>Max_Plot_Coverage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Min Front Setback mt --></label>
+        <name>Min_Front_Setback_mt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Min Rear Setback mt --></label>
+        <name>Min_Rear_Setback_mt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Min Side1 Setback mt --></label>
+        <name>Min_Side1_Setback_mt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Min Side2 Setback mt --></label>
+        <name>Min_Side2_Setback_mt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number --></label>
+        <name>Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offering --></label>
+        <name>Offering__c</name>
+        <picklistValues>
+            <masterLabel>lease</masterLabel>
+            <translation><!-- lease --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>sale</masterLabel>
+            <translation><!-- sale --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Plots --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Origin Plot --></label>
+        <name>Origin_Plot__c</name>
+        <relationshipLabel><!-- Plots --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Original Transaction --></label>
+        <name>Original_Transaction__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Ownership Status --></label>
+        <name>Ownership_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Planned Disposal Date --></label>
+        <name>Planned_Disposal_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Planned Operation Date --></label>
+        <name>Planned_Operation_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot Allocated for Bidding --></label>
+        <name>Plot_Allocated_for_Bidding__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot Category --></label>
+        <name>Plot_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot Code YARDI --></label>
+        <name>Plot_Code_YARDI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot Condition --></label>
+        <name>Plot_Condition__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot External ID --></label>
+        <name>Plot_External_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot GFA (ft²) --></label>
+        <name>Plot_GFA_ft__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot GFA (m²) --></label>
+        <name>Plot_GFA_m__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot Name YARDI --></label>
+        <name>Plot_Name_YARDI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot Number --></label>
+        <name>Plot_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot Sub Category Code --></label>
+        <name>Plot_Sub_Category_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Plot Sub Category --></label>
+        <name>Plot_Sub_Category__c</name>
+    </fields>
+    <fields>
+        <label><!-- Price Group --></label>
+        <name>Price_Group__c</name>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Created --></label>
+        <name>Product_Created__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Name --></label>
+        <name>Product_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Purpose &amp; Activities --></label>
+        <name>Purpose_Activities__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rear SetBack Max (m) --></label>
+        <name>Rear_SetBack_Max_m__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rear SetBack Min (m) --></label>
+        <name>Rear_SetBack_Min_m__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reason for Frozen Plot --></label>
+        <name>Reason_for_Frozen_Plot__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue Recognised - Year --></label>
+        <name>Revenue_Recognised_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- SIF Amount --></label>
+        <name>SIF_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sale-Aproved Payment Terms --></label>
+        <name>Sale_Aproved_Payment_Terms__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sector Name --></label>
+        <name>Sector_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sector Yardi Id --></label>
+        <name>Sector_Yardi_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sector --></label>
+        <name>Sector__c</name>
+        <relationshipLabel><!-- Plots --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sewage Network Status --></label>
+        <name>Sewage_Network_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Side SetBack Max (m) --></label>
+        <name>Side_SetBack_Max_m__c</name>
+    </fields>
+    <fields>
+        <label><!-- Side SetBack Min (m) --></label>
+        <name>Side_SetBack_Min_m__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Available - Lease</masterLabel>
+            <translation><!-- Available - Lease --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Available - Sale</masterLabel>
+            <translation><!-- Available - Sale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blocked</masterLabel>
+            <translation><!-- Blocked --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Granted</masterLabel>
+            <translation><!-- Granted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leased</masterLabel>
+            <translation><!-- Leased --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not applicable</masterLabel>
+            <translation><!-- Not applicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre Lease</masterLabel>
+            <translation><!-- Pre Lease --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pre Sale</masterLabel>
+            <translation><!-- Pre Sale --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold</masterLabel>
+            <translation><!-- Sold --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status of Grant --></label>
+        <name>Status_of_Grant__c</name>
+    </fields>
+    <fields>
+        <label><!-- Storm Water Discharge (M3/day) --></label>
+        <name>Storm_Water_Discharge_M3_day__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Connected Load (KW) --></label>
+        <name>Total_Connected_Load_KW__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unique Key --></label>
+        <name>Unique_Key__c</name>
+    </fields>
+    <fields>
+        <label><!-- UnitId --></label>
+        <name>UnitId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle Trips - AM --></label>
+        <name>Vehicle_Trips_AM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vehicle Trips - PM --></label>
+        <name>Vehicle_Trips_PM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Verification Status --></label>
+        <name>Verification_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Water Network Status --></label>
+        <name>Water_Network_Status__c</name>
+    </fields>
+    <layouts>
+        <layout>Plot Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Dates --></label>
+            <section>Dates</section>
+        </sections>
+        <sections>
+            <label><!-- Dimensions --></label>
+            <section>Dimensions</section>
+        </sections>
+        <sections>
+            <label><!-- Financial --></label>
+            <section>Financial</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Plot Layout - Backup</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

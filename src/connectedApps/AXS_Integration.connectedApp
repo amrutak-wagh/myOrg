@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>nikhil.andhalkar@tecomgroup.ae</contactEmail>
+    <label>AXS Integration</label>
+    <oauthConfig>
+        <callbackUrl>https://test.salesforce.com/services/authcallback/00D9D0000008aWAUAY/CorpCRM</callbackUrl>
+        <consumerKey>3MVG9pHRjzOBdkd.PCPM.4bIcWOokuSI8PordZ1AffepHTHXCmH4AJk7IKYUFrokdYESOD2o1IBwvpsEuRtI4</consumerKey>
+        <isAdminApproved>false</isAdminApproved>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>Full</scopes>
+        <scopes>Chatter</scopes>
+        <scopes>CustomApplications</scopes>
+        <scopes>RefreshToken</scopes>
+        <scopes>OpenID</scopes>
+        <scopes>CustomPermissions</scopes>
+        <scopes>Wave</scopes>
+        <scopes>Eclair</scopes>
+    </oauthConfig>
+</ConnectedApp>

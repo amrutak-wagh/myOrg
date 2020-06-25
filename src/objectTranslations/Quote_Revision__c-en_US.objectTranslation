@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Quote Revision</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Quote Revisions</value>
+    </caseValues>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Offered Price Rate --></label>
+        <name>Offered_Price_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote --></label>
+        <name>Quote__c</name>
+        <relationshipLabel><!-- Quote Revisions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Revision Number --></label>
+        <name>Revision_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Best Rate --></label>
+        <name>Total_Best_Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Offered Price --></label>
+        <name>Total_Offered_Price__c</name>
+    </fields>
+    <layouts>
+        <layout>Quote Revision Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Cannot update the payment schedules when quote is under DOA approval. --></errorMessage>
+        <name>Cannot_update_when_qoute_under_approval</name>
+    </validationRules>
+</CustomObjectTranslation>

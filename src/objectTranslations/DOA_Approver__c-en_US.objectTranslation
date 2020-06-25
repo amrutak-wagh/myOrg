@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>DOA Approver</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>DOA Approver</value>
+    </caseValues>
+    <fields>
+        <label><!-- Additional Payments From --></label>
+        <name>Additional_Payment_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Payments To --></label>
+        <name>Additional_Payment_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Business Park --></label>
+        <name>Business_Park__c</name>
+        <relationshipLabel><!-- DOA Approver --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Business Center - Executive Desk</masterLabel>
+            <translation><!-- Business Center - Executive Desk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Center - Executive Office</masterLabel>
+            <translation><!-- Business Center - Executive Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Center - Hot Desk</masterLabel>
+            <translation><!-- Business Center - Hot Desk --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Parking</masterLabel>
+            <translation><!-- Parking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Signage</masterLabel>
+            <translation><!-- Signage --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- DOA Discount Amount From --></label>
+        <name>DOA_Discount_Amount_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- DOA Discount Amount To --></label>
+        <name>DOA_Discount_Amount_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount Percent From --></label>
+        <name>Discount_Percent_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Discount Percent To --></label>
+        <name>Discount_Percent_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grace Period From --></label>
+        <name>Grace_Period_From__c</name>
+    </fields>
+    <fields>
+        <label><!-- Grace Period To --></label>
+        <name>Grace_Period_To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lease Type --></label>
+        <name>Lease_Type__c</name>
+        <picklistValues>
+            <masterLabel>Amendment</masterLabel>
+            <translation><!-- Amendment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Modification</masterLabel>
+            <translation><!-- Modification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renew</masterLabel>
+            <translation><!-- Renew --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Level 1 Approver --></label>
+        <name>Level_1_Approver__c</name>
+        <relationshipLabel><!-- DOA Approver (Level 1 Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Level 2 Approver --></label>
+        <name>Level_2_Approver__c</name>
+        <relationshipLabel><!-- DOA Approver (Level 2 Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Level 3 Approver --></label>
+        <name>Level_3_Approver__c</name>
+        <relationshipLabel><!-- DOA Approver (Level 3 Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Level 4 Approver --></label>
+        <name>Level_4_Approver__c</name>
+        <relationshipLabel><!-- DOA Approver (Level 4 Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Level 5 Approver --></label>
+        <name>Level_5_Approver__c</name>
+        <relationshipLabel><!-- DOA Approver (Level 5 Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Level 6 Approver --></label>
+        <name>Level_6_Approver__c</name>
+        <relationshipLabel><!-- DOA Approver (Level 6 Approver) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Type --></label>
+        <name>Opportunity_Type__c</name>
+        <picklistValues>
+            <masterLabel>Land Lease Opportunity</masterLabel>
+            <translation><!-- Land Lease Opportunity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Premise Lease Opportunity</masterLabel>
+            <translation><!-- Premise Lease Opportunity --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unit Category --></label>
+        <name>Unit_Category__c</name>
+        <relationshipLabel><!-- DOA Approver --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Unit Sub-Category --></label>
+        <name>Unit_Sub_Category__c</name>
+        <relationshipLabel><!-- DOA Approver --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>DOA Approver Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

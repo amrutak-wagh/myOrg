@@ -1,0 +1,18 @@
+<apex:page renderAs="pdf" controller="PrintCustomerApplicationCtrl" showHeader="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" standardStylesheets="false">
+    <html>
+        <head>
+            <style>
+            </style>
+        </head>
+        <body>
+        	<table>
+        		<tr>
+        			<td>License Type</td>
+        			<td>{!info.selectedLicenseType}</td>
+        			<td>Proposed Legal Form of Business</td>
+        			<td>{!info.proposedLegalFormOfBusiness}</td>
+        		</tr>
+        	</table>
+        </body>
+    </html>
+</apex:page>

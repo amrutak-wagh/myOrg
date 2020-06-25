@@ -1,0 +1,24 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" controller="CheckSecurityCodeCompController">
+    <!--Registering the event to pass recordId-->
+    <aura:registerEvent name="passCaseIdEvent" type="c:compEvent"/>
+    
+	<!--attributes reqd on the page-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="userEnteredCode" type="String"/>
+    <aura:attribute name="load" type="Boolean" default="true"/>
+    <aura:if isTrue="{! v.load}">
+    <div class="slds-form-element" style="margin:53px;">
+      
+        <div class="slds-form-element__control">
+            <lightning:input style="margin-top:10px;" name="input1" value="{! v.userEnteredCode }" label="Enter verification code" />
+            <div style="margin-top: 10px;"> 
+                <lightning:button  variant="brand" label="Submit" title="Submit" onclick="{!c.checkCodeFromURL}" />
+            </div>
+        </div>
+	</div>
+    <aura:set attribute="else">
+                <lightning:spinner alternativeText="Loading" />
+    </aura:set>
+    </aura:if>
+</aura:component>

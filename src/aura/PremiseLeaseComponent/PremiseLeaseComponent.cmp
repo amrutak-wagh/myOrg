@@ -1,0 +1,100 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,lightning:availableForFlowScreens,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction"
+                access="global"  
+                controller="PremiseLeaseComponentController">
+	
+    <aura:attribute name="isOpenFlow" type="boolean" default="false"/>
+    <aura:attribute name="isOpenComponent" type="boolean" default="false"/>
+    <aura:attribute name="runProcess" type="String"/>
+    <aura:attribute name="renewalProcessStatusMsg" type="String"/>
+    <aura:method name="closeModalBox" action="{!c.closeModalBox}"/>
+    <aura:attribute name="showLoader" type="Boolean" default="true" />
+
+    <lightning:card>   
+            <div class="custom-box" style="text-align: right;padding-right: 25px">
+                <lightning:button variant="neutral" label="Downsizing" title="Downsizing" onclick="{!c.callDownsizingProcess}"/>
+                <lightning:button variant="neutral" label="Expansion" title="Expansion" onclick="{!c.callExpansionProcess}"/>
+                <lightning:button variant="neutral" label="Assignment" title="Assignment" onclick="{!c.callAssignmentProcess}" />
+                <lightning:button variant="neutral" label="Renewal" title="Renewal" onclick="{!c.callRenewalProcess}"/>
+                <lightning:button variant="neutral" label="Termination" title="Termination" onclick="{!c.callTerminationProcess}"/>
+               <!-- <lightning:button variant="neutral" label="Modification" title="Modification" onclick="{!c.callModificationProcess}"/> -->
+        	</div>
+        
+    </lightning:card>
+    
+     <aura:if isTrue="{!v.isOpenFlow}">
+        
+        <!--###### MODAL BOX Start######--> 
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <aura:if isTrue="{!v.showLoader}">
+                    <lightning:spinner variant="brand" class="spinnerCss"/>
+                </aura:if>
+                <!-- ###### MODAL BOX HEADER Start ######-->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeModel }"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!v.runProcess}</h2>
+                </header>
+                <!--###### MODAL BOX BODY Part Start######-->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    
+                    
+                    <aura:if isTrue="{!v.runProcess == 'Assignment'}">
+                        <lightning:flow aura:id="assignmentFlow" />
+                    </aura:if> 
+                    <aura:if isTrue="{!v.runProcess == 'Renewal'}">
+                        <!--<lightning:flow aura:id="renewalFlow" /> -->
+                        {!v.renewalProcessStatusMsg}
+                    </aura:if> 
+                    <!--<aura:if isTrue="{!v.runProcess == 'Modification'}">
+                        <lightning:flow aura:id="modificationFlow" />
+                    </aura:if>  -->
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+        <!--###### MODAL BOX Part END Here ######-->
+        
+    </aura:if>  
+   
+    <aura:if isTrue="{!v.isOpenComponent}">
+        
+        <!--###### MODAL BOX Start######--> 
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- ###### MODAL BOX HEADER Start ######-->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeCmpModel }"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!v.runProcess}</h2>
+                </header>
+                <!--###### MODAL BOX BODY Part Start######-->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    
+                    
+                    <aura:if isTrue="{!v.runProcess == 'Downsizing'}">
+                        <c:Downsizing_v2 recordId ="{!v.recordId}" parent="{!this}"/>
+                    </aura:if>
+                    <aura:if isTrue="{!v.runProcess == 'Termination'}">
+                        <c:TerminationProcess recordId ="{!v.recordId}"/>
+                    </aura:if>
+                    <aura:if isTrue="{!v.runProcess == 'Expansion'}">
+                        <c:Expansion recordId ="{!v.recordId}" parent="{!this}"/>
+                    </aura:if> 
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+        <!--###### MODAL BOX Part END Here ######-->
+        
+    </aura:if>  
+    
+    
+
+</aura:component>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>TECOM</letterhead>
+    <name>Case: DDA Name Reservation Certification Notification</name>
+    <style>freeForm</style>
+    <subject>Your DDA Name Reservation Certificate is ready</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+Your Name Reservation Certificate is ready in the Tecom Customer Portal. Please login to review and download the document.
+
+{!Case.Link}
+
+If you have any questions please let us know.
+
+Kind regards,
+TECOM Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

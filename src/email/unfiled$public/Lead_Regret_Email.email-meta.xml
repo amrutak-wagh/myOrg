@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>TECOM</letterhead>
+    <name>Lead: Regret Email</name>
+    <style>freeForm</style>
+    <subject>TECOM: Apologies</subject>
+    <textOnly>Dear {!Lead.Name},
+
+We are sorry to inform you that your request has been denied.
+
+Kind regards,
+TECOM team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Lead Assignment</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>D3_Commercial</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Design District</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Office</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>D3_Retail</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Design District</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Retail</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DIC_Commercial</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <booleanFilter>1 AND 2</booleanFilter>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Internet City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Office</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DIC_Retail</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Internet City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Retail</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DIC_Business_Center</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Internet City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Business Center</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DMC_Commercial</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Media City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Office</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DMC_Retail</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Media City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Retail</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DMC_Business_Center</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Media City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Business Center</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DSC_Commercial</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Studio City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Office</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DSC_Retail</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Studio City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Retail</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DSC_Business_Center</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Studio City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Business Center</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DIP_Commercial</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Industrial Park</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Office</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DIP_Retail</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Industrial Park</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Retail</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DIP_Business_Center</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Industrial Park</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Business Center</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DIP_Land</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Industrial Park</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Land</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DOC_Commercial</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Outsource City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Office</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DOC_Retail</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Outsource City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Retail</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DOC_Business_Center</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Outsource City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Business Center</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DPC_Commercial</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Production City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Office</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DPC_Retail</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Production City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Retail</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DPC_Business_Center</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Production City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Business Center</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DPC_Land</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Production City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Land</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DIAC_Commercial</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai International Academic City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Office</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DIAC_Retail</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai International Academic City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Retail</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DIAC_Business_Center</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai International Academic City</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Business Center</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DKP_Commercial</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Knowledge Park</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Office</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DKP_Retail</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Knowledge Park</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Retail</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DKP_Business_Center</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Knowledge Park</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Business Center</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DSP_Commercial</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Science Park</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Office</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DSP_Retail</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Science Park</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Retail</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DSP_Business_Center</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Science Park</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Business Center</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>in5_Commercial</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai In5 Park</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Office</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>in5_Retail</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai In5 Park</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Retail</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>in5_Business_Center</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai In5 Park</value>
+            </criteriaItems>
+            <criteriaItems>
+                <field>Lead.Product_Category__c</field>
+                <operation>equals</operation>
+                <value>Business Center</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>D3_General</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Design District</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DIC_General</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Internet City</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DMC_General</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Media City</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DSC_General</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Studio City</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DIP_General</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Industrial Park</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DOC_General</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Outsource City</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DPC_General</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Production City</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DIAC_General</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai International Academic City</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DKP_General</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Knowledge Park</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>DSP_General</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai Science Park</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>in5_General</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Lead.Business_Park_Copy__c</field>
+                <operation>equals</operation>
+                <value>Dubai In5 Park</value>
+            </criteriaItems>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

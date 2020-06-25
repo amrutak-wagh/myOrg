@@ -1,0 +1,35 @@
+.THIS .p20{padding:0 20px}
+.THIS .btn-wrap{padding:10px 20px; text-align:center;}
+.THIS .w50{width:50%;}
+.THIS .w30{width:30%;}
+.THIS .slds-card__header{
+    background: #ddd;
+    padding: 10px;}
+
+.THIS .slds-card__body{ max-height: 200px;
+    overflow: auto;
+    overflow-x: hidden; min-height: 200px;}
+
+.THIS .text-center{text-align: center; padding: 10px 0px 5px!important;} 
+.THIS .table-wrap{height: 100px; padding: 0px 20px;
+    overflow: auto;
+}
+
+.THIS .slds-table{  border: 1px solid rgb(221, 219, 218);}
+
+.THIS.exampleHolder{
+    position: relative;
+    
+    
+    margin-left: 150px;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+.THIS .left-wrap{border-right: 2px solid #eaeaea;
+    padding: 0 15px 0px 0px;}
+
+.THIS .slds-accordion__list-item{border-top:none!important}
+
+.THIS .slds-card__body{border: solid 1px #ddd; margin-top: -8px;}
+.THIS .removeLabel .slds-form-element__label{display:none;}

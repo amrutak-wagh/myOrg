@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>When Opportunity probability is &gt;=50% soft book products that are linked to the quote line items.</description>
+    <flowDefinition>Soft_Book</flowDefinition>
+    <label>Soft Book</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <type>Flow</type>
+</QuickAction>

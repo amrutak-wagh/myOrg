@@ -1,0 +1,31 @@
+.THIS.slds-modal {
+    width: 190%;
+    left: -45%;
+}
+.THIS.slds-modal:focus {
+    outline: none !important;
+}
+.THIS .slds-modal__content {
+    min-height: 16rem;
+}
+.THIS .slds-modal__container{
+    width:100%;
+}
+
+.THIS .slds-modal__content .slds-button_icon-bare{
+    display: none;
+}
+.THIS .selectClass {
+    width: 30%;
+    margin-left: 25px;
+}
+.THIS .mr20{margin-right:20px}
+.THIS .ml20{margin-left:20px}
+.THIS .mr5{margin-right:5px}
+.THIS .ml5{margin-left:5px}
+.THIS .slds-show{border:1px solid rgb(221, 219, 218); padding: 0;}
+.THIS .disabled {
+     color: currentColor;
+     cursor: not-allowed;
+     text-decoration: none;
+}

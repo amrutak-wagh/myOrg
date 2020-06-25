@@ -1,0 +1,3237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>AddInfluence</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddInfluence</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddInfluence</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Opportunity_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <businessProcesses>
+        <fullName>Sales Process</fullName>
+        <isActive>true</isActive>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Lost</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed Won</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Holdover Initiated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negotiation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proposal%2FPrice Quote</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Termination In Progress</fullName>
+            <default>false</default>
+        </values>
+    </businessProcesses>
+    <compactLayoutAssignment>New_Awesome_Companct_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>New_Awesome_Companct_Layout</fullName>
+        <fields>Name</fields>
+        <fields>AccountId</fields>
+        <fields>CloseDate</fields>
+        <fields>Amount__c</fields>
+        <fields>OwnerId</fields>
+        <label>New Awesome Compact Layout</label>
+    </compactLayouts>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>true</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <externalSharingModel>Read</externalSharingModel>
+    <fieldSets>
+        <fullName>LeaseDetailsFieldSet</fullName>
+        <description>It is used to display fields in Lease details section from opportunity detail page.</description>
+        <displayedFields>
+            <field>RecordTypeId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>ExpectedRevenue</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>LeaseDetailsFieldSet</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>OpportunityFieldSet</fullName>
+        <description>It is used to display fields in opportunity details section from opportunity detail page.</description>
+        <displayedFields>
+            <field>Name</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>AccountId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Parent_Opportunity__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Contact__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Type</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>StageName</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Sub_Type__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CloseDate</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Business_Park__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>CurrencyIsoCode</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>OwnerId</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Probability</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Yardi_Lease_Status__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Is_renewal__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Building_Name__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>OpportunityFieldSet</label>
+    </fieldSets>
+    <fields>
+        <fullName>AG_Number__c</fullName>
+        <displayFormat>AG-{000000}</displayFormat>
+        <externalId>false</externalId>
+        <label>AG Number</label>
+        <trackTrending>false</trackTrending>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Accepted_Syncing_Quote__c</fullName>
+        <externalId>false</externalId>
+        <label>Accepted/Syncing Quote</label>
+        <summaryFilterItems>
+            <field>Quote.Status</field>
+            <operation>equals</operation>
+            <value>Accepted</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>Quote.IsSyncing</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Quote.OpportunityId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Accou__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact__r.AccountId</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Account ID</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Amendment_Id__c</fullName>
+        <description>this is returned by Yardi in response</description>
+        <externalId>false</externalId>
+        <label>Amendment Id</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Amount</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Budget_Confirmed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Budget Confirmed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Building_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Building</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Business_Park__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Business Park</label>
+        <referenceTo>Business_Park__c</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CampaignId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CloseDate</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <lookupFilter>
+            <active>false</active>
+            <filterItems>
+                <field>$Source.AccountId</field>
+                <operation>equals</operation>
+                <valueField>Contact.AccountId</valueField>
+            </filterItems>
+            <isOptional>false</isOptional>
+        </lookupFilter>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities_del</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>ContractId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>CurrencyIsoCode</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>CurrentGenerators__c</fullName>
+        <externalId>false</externalId>
+        <label>Current Generator(s)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>DOA_Discount__c</fullName>
+        <externalId>false</externalId>
+        <label>DOA Discount</label>
+        <summarizedField>Quote.DOA_Discount_Roll_Up_Summary__c</summarizedField>
+        <summaryFilterItems>
+            <field>Quote.IsSyncing</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Quote.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>DeliveryInstallationStatus__c</fullName>
+        <externalId>false</externalId>
+        <label>Delivery/Installation Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>In progress</fullName>
+                    <default>false</default>
+                    <label>In progress</label>
+                </value>
+                <value>
+                    <fullName>Yet to begin</fullName>
+                    <default>false</default>
+                    <label>Yet to begin</label>
+                </value>
+                <value>
+                    <fullName>Completed</fullName>
+                    <default>false</default>
+                    <label>Completed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Discovery_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Discovery Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Expansion_Separate_Amendment_Terms__c</fullName>
+        <externalId>false</externalId>
+        <label>Expansion Separate Amendment Terms</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>0</fullName>
+                    <default>false</default>
+                    <label>Combined Rates and Dates</label>
+                </value>
+                <value>
+                    <fullName>-1</fullName>
+                    <default>false</default>
+                    <label>Separate Rates and Dates</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ExpectedRevenue</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Framework_Detail__c</fullName>
+        <externalId>false</externalId>
+        <label>Framework Detail</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Legal_Framework__c</controllingField>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Individual</fullName>
+                    <default>false</default>
+                    <label>Individual</label>
+                </value>
+                <value>
+                    <fullName>Corporate</fullName>
+                    <default>false</default>
+                    <label>Corporate</label>
+                </value>
+                <value>
+                    <fullName>Both</fullName>
+                    <default>false</default>
+                    <label>Both</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Freezone</controllingFieldValue>
+                <controllingFieldValue>Branch UAE</controllingFieldValue>
+                <controllingFieldValue>Branch Foreign</controllingFieldValue>
+                <valueName>Individual</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Freezone</controllingFieldValue>
+                <controllingFieldValue>Branch UAE</controllingFieldValue>
+                <controllingFieldValue>Branch Foreign</controllingFieldValue>
+                <valueName>Corporate</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Freezone</controllingFieldValue>
+                <controllingFieldValue>Branch UAE</controllingFieldValue>
+                <controllingFieldValue>Branch Foreign</controllingFieldValue>
+                <valueName>Both</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>HSE_Clearance_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>HSE Clearance Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>HSE_Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>HSE Notes</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>HSE_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>HSE Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>None</fullName>
+                    <default>true</default>
+                    <label>None</label>
+                </value>
+                <value>
+                    <fullName>Approved</fullName>
+                    <default>false</default>
+                    <label>Approved</label>
+                </value>
+                <value>
+                    <fullName>Not Applicable</fullName>
+                    <default>false</default>
+                    <label>Not Applicable</label>
+                </value>
+                <value>
+                    <fullName>Applicable</fullName>
+                    <default>false</default>
+                    <label>Applicable</label>
+                </value>
+                <value>
+                    <fullName>Under Process</fullName>
+                    <default>false</default>
+                    <label>Under Process</label>
+                </value>
+                <value>
+                    <fullName>Approved with comments</fullName>
+                    <default>false</default>
+                    <label>Approved with comments</label>
+                </value>
+                <value>
+                    <fullName>Rejected</fullName>
+                    <default>false</default>
+                    <label>Rejected</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>IqScore</fullName>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>IsPrivate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Is_Created_From_Component__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Created From Component</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Is_renewal__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is renewal</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Lease_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>land</fullName>
+                    <default>false</default>
+                    <label>land</label>
+                </value>
+                <value>
+                    <fullName>office</fullName>
+                    <default>false</default>
+                    <label>office</label>
+                </value>
+                <value>
+                    <fullName>retail</fullName>
+                    <default>false</default>
+                    <label>retail</label>
+                </value>
+                <value>
+                    <fullName>str</fullName>
+                    <default>false</default>
+                    <label>str</label>
+                </value>
+                <value>
+                    <fullName>annland</fullName>
+                    <default>false</default>
+                    <label>annland</label>
+                </value>
+                <value>
+                    <fullName>lhland</fullName>
+                    <default>false</default>
+                    <label>lhland</label>
+                </value>
+                <value>
+                    <fullName>unitsale</fullName>
+                    <default>false</default>
+                    <label>unitsale</label>
+                </value>
+                <value>
+                    <fullName>cowork</fullName>
+                    <default>false</default>
+                    <label>cowork</label>
+                </value>
+                <value>
+                    <fullName>PMLA</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>PMLA</label>
+                </value>
+                <value>
+                    <fullName>PMS</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>PMS</label>
+                </value>
+                <value>
+                    <fullName>TECOM</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>TECOM</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Legal_Framework__c</fullName>
+        <externalId>false</externalId>
+        <label>Legal Framework</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Freezone</fullName>
+                    <default>false</default>
+                    <label>Freezone</label>
+                </value>
+                <value>
+                    <fullName>Freelance</fullName>
+                    <default>false</default>
+                    <label>Freelance</label>
+                </value>
+                <value>
+                    <fullName>Branch UAE</fullName>
+                    <default>false</default>
+                    <label>Branch UAE</label>
+                </value>
+                <value>
+                    <fullName>Branch Foreign</fullName>
+                    <default>false</default>
+                    <label>Branch Foreign</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>License_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>License Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Values TBC</fullName>
+                    <default>false</default>
+                    <label>Values TBC</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Loss_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Loss Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Lost to Competitor</fullName>
+                    <default>false</default>
+                    <label>Lost to Competitor</label>
+                </value>
+                <value>
+                    <fullName>No Budget / Lost Funding</fullName>
+                    <default>false</default>
+                    <label>No Budget / Lost Funding</label>
+                </value>
+                <value>
+                    <fullName>No Decision / Non-Responsive</fullName>
+                    <default>false</default>
+                    <label>No Decision / Non-Responsive</label>
+                </value>
+                <value>
+                    <fullName>Price</fullName>
+                    <default>false</default>
+                    <label>Price</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>MainCompetitors__c</fullName>
+        <externalId>false</externalId>
+        <label>Main Competitor(s)</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>NextStep</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Renew</fullName>
+                    <default>false</default>
+                    <label>Renew</label>
+                </value>
+                <value>
+                    <fullName>Modification</fullName>
+                    <default>false</default>
+                    <label>Modification</label>
+                </value>
+                <value>
+                    <fullName>Contraction</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>Contraction</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>OrderNumber__c</fullName>
+        <externalId>false</externalId>
+        <label>Order Number</label>
+        <length>8</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Parent_Amendment_Id__c</fullName>
+        <defaultValue>0</defaultValue>
+        <externalId>false</externalId>
+        <label>Parent Amendment Id</label>
+        <precision>9</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Parent_Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Parent Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Opportunities</relationshipLabel>
+        <relationshipName>Opportunities</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Pricebook2Id</fullName>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Probability</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Proposed_Booking_Expiry_Extension__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed Booking Expiry Extension</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>ROI_Analysis_Completed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>ROI Analysis Completed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Retail_Sales_Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Retail Sales Category</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Bakeries</fullName>
+                    <default>false</default>
+                    <label>Bakeries</label>
+                </value>
+                <value>
+                    <fullName>Butcher</fullName>
+                    <default>false</default>
+                    <label>Butcher</label>
+                </value>
+                <value>
+                    <fullName>Seafood</fullName>
+                    <default>false</default>
+                    <label>Seafood</label>
+                </value>
+                <value>
+                    <fullName>Beer &amp; Wine</fullName>
+                    <default>false</default>
+                    <label>Beer &amp; Wine</label>
+                </value>
+                <value>
+                    <fullName>Groceries</fullName>
+                    <default>false</default>
+                    <label>Groceries</label>
+                </value>
+                <value>
+                    <fullName>Florists</fullName>
+                    <default>false</default>
+                    <label>Florists</label>
+                </value>
+                <value>
+                    <fullName>Chocolates &amp; Confections</fullName>
+                    <default>false</default>
+                    <label>Chocolates &amp; Confections</label>
+                </value>
+                <value>
+                    <fullName>Delicatesse</fullName>
+                    <default>false</default>
+                    <label>Delicatesse</label>
+                </value>
+                <value>
+                    <fullName>Coffees Teas &amp; Drinks</fullName>
+                    <default>false</default>
+                    <label>Coffees Teas &amp; Drinks</label>
+                </value>
+                <value>
+                    <fullName>Restaurants &amp; Pubs with Alcohol License</fullName>
+                    <default>false</default>
+                    <label>Restaurants &amp; Pubs with Alcohol License</label>
+                </value>
+                <value>
+                    <fullName>Takeaway &amp; Fast Food</fullName>
+                    <default>false</default>
+                    <label>Takeaway &amp; Fast Food</label>
+                </value>
+                <value>
+                    <fullName>Lounges</fullName>
+                    <default>false</default>
+                    <label>Lounges</label>
+                </value>
+                <value>
+                    <fullName>Ceramics and Pottery</fullName>
+                    <default>false</default>
+                    <label>Ceramics and Pottery</label>
+                </value>
+                <value>
+                    <fullName>Jewellery</fullName>
+                    <default>false</default>
+                    <label>Jewellery</label>
+                </value>
+                <value>
+                    <fullName>Leather, Wool and Silk</fullName>
+                    <default>false</default>
+                    <label>Leather, Wool and Silk</label>
+                </value>
+                <value>
+                    <fullName>Wood</fullName>
+                    <default>false</default>
+                    <label>Wood</label>
+                </value>
+                <value>
+                    <fullName>Glass</fullName>
+                    <default>false</default>
+                    <label>Glass</label>
+                </value>
+                <value>
+                    <fullName>Furniture</fullName>
+                    <default>false</default>
+                    <label>Furniture</label>
+                </value>
+                <value>
+                    <fullName>Sculpture</fullName>
+                    <default>false</default>
+                    <label>Sculpture</label>
+                </value>
+                <value>
+                    <fullName>Printmaking</fullName>
+                    <default>false</default>
+                    <label>Printmaking</label>
+                </value>
+                <value>
+                    <fullName>Painters</fullName>
+                    <default>false</default>
+                    <label>Painters</label>
+                </value>
+                <value>
+                    <fullName>Galleries</fullName>
+                    <default>false</default>
+                    <label>Galleries</label>
+                </value>
+                <value>
+                    <fullName>Art Supplier</fullName>
+                    <default>false</default>
+                    <label>Art Supplier</label>
+                </value>
+                <value>
+                    <fullName>Theatres</fullName>
+                    <default>false</default>
+                    <label>Theatres</label>
+                </value>
+                <value>
+                    <fullName>Festivals</fullName>
+                    <default>false</default>
+                    <label>Festivals</label>
+                </value>
+                <value>
+                    <fullName>Bank</fullName>
+                    <default>false</default>
+                    <label>Bank</label>
+                </value>
+                <value>
+                    <fullName>Activewear</fullName>
+                    <default>false</default>
+                    <label>Activewear</label>
+                </value>
+                <value>
+                    <fullName>Casualwear</fullName>
+                    <default>false</default>
+                    <label>Casualwear</label>
+                </value>
+                <value>
+                    <fullName>Denim and Streetwear</fullName>
+                    <default>false</default>
+                    <label>Denim and Streetwear</label>
+                </value>
+                <value>
+                    <fullName>General Fashion</fullName>
+                    <default>false</default>
+                    <label>General Fashion</label>
+                </value>
+                <value>
+                    <fullName>Intimates and Hosiery</fullName>
+                    <default>false</default>
+                    <label>Intimates and Hosiery</label>
+                </value>
+                <value>
+                    <fullName>kids</fullName>
+                    <default>false</default>
+                    <label>kids</label>
+                </value>
+                <value>
+                    <fullName>Formal and Eveningwear</fullName>
+                    <default>false</default>
+                    <label>Formal and Eveningwear</label>
+                </value>
+                <value>
+                    <fullName>Shirting</fullName>
+                    <default>false</default>
+                    <label>Shirting</label>
+                </value>
+                <value>
+                    <fullName>Sportswear</fullName>
+                    <default>false</default>
+                    <label>Sportswear</label>
+                </value>
+                <value>
+                    <fullName>Suiting</fullName>
+                    <default>false</default>
+                    <label>Suiting</label>
+                </value>
+                <value>
+                    <fullName>Swimwear</fullName>
+                    <default>false</default>
+                    <label>Swimwear</label>
+                </value>
+                <value>
+                    <fullName>Eyewear</fullName>
+                    <default>false</default>
+                    <label>Eyewear</label>
+                </value>
+                <value>
+                    <fullName>Handbags and Accessories</fullName>
+                    <default>false</default>
+                    <label>Handbags and Accessories</label>
+                </value>
+                <value>
+                    <fullName>Jewellery and Watches</fullName>
+                    <default>false</default>
+                    <label>Jewellery and Watches</label>
+                </value>
+                <value>
+                    <fullName>Shoes</fullName>
+                    <default>false</default>
+                    <label>Shoes</label>
+                </value>
+                <value>
+                    <fullName>Sports shoes</fullName>
+                    <default>false</default>
+                    <label>Sports shoes</label>
+                </value>
+                <value>
+                    <fullName>Fine Leather &amp; Luggage</fullName>
+                    <default>false</default>
+                    <label>Fine Leather &amp; Luggage</label>
+                </value>
+                <value>
+                    <fullName>Kids fashion</fullName>
+                    <default>false</default>
+                    <label>Kids fashion</label>
+                </value>
+                <value>
+                    <fullName>Kids shoes</fullName>
+                    <default>false</default>
+                    <label>Kids shoes</label>
+                </value>
+                <value>
+                    <fullName>Toys</fullName>
+                    <default>false</default>
+                    <label>Toys</label>
+                </value>
+                <value>
+                    <fullName>Copy shop</fullName>
+                    <default>false</default>
+                    <label>Copy shop</label>
+                </value>
+                <value>
+                    <fullName>Dry cleaning</fullName>
+                    <default>false</default>
+                    <label>Dry cleaning</label>
+                </value>
+                <value>
+                    <fullName>Library</fullName>
+                    <default>false</default>
+                    <label>Library</label>
+                </value>
+                <value>
+                    <fullName>Gifts/Cards</fullName>
+                    <default>false</default>
+                    <label>Gifts/Cards</label>
+                </value>
+                <value>
+                    <fullName>Handicrafts</fullName>
+                    <default>false</default>
+                    <label>Handicrafts</label>
+                </value>
+                <value>
+                    <fullName>Tobacco</fullName>
+                    <default>false</default>
+                    <label>Tobacco</label>
+                </value>
+                <value>
+                    <fullName>Newsagent</fullName>
+                    <default>false</default>
+                    <label>Newsagent</label>
+                </value>
+                <value>
+                    <fullName>Travel Agent</fullName>
+                    <default>false</default>
+                    <label>Travel Agent</label>
+                </value>
+                <value>
+                    <fullName>Fitness &amp; Gym</fullName>
+                    <default>false</default>
+                    <label>Fitness &amp; Gym</label>
+                </value>
+                <value>
+                    <fullName>Entertainment</fullName>
+                    <default>false</default>
+                    <label>Entertainment</label>
+                </value>
+                <value>
+                    <fullName>Cinema</fullName>
+                    <default>false</default>
+                    <label>Cinema</label>
+                </value>
+                <value>
+                    <fullName>Family Entertainment Center</fullName>
+                    <default>false</default>
+                    <label>Family Entertainment Center</label>
+                </value>
+                <value>
+                    <fullName>Bowling</fullName>
+                    <default>false</default>
+                    <label>Bowling</label>
+                </value>
+                <value>
+                    <fullName>Biking</fullName>
+                    <default>false</default>
+                    <label>Biking</label>
+                </value>
+                <value>
+                    <fullName>Swimming pool</fullName>
+                    <default>false</default>
+                    <label>Swimming pool</label>
+                </value>
+                <value>
+                    <fullName>Spa</fullName>
+                    <default>false</default>
+                    <label>Spa</label>
+                </value>
+                <value>
+                    <fullName>Beauty</fullName>
+                    <default>false</default>
+                    <label>Beauty</label>
+                </value>
+                <value>
+                    <fullName>Pharmacy</fullName>
+                    <default>false</default>
+                    <label>Pharmacy</label>
+                </value>
+                <value>
+                    <fullName>Home appliances</fullName>
+                    <default>false</default>
+                    <label>Home appliances</label>
+                </value>
+                <value>
+                    <fullName>Home interior</fullName>
+                    <default>false</default>
+                    <label>Home interior</label>
+                </value>
+                <value>
+                    <fullName>Books &amp; Stationary</fullName>
+                    <default>false</default>
+                    <label>Books &amp; Stationary</label>
+                </value>
+                <value>
+                    <fullName>Lighting</fullName>
+                    <default>false</default>
+                    <label>Lighting</label>
+                </value>
+                <value>
+                    <fullName>Bed &amp; Bath</fullName>
+                    <default>false</default>
+                    <label>Bed &amp; Bath</label>
+                </value>
+                <value>
+                    <fullName>China &amp; Glass</fullName>
+                    <default>false</default>
+                    <label>China &amp; Glass</label>
+                </value>
+                <value>
+                    <fullName>Kitchen &amp; Cookware</fullName>
+                    <default>false</default>
+                    <label>Kitchen &amp; Cookware</label>
+                </value>
+                <value>
+                    <fullName>Electronics</fullName>
+                    <default>false</default>
+                    <label>Electronics</label>
+                </value>
+                <value>
+                    <fullName>Home and Gifts</fullName>
+                    <default>false</default>
+                    <label>Home and Gifts</label>
+                </value>
+                <value>
+                    <fullName>Decorative Accessories</fullName>
+                    <default>false</default>
+                    <label>Decorative Accessories</label>
+                </value>
+                <value>
+                    <fullName>Candles &amp; Fragrances</fullName>
+                    <default>false</default>
+                    <label>Candles &amp; Fragrances</label>
+                </value>
+                <value>
+                    <fullName>Office</fullName>
+                    <default>false</default>
+                    <label>Office</label>
+                </value>
+                <value>
+                    <fullName>Residential</fullName>
+                    <default>false</default>
+                    <label>Residential</label>
+                </value>
+                <value>
+                    <fullName>Cars</fullName>
+                    <default>false</default>
+                    <label>Cars</label>
+                </value>
+                <value>
+                    <fullName>Gym</fullName>
+                    <default>false</default>
+                    <label>Gym</label>
+                </value>
+                <value>
+                    <fullName>Music</fullName>
+                    <default>false</default>
+                    <label>Music</label>
+                </value>
+                <value>
+                    <fullName>Restaurants &amp; Pubs without Alcohol License</fullName>
+                    <default>false</default>
+                    <label>Restaurants &amp; Pubs without Alcohol License</label>
+                </value>
+                <value>
+                    <fullName>Store Room</fullName>
+                    <default>false</default>
+                    <label>Store Room</label>
+                </value>
+                <value>
+                    <fullName>F&amp;B, Concept</fullName>
+                    <default>false</default>
+                    <label>F&amp;B, Concept</label>
+                </value>
+                <value>
+                    <fullName>Nursery</fullName>
+                    <default>false</default>
+                    <label>Nursery</label>
+                </value>
+                <value>
+                    <fullName>ATM</fullName>
+                    <default>false</default>
+                    <label>ATM</label>
+                </value>
+                <value>
+                    <fullName>Vending Machine</fullName>
+                    <default>false</default>
+                    <label>Vending Machine</label>
+                </value>
+                <value>
+                    <fullName>Payment Machine</fullName>
+                    <default>false</default>
+                    <label>Payment Machine</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Segment__c</fullName>
+        <externalId>false</externalId>
+        <label>Segment</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Soft_Booking_Extension_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used as criteria for the soft booking extension approval process, button and flow.</description>
+        <externalId>false</externalId>
+        <label>Soft Booking Extension Submitted</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>StageName</fullName>
+        <trackFeedHistory>true</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>StageNameBeforeTerminationCase__c</fullName>
+        <externalId>false</externalId>
+        <label>StageNameBeforeTerminationCase</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Sub_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Sub Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Type</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Expansion</fullName>
+                    <default>false</default>
+                    <label>Expansion</label>
+                </value>
+                <value>
+                    <fullName>Downsize</fullName>
+                    <default>false</default>
+                    <label>Downsize</label>
+                </value>
+                <value>
+                    <fullName>Renewal</fullName>
+                    <default>false</default>
+                    <label>Renewal</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Amendment</controllingFieldValue>
+                <controllingFieldValue>Renewal</controllingFieldValue>
+                <valueName>Expansion</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Amendment</controllingFieldValue>
+                <controllingFieldValue>Renewal</controllingFieldValue>
+                <valueName>Downsize</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Renewal</controllingFieldValue>
+                <valueName>Renewal</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>SyncedQuoteId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>T_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>T Code</label>
+        <length>8</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>TotalOpportunityQuantity</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+    </fields>
+    <fields>
+        <fullName>Total_Discount__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Discount</label>
+        <summarizedField>Quote.Total_Discount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Quote.IsSyncing</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Quote.OpportunityId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Quotes__c</fullName>
+        <description>Count the amount of quote records on an opportunity. To be used in a validation rule when progressing to Negotiation or Active stage.</description>
+        <externalId>false</externalId>
+        <label>Total Quotes</label>
+        <summaryForeignKey>Quote.OpportunityId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>TrackingNumber__c</fullName>
+        <externalId>false</externalId>
+        <label>Tracking Number</label>
+        <length>12</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Yardi_Integration_Error_Message__c</fullName>
+        <externalId>false</externalId>
+        <label>Yardi Integration Error Message</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Integration_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Yardi Integration Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Success</fullName>
+                    <default>false</default>
+                    <label>Success</label>
+                </value>
+                <value>
+                    <fullName>Failed</fullName>
+                    <default>false</default>
+                    <label>Failed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Yardi_Lease_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Yardi Lease Status</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>is_Merged_Opportunity__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>is Merged Opportunity</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <listViews>
+        <fullName>AllOpportunities</fullName>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>ACCOUNT.NAME</columns>
+        <columns>OPPORTUNITY.AMOUNT</columns>
+        <columns>OPPORTUNITY.CLOSE_DATE</columns>
+        <columns>OPPORTUNITY.STAGE_NAME</columns>
+        <columns>OPPORTUNITY.PROBABILITY</columns>
+        <columns>OPPORTUNITY.TYPE</columns>
+        <columns>OPPORTUNITY.LEAD_SOURCE</columns>
+        <columns>CORE.USERS.FULL_NAME</columns>
+        <columns>OPPORTUNITY.CREATED_DATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Opportunities</label>
+    </listViews>
+    <listViews>
+        <fullName>ClosingNextMonth</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>equals</operation>
+            <value>NEXT_MONTH</value>
+        </filters>
+        <label>Closing Next Month</label>
+    </listViews>
+    <listViews>
+        <fullName>ClosingThisMonth</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_MONTH</value>
+        </filters>
+        <label>Closing This Month</label>
+    </listViews>
+    <listViews>
+        <fullName>Default_Opportunity_Pipeline</fullName>
+        <booleanFilter>(1 OR 2)</booleanFilter>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSE_DATE</field>
+            <operation>greaterOrEqual</operation>
+            <value>LAST_N_DAYS:30</value>
+        </filters>
+        <label>Opportunity Pipeline</label>
+    </listViews>
+    <listViews>
+        <fullName>MyOpportunities</fullName>
+        <filterScope>Mine</filterScope>
+        <label>My Opportunities</label>
+    </listViews>
+    <listViews>
+        <fullName>NewLastWeek</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>LAST_WEEK</value>
+        </filters>
+        <label>New Last Week</label>
+    </listViews>
+    <listViews>
+        <fullName>NewThisWeek</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.CREATED_DATE</field>
+            <operation>equals</operation>
+            <value>THIS_WEEK</value>
+        </filters>
+        <label>New This Week</label>
+    </listViews>
+    <listViews>
+        <fullName>Private</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.PRIVATE</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Private</label>
+    </listViews>
+    <listViews>
+        <fullName>Won</fullName>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>OPPORTUNITY.WON</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>OPPORTUNITY.CLOSED</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Won</label>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypes>
+        <fullName>Land_Lease_Opportunity</fullName>
+        <active>true</active>
+        <businessProcess>Sales Process</businessProcess>
+        <label>Land Lease Opportunity</label>
+        <picklistValues>
+            <picklist>DeliveryInstallationStatus__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yet to begin</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Expansion_Separate_Amendment_Terms__c</picklist>
+            <values>
+                <fullName>-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Framework_Detail__c</picklist>
+            <values>
+                <fullName>Both</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HSE_Status__c</picklist>
+            <values>
+                <fullName>Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved with comments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Process</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Broker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call Centre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Walk-In</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lease_Type__c</picklist>
+            <values>
+                <fullName>annland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>cowork</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>land</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>lhland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>str</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>unitsale</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Legal_Framework__c</picklist>
+            <values>
+                <fullName>Branch Foreign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Branch UAE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Freelance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Freezone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>License_Type__c</picklist>
+            <values>
+                <fullName>Values TBC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loss_Reason__c</picklist>
+            <values>
+                <fullName>Lost to Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Budget %2F Lost Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Decision %2F Non-Responsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Type__c</picklist>
+            <values>
+                <fullName>Modification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renew</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Retail_Sales_Category__c</picklist>
+            <values>
+                <fullName>ATM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Activewear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Art Supplier</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bakeries</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Beauty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bed %26 Bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Beer %26 Wine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Books %26 Stationary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bowling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Butcher</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Candles %26 Fragrances</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cars</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Casualwear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ceramics and Pottery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China %26 Glass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chocolates %26 Confections</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cinema</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coffees Teas %26 Drinks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Copy shop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decorative Accessories</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delicatesse</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denim and Streetwear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dry cleaning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electronics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eyewear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F%26B%2C Concept</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family Entertainment Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Festivals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fine Leather %26 Luggage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fitness %26 Gym</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Florists</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Formal and Eveningwear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furniture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Galleries</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Fashion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gifts%2FCards</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Glass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groceries</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gym</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Handbags and Accessories</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Handicrafts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home and Gifts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home appliances</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home interior</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intimates and Hosiery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jewellery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jewellery and Watches</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kids fashion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kids shoes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kitchen %26 Cookware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leather%2C Wool and Silk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Library</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lighting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lounges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Newsagent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Painters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payment Machine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pharmacy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printmaking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restaurants %26 Pubs with Alcohol License</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restaurants %26 Pubs without Alcohol License</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sculpture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seafood</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shirting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shoes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sports shoes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sportswear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Store Room</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suiting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Swimming pool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Swimwear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Takeaway %26 Fast Food</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Theatres</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toys</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Travel Agent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vending Machine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wood</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>kids</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Type__c</picklist>
+            <values>
+                <fullName>Downsize</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expansion</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Amendment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Yardi_Integration_Status__c</picklist>
+            <values>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Success</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Premise_Lease_Opportunity</fullName>
+        <active>true</active>
+        <businessProcess>Sales Process</businessProcess>
+        <label>Premise Lease Opportunity</label>
+        <picklistValues>
+            <picklist>DeliveryInstallationStatus__c</picklist>
+            <values>
+                <fullName>Completed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yet to begin</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Expansion_Separate_Amendment_Terms__c</picklist>
+            <values>
+                <fullName>-1</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>0</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>ForecastCategoryName</picklist>
+            <values>
+                <fullName>Best Case</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Commit</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Omitted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pipeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Framework_Detail__c</picklist>
+            <values>
+                <fullName>Both</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Individual</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>HSE_Status__c</picklist>
+            <values>
+                <fullName>Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved with comments</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>None</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Process</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>LeadSource</picklist>
+            <values>
+                <fullName>Broker</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Call Centre</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Email</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Events</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Phone</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Referral</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Walk-In</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Web</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Lease_Type__c</picklist>
+            <values>
+                <fullName>annland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>cowork</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>land</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>lhland</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>retail</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>str</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>unitsale</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Legal_Framework__c</picklist>
+            <values>
+                <fullName>Branch Foreign</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Branch UAE</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Freelance</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Freezone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>License_Type__c</picklist>
+            <values>
+                <fullName>Values TBC</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Loss_Reason__c</picklist>
+            <values>
+                <fullName>Lost to Competitor</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Budget %2F Lost Funding</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>No Decision %2F Non-Responsive</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Price</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Opportunity_Type__c</picklist>
+            <values>
+                <fullName>Modification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renew</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Retail_Sales_Category__c</picklist>
+            <values>
+                <fullName>ATM</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Activewear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Art Supplier</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bakeries</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bank</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Beauty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bed %26 Bath</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Beer %26 Wine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Biking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Books %26 Stationary</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bowling</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Butcher</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Candles %26 Fragrances</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cars</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Casualwear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ceramics and Pottery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>China %26 Glass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Chocolates %26 Confections</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cinema</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Coffees Teas %26 Drinks</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Copy shop</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Decorative Accessories</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Delicatesse</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Denim and Streetwear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Dry cleaning</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Electronics</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Eyewear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F%26B%2C Concept</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Family Entertainment Center</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Festivals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fine Leather %26 Luggage</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fitness %26 Gym</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Florists</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Formal and Eveningwear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Furniture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Galleries</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>General Fashion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gifts%2FCards</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Glass</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Groceries</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gym</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Handbags and Accessories</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Handicrafts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home and Gifts</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home appliances</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home interior</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Intimates and Hosiery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jewellery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Jewellery and Watches</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kids fashion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kids shoes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Kitchen %26 Cookware</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leather%2C Wool and Silk</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Library</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lighting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lounges</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Music</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Newsagent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Office</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Painters</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Payment Machine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Pharmacy</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Printmaking</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Residential</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restaurants %26 Pubs with Alcohol License</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Restaurants %26 Pubs without Alcohol License</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sculpture</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Seafood</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shirting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Shoes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Spa</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sports shoes</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Sportswear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Store Room</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Suiting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Swimming pool</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Swimwear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Takeaway %26 Fast Food</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Theatres</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Tobacco</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Toys</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Travel Agent</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Vending Machine</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Wood</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>kids</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sub_Type__c</picklist>
+            <values>
+                <fullName>Downsize</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expansion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type</picklist>
+            <values>
+                <fullName>Amendment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Modification</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Yardi_Integration_Status__c</picklist>
+            <values>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Success</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>ACCOUNT.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OPPORTUNITY.CLOSE_DATE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>ACCOUNT.NAME</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OPPORTUNITY.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>ACCOUNT.NAME</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>ACCOUNT.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.STAGE_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.CLOSE_DATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>Read</sharingModel>
+    <validationRules>
+        <fullName>Cant_change_Opportunity_Status_to_New</fullName>
+        <active>true</active>
+        <description>Once the stage has moved past &apos;New&apos;, this stage can&apos;t be selected again.</description>
+        <errorConditionFormula>$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;&amp;&amp;
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;&amp;&amp;  
+ISPICKVAL(StageName, &quot;New&quot;)&amp;&amp;
+ISCHANGED(StageName)</errorConditionFormula>
+        <errorMessage>Opportunity can&apos;t be set to &apos;New&apos;, please create a new Opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Cant_reactivate_closed_lost</fullName>
+        <active>true</active>
+        <description>Once opportunity has been cancelled or closed lost, a new opportunity must be raised, this can not be reactivated</description>
+        <errorConditionFormula>(ISPICKVAL(PRIORVALUE(StageName),&quot;Cancelled&quot;) || 
+ISPICKVAL(PRIORVALUE(StageName),&quot;Closed Lost&quot;))&amp;&amp;
+ISCHANGED(StageName)
+&amp;&amp;
+(ISPICKVAL(StageName, &quot;Active&quot;) || 
+ISPICKVAL(StageName, &quot;Proposal/Price Quote&quot;) ||  
+ISPICKVAL(StageName, &quot;Negotiation&quot;))
+&amp;&amp;
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;&amp;&amp;
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;</errorConditionFormula>
+        <errorMessage>Please raise a New Quote, this can&apos;t be reactivated.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ExpansionSeparateAmendmentShouldNotBlank</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( ISPICKVAL(Type, &apos;Renewal&apos;), ISPICKVAL( Sub_Type__c , &apos;Expansion&apos;), ISPICKVAL( Expansion_Separate_Amendment_Terms__c, &quot;&quot; ))</errorConditionFormula>
+        <errorDisplayField>Expansion_Separate_Amendment_Terms__c</errorDisplayField>
+        <errorMessage>Expansion Separate Amendment Terms Should Not Blank for Renewal Expansion Opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lease_End_Date_cannot_be_Lesser</fullName>
+        <active>true</active>
+        <description>Lease End Date cannot be less than the Lease Start Date</description>
+        <errorConditionFormula>Lease_End_Date__c &lt; Lease_Start_Date__c</errorConditionFormula>
+        <errorMessage>The Lease End Date cannot be lesser than the Lease Start Date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Negotiation_OR_Active_Stage_Validation</fullName>
+        <active>true</active>
+        <description>Validation to check if there are any quotes on the Opportunity before user can move to Negotiation OR Active.</description>
+        <errorConditionFormula>OR(
+AND( Total_Quotes__c &lt;1,
+ISPICKVAL( StageName, &quot;Negotiation&quot;)),
+AND( Total_Quotes__c &lt;1,
+ISPICKVAL( StageName, &quot;Active&quot;))
+)</errorConditionFormula>
+        <errorMessage>Please create a quote before you can progress this Opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Restrict_End_Date_Change</fullName>
+        <active>true</active>
+        <description>Restrict to change end date for Amendment expansion opportunity.</description>
+        <errorConditionFormula>AND( ISPICKVAL( Type , &apos;Amendment&apos;), ISPICKVAL( Sub_Type__c , &apos;Expansion&apos;), ISCHANGED( Lease_End_Date__c ))</errorConditionFormula>
+        <errorMessage>Lease End Date can&apos;t be changed if Opportunity Type is Amendment and Sub-type is Expansion.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Restrict_User_to_Change_Type_Expansion</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(NOT(Is_Created_From_Component__c), NOT(ISPICKVAL( Type , &apos;Renewal&apos;)), OR(OR(AND(ISPICKVAL( Type , &apos;Amendment&apos;), ISCHANGED(Type)), AND(ISPICKVAL( Sub_Type__c , &apos;Expansion&apos;), ISCHANGED(Sub_Type__c))) , AND(ISNEW(), NOT(ISPICKVAL( Type , &apos;Renewal&apos;)),  OR(ISPICKVAL( Type , &apos;Amendment&apos;), ISPICKVAL( Sub_Type__c , &apos;Expansion&apos;)))))</errorConditionFormula>
+        <errorMessage>You can&apos;t create an opportunity with type amendment, this must be created through relevant buttons</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Stage_Closed_Won_to_Active</fullName>
+        <active>true</active>
+        <description>Throws an error if the stage changes to any other stage from closed won other than active or cancelled.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+ISCHANGED(StageName),
+ISPICKVAL(PRIORVALUE(StageName),&quot;Closed Won&quot;),
+OR(ISPICKVAL(StageName, &quot;New&quot;),
+ISPICKVAL(StageName, &quot;Proposal/Price Quote&quot;),
+ISPICKVAL(StageName, &quot;Negotiation&quot;),
+ISPICKVAL(StageName, &quot;Closed Lost&quot;))
+)</errorConditionFormula>
+        <errorMessage>A &apos;Closed Won&apos; Opportunity cannot be moved to this Stage.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Sync_Quote_to_Opportunity</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+Accepted_Syncing_Quote__c = 0,
+ISPICKVAL( StageName, &quot;Closed Won&quot;)
+)</errorConditionFormula>
+        <errorMessage>Your Quote has not been Synced to the Opportunity - Please Sync your Accepted Quote to the Opportunity before you Close Won the Opportunity.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>APXTConga4__Conga_Composer_OAuth</fullName>
+        <availability>online</availability>
+        <description>*** DO NOT USE THIS BUTTON ON A PAGE LAYOUT *** 
+
+OAuth buttons require additional setup. Please see the Composer Installation Guide for more details.
+
+COPY THE URL FROM THIS BUTTON and paste it into your own custom button or link. Then add optional parameters to finely tune the button&apos;s behavior. See the Composer Configuration Guide for details.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>660</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Conga Composer (OAuth)</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/APXTConga4__Conga_Composer
+?serverUrl={!API.Partner_Server_URL_370}
+&amp;id={!Opportunity.Id}</url>
+        <width>900</width>
+    </webLinks>
+    <webLinks>
+        <fullName>APXTConga4__Conga_Mail_Merge</fullName>
+        <availability>online</availability>
+        <description>*** DO NOT USE THIS BUTTON ON A PAGE LAYOUT *** 
+
+COPY THE URL FROM THIS BUTTON and paste it into your own custom button or link. Then add optional parameters to finely tune the button&apos;s behavior. See the Conga Configuration Guide for details.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>false</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>660</height>
+        <isResizable>false</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Conga Composer</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://composer.congamerge.com
+?serverUrl={!API.Partner_Server_URL_370}
+&amp;id={!Opportunity.Id}</url>
+        <width>900</width>
+    </webLinks>
+    <webLinks>
+        <fullName>DeliveryStatus</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Delivery Status</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://www.fedex.com/cgi-bin/tracking?tracknumbers={!Opportunity.TrackingNumber__c}&amp;action=track&amp;language=english&amp;cntry_code=us</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Downsizing</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Downsizing</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/c/AmendmentProcessApp.app?recordId={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Downsizing_Test</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Downsizing Test</masterLabel>
+        <openType>sidebar</openType>
+        <page>AmendmentProcessPage</page>
+        <protected>false</protected>
+    </webLinks>
+</CustomObject>

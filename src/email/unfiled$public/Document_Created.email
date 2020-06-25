@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Hi {!Document__c.Contact__c},<div><br></div><div>Please note that your document&nbsp;{!Document__c.Name} has been created and a file has been uploaded.</div><div><br></div><div>&nbsp;Click {!Document__c.Link} to view the Document in Salesforce.</div><div><br></div><div>Kind Regards,</div><div><br></div><div>The Salesforce Team</div>]]></td>
+</tr>
+</table>

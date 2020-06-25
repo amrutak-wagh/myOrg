@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Courier Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Courier Requests</value>
+    </caseValues>
+    <fields>
+        <label><!-- AXS Request Id --></label>
+        <name>AXS_Request_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>Account_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agreement# --></label>
+        <name>Agreement_Num__c</name>
+    </fields>
+    <fields>
+        <label><!-- Airway Bill Number --></label>
+        <name>Airway_Bill_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Building Name --></label>
+        <name>Building_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Name --></label>
+        <name>Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery Location --></label>
+        <name>Delivery_Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Delivery Zone --></label>
+        <name>Delivery_Zone__c</name>
+        <picklistValues>
+            <masterLabel>D3</masterLabel>
+            <translation><!-- D3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DI</masterLabel>
+            <translation><!-- DI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIAC</masterLabel>
+            <translation><!-- DIAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIC</masterLabel>
+            <translation><!-- DIC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DKP</masterLabel>
+            <translation><!-- DKP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DMC</masterLabel>
+            <translation><!-- DMC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DOC</masterLabel>
+            <translation><!-- DOC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DOZ</masterLabel>
+            <translation><!-- DOZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DPC</masterLabel>
+            <translation><!-- DPC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DSC</masterLabel>
+            <translation><!-- DSC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DSP</masterLabel>
+            <translation><!-- DSP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IMPZ</masterLabel>
+            <translation><!-- IMPZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In5</masterLabel>
+            <translation><!-- In5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TECOM</masterLabel>
+            <translation><!-- TECOM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Document Type --></label>
+        <name>Document_Type__c</name>
+        <picklistValues>
+            <masterLabel>Executed Lease Documents Delivery</masterLabel>
+            <translation><!-- Executed Lease Documents Delivery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lease Document Collection (Along with Cheque)</masterLabel>
+            <translation><!-- Lease Document Collection (Along with Cheque) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lease Document Delivery</masterLabel>
+            <translation><!-- Lease Document Delivery --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Empost Sticker --></label>
+        <name>Empost_Sticker__c</name>
+    </fields>
+    <fields>
+        <label><!-- Envelope Sticker --></label>
+        <name>Envelope_Sticker__c</name>
+    </fields>
+    <fields>
+        <label><!-- Integration Error Message --></label>
+        <name>Integration_Error_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Integration Status --></label>
+        <name>Integration_Status__c</name>
+        <picklistValues>
+            <masterLabel>Failure</masterLabel>
+            <translation><!-- Failure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready</masterLabel>
+            <translation><!-- Ready --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation><!-- Success --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Last Updated On --></label>
+        <name>Last_Updated_On__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number Of Cheques --></label>
+        <name>Number_Of_Cheques__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oracle Party ID --></label>
+        <name>Oracle_Party_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Reference Mobile --></label>
+        <name>Reference_Mobile__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Request Number --></label>
+        <name>Service_Request_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source System --></label>
+        <name>Source_System__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Allotted</masterLabel>
+            <translation><!-- Allotted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>At Hub</masterLabel>
+            <translation><!-- At Hub --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancelled</masterLabel>
+            <translation><!-- Cancelled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delivered</masterLabel>
+            <translation><!-- Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Out for Collection</masterLabel>
+            <translation><!-- Out for Collection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Out for Delivery</masterLabel>
+            <translation><!-- Out for Delivery --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Return to Sender</masterLabel>
+            <translation><!-- Return to Sender --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>at dispatcher</masterLabel>
+            <translation><!-- at dispatcher --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Courier Request Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

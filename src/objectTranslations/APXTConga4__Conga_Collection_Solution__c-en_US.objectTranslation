@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Conga Collection --></label>
+        <name>APXTConga4__Conga_Collection__c</name>
+        <relationshipLabel><!-- Conga Collection Solutions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Conga Solution --></label>
+        <name>APXTConga4__Conga_Solution__c</name>
+        <relationshipLabel><!-- Conga Collection Solutions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>APXTConga4__Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sort Order --></label>
+        <name>APXTConga4__Sort_Order__c</name>
+    </fields>
+</CustomObjectTranslation>

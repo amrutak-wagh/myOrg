@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Unit Sub-Category</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Unit Sub-Categories</value>
+    </caseValues>
+    <fields>
+        <label><!-- Activity --></label>
+        <name>Activity__c</name>
+        <picklistValues>
+            <masterLabel>Industrial</masterLabel>
+            <translation><!-- Industrial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office</masterLabel>
+            <translation><!-- Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Integration Flag --></label>
+        <name>Integration_Flag__c</name>
+    </fields>
+    <fields>
+        <label><!-- Push LeaseItems To DCCA --></label>
+        <name>Push_LeaseItems_To_DCCA__c</name>
+    </fields>
+    <fields>
+        <label><!-- SQL Integration Status --></label>
+        <name>SQL_Integration_Status__c</name>
+        <picklistValues>
+            <masterLabel>Ready To Insert</masterLabel>
+            <translation><!-- Ready To Insert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation><!-- Success --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unit Category Name --></label>
+        <name>Unit_Category_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Category --></label>
+        <name>Unit_Category__c</name>
+        <relationshipLabel><!-- Unit Sub-Categories --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Yardi SubCategory Code --></label>
+        <name>Yardi_SubCategory_Code__c</name>
+    </fields>
+    <layouts>
+        <layout>Unit Sub-Category Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

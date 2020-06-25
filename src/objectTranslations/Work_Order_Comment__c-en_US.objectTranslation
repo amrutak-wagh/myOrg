@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Work Order Comment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Work Order Comments</value>
+    </caseValues>
+    <fields>
+        <label><!-- Comment Body --></label>
+        <name>Comment_Body__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Clarification</masterLabel>
+            <translation><!-- Clarification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Review</masterLabel>
+            <translation><!-- Review --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Work Order --></label>
+        <name>Work_Order__c</name>
+        <relationshipLabel><!-- Work Order Comments --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

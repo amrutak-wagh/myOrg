@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[Hi {!Lead.OwnerFirstName},<br style="font-family: Times; font-size: medium;"><br style="font-family: Times; font-size: medium;">The below lead has been in status 1st Contact Completed for 3 days and has not progressed.&nbsp;<div><br></div><div>Please update the lead as soon as possible.&nbsp;</div><div><br></div><div>{!Lead.Link}<br><div style=""><div style="color: rgb(0, 0, 0);"><br style="font-family: Times; font-size: medium;"><span style="font-family: Times; font-size: medium;">Best Regards,&nbsp;</span><br style="font-family: Times; font-size: medium;">TECOM Salesforce Team</div></div></div>]]></td>
+</tr>
+</table>

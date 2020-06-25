@@ -1,0 +1,16 @@
+<aura:component controller="GenerateCCLDocument" implements="force:hasRecordId,force:lightningQuickAction">
+	<aura:attribute name="documents" type="Document__c[]"/>
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}"/>
+    <div style="height = 200px;">
+        CCL Generated, attached to a document.
+    </div>
+    <aura:html tag="style">
+       .slds-backdrop {
+       background: rgba(43, 40, 38, 0) !important;  
+       }
+       .slds-fade-in-open {
+       display:none !important;
+       }
+    </aura:html>
+    
+</aura:component>

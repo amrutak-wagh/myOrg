@@ -1,0 +1,130 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="DownsizingController_V2">
+    <aura:attribute name="recordId" type="String" />
+    <aura:attribute name="showLoader" type="Boolean" default="true" />
+    <aura:attribute name="opportunityLayout" type="Object" />
+    <aura:attribute name="quoteLayout" type="Object" />
+    <aura:attribute name="quoteId" type="String" description="Quote associated to opportunity." />
+    <aura:attribute name="terminationDate" type="Date" description="Termination date entered by user." />
+    <aura:attribute name="quoteLineItems" type="Object"/>
+    <aura:attribute name="quoteLineItemsColumns" type="List" />
+    <aura:attribute name="removeableQuoteLineItemsColumns" type="List" />    
+    <aura:attribute name="removeableQuoteLineItems" type="List"/>
+    <aura:attribute name="selectedQuoteLineItems" type="Object" description="List of selected items."/>
+    <aura:attribute name="hideModalClass" type="String" default="false" />
+    <aura:attribute name="parent" type="Aura.Component"/>
+    
+    
+    <aura:attribute name="step" type="Integer" default="1" />
+    
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <section role="dialog" tabindex="-1" aria-modal="true" class="{!v.hideModalClass + ' slds-modal slds-fade-in-open slds-modal_large'}">
+        <div class="slds-modal__container">
+            <header class="slds-modal__header">
+                <lightning:buttonIcon size="large" iconName="utility:close" variant="bare" onclick="{! c.cancel }" alternativeText="Close window." class="slds-modal__close slds-button_icon-inverse"/>
+                <h2 class="slds-text-heading_medium slds-hyphenate"><span>Amendment Process</span></h2>
+            </header>    
+
+            <div class="slds-modal__content">
+                <lightning:card class="slds-no-header slds-full-width slds-m-horizontal_medium">
+
+                <aura:if isTrue="{!v.showLoader}">
+                    <lightning:spinner variant="brand" />
+                </aura:if>
+                
+                <div class="slds-theme_default">
+                    <aura:if isTrue="{!v.step == 1}">
+                        <lightning:recordViewForm recordId="{!v.recordId}" objectApiName="Opportunity">
+                            <aura:iteration items="{! v.opportunityLayout.Sections }" var="section">
+                                <aura:if isTrue="{! or(section.Label == 'Opportunity Details', section.Label == 'Lease Details')}">
+                                    <h3 class="slds-section-title--divider">{! section.Label }</h3>
+                                    <div class="slds-grid slds-gutters">
+                                        <aura:iteration items="{! section.Columns }" var="column">
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <aura:iteration items="{! column.Fields }" var="field">
+                                                    <lightning:outputField fieldName="{! field.APIName }" />
+                                                </aura:iteration>
+                                            </div>
+                                        </aura:iteration>
+                                    </div>
+                                </aura:if>
+                            </aura:iteration>
+                        </lightning:recordViewForm>
+                    </aura:if> <!-- @END:step1 -->
+                    
+                    <aura:if isTrue="{!v.step == 2}">
+                        <div class="slds-m-vertical__medium slds-termination-date-input">
+							<lightning:input type="date" dateStyle="short" label="Termination Date" value="{!v.terminationDate}" aura:id="terminationDate" displayDatePicker="true" format="MM/dd/yyyy" required="true"/>
+                        </div>
+                         
+                        <lightning:recordViewForm recordId="{!v.quoteId}" objectApiName="Quote">
+                            <aura:iteration items="{! v.quoteLayout.Sections }" var="section">
+                                <aura:if isTrue="{! or(section.Label == 'Mandatory Quote Information', section.Label == 'Quote Information')}">
+                                    <h3 class="slds-section-title--divider">{! section.Label }</h3>
+                                    <div class="slds-grid slds-gutters">
+                                        <aura:iteration items="{! section.Columns }" var="column">
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <aura:iteration items="{! column.Fields }" var="field">
+                                                    <lightning:outputField fieldName="{! field.APIName }" />
+                                                </aura:iteration>
+                                            </div>
+                                        </aura:iteration>
+                                    </div>
+                                </aura:if>
+                                <aura:if isTrue="{! or(section.Label == 'Prices and Dates', section.Label == 'Discounts')}">
+                                    <h3 class="slds-section-title--divider">{! section.Label }</h3>
+                                    <div class="slds-grid slds-gutters">
+                                        <aura:iteration items="{! section.Columns }" var="column">
+                                            <div class="slds-col slds-size_1-of-2">
+                                                <aura:iteration items="{! column.Fields }" var="field">
+                                                    <lightning:outputField fieldName="{! field.APIName }" />
+                                                </aura:iteration>
+                                            </div>
+                                        </aura:iteration>
+                                    </div>
+                                </aura:if>
+                            </aura:iteration>
+                        </lightning:recordViewForm>
+                    </aura:if> <!-- @END:step2 -->
+                    
+                    <aura:if isTrue="{!v.step == 3}">
+                        <p class="slds-m-top_medium slds-m-bottom_medium">Please select quote line items to be removed:</p>
+                         <lightning:datatable
+                                     aura:id="quoteLineItems"
+                                     columns="{!v.quoteLineItemsColumns}"
+                                     data="{!v.quoteLineItems}"
+                                     keyField="id"
+                                     resizeColumnDisabled ="true"
+                                     class="slds-border_top"
+                                     onrowselection="{!c.updateRemoveableSelection}"
+                                     selectedRows="{!v.removeableQuoteLineItems}"
+                                     />
+                    </aura:if> <!-- @END:step3 -->
+                    
+                    <aura:if isTrue="{!v.step == 4}">
+                        <p class="slds-m-top_medium slds-m-bottom_medium">Follwing quote line items will be removed with respective termination date:</p>
+                         <lightning:datatable
+                                     aura:id="removeableQuoteLineItems"
+                                     columns="{!v.removeableQuoteLineItemsColumns}"
+                                     data="{!v.selectedQuoteLineItems}"
+                                     keyField="id"
+                                     resizeColumnDisabled ="true"
+                                     class="slds-border_top"
+                                     hideCheckboxColumn="true"
+                                     />
+                    </aura:if> <!-- @END:step4 -->
+                </div>
+                    
+                </lightning:card>
+            </div>
+            
+            <div class="slds-modal__footer"> 
+                <aura:if isTrue="{!v.step > 1}">
+	                <lightning:button value="Back" label="Back" onclick="{!c.back}"/>
+                </aura:if>
+                <lightning:button value="{!if(v.step == 4, 'Save', 'Next')}" variant="brand" label="{!if(v.step == 4, 'Save', 'Next')}" onclick="{!c.next}"/>
+            </div>
+        </div>
+    </section>
+</aura:component>

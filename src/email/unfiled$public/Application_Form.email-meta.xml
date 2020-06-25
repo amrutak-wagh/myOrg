@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Application Form</name>
+    <style>none</style>
+    <subject>Application form</subject>
+    <textOnly>Hi {!Contact.LastName},
+
+Welcome to the TECOM community.
+Please click on the following link to fill out the Application form for your lease interest:
+https://4cdev-tecomtest.cs3.force.com/test/s/registration?Id={!Contact.Encrypted_Contact_Id__c}
+You will receive a separate E-Mail with a verification code, which you require to access the application form.
+
+Best Regards,
+TECOM</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>TECOM</letterhead>
+    <name>Notify Lead Owner 3days after 1st contact completed</name>
+    <style>freeForm</style>
+    <subject>ACTION Required! Your Lead has been in 1st Contact Stage for 3 days.</subject>
+    <textOnly>Hi {!Lead.OwnerFirstName},
+
+The below lead has been in status 1st Contact Completed for 3 days and has not progressed.
+
+Please update the lead as soon as possible.
+
+{!Lead.Link}
+
+Best Regards,
+TECOM Salesforce Team</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

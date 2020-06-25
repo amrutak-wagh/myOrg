@@ -1,0 +1,7 @@
+Hi {!Opportunity.Contact__c},
+
+Your Opportunity will expire in next 120 days. Please do a follow up
+
+Opportunity - {!Opportunity.Link}
+
+Thanks & Regards

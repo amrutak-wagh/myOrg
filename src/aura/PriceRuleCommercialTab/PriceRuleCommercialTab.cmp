@@ -1,0 +1,32 @@
+<aura:component controller="PriceRuleCommercialTabController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+	<aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <aura:attribute name="selectedAssets" type="sObject[]" default="[]"/>
+ 	<aura:attribute name="selectedCategory" type="sObject[]" default="[]"/>
+    <aura:attribute name="selectedSubCategory" type="sObject[]" default="[]"/>
+    <aura:attribute name ="recordId" type="String" default=""/>
+    <aura:attribute name ="selectedOwnerShipValue" type="String" default=""/>
+    <aura:attribute name="options" type="Object" default=""/>
+    <aura:attribute name="values" type="List" default="[]"/>
+  <c:ReusableMultiSelectLookupParent objectAPIName="Asset_class__c"
+                               lstSelectedRecords="{!v.selectedAssets}"
+                               label="Asset Class"/>
+  <c:ReusableMultiSelectLookupParent objectAPIName="Unit_Category__c"
+                               IconName="standard:account"
+                               lstSelectedRecords="{!v.selectedCategory}"
+                               label="Unit Category"/>
+  <c:ReusableMultiSelectLookupParent objectAPIName="Unit_Sub_Category__c"
+                               IconName="standard:account"
+                               lstSelectedRecords="{!v.selectedSubCategory}"
+                               label="Unit Sub Category"/>
+    
+    <lightning:dualListbox name="languages"  
+                           label= "Ownership" 
+                           sourceLabel="Available" 
+                           selectedLabel="Selected" 
+                           fieldLevelHelp="This is a dual listbox" 
+                           options="{!v.options}" 
+                           value="{!v.values}"
+                           onchange="{! c.handleChange }"/>
+    <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.handleClick }" />
+   
+</aura:component>

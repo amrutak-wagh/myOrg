@@ -1,0 +1,116 @@
+<aura:component controller="ManagePriceRevisionsController">
+    <aura:attribute name="quoteLine" type="Object" />
+    <aura:attribute name="showLoader" type="Boolean" default="false" />
+    <aura:attribute name ="lineItemObj" type ="Object"/>
+    <aura:attribute name ="quoteLineMap" type ="Map"/>
+    <aura:attribute name="changesMade" type="Boolean" default="false"/>
+    <aura:attribute name="changedLineItemList" type="List"/>
+    <aura:handler name="init" value="this" action="{!c.doInit}"/>
+    
+    <aura:if isTrue="{!v.showLoader}">
+         <lightning:spinner variant="brand" alternativeText="Loading"/>
+    </aura:if>
+    
+    <div class="slds-page-header" style="cursor: pointer;background:white;" data-id="{!v.quoteLine.productId}" onclick="{!c.displayLineItem}">
+        <section class="slds-clearfix">
+            <div class="slds-float--left ">
+                <lightning:icon class="slds-show" iconName="utility:add" aura:id="panelDiv" size="x-small" alternativeText="Indicates add"/>
+                <lightning:icon class="slds-hide" iconName="utility:dash" aura:id="panelDiv" size="x-small" alternativeText="Indicates dash"/>
+            </div>
+            <div class="slds-grid slds-m-left--large">
+                <div class="slds-col--padded slds-size--1-of-2"> <b>Product: </b> {!v.quoteLine.productName}</div>
+                <div class="slds-col--padded slds-size--1-of-2"> <b>Area: </b> {!v.quoteLine.unitArea} </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="slds-hide slds-p-around--medium" aura:id="panelDiv">
+        
+        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Revision">Revision</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Type">Type</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Best Rate">Best Rate</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Offered Rate">Offered Rate</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Discount">Discount</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="Total Best Ratee">Total Best Rate</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="otal Offered Price">Total Offered Price</div>
+                    </th>
+                    <th class="" scope="col">
+                        <div class="slds-truncate" title="DOA Discount Amount">DOA Discount</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <aura:iteration items="{!v.quoteLine.lineItemList}" var="lineItem">
+                    <tr class="slds-hint-parent">
+                        
+                        <td><div class="slds-truncate" title="{!lineItem.Revision_Number__c}">{!lineItem.Revision_Number__c}</div></td>
+                        <td>
+                            <div class="slds-truncate" title="{!lineItem.PriceSch_ChargeType__c}">
+                                <aura:if isTrue="{!or(lineItem.Type__c == 'Normal', lineItem.Type__c == 'Revision')}">
+                            		{!lineItem.PriceSch_ChargeType__c}
+                                    <aura:set attribute="else">
+                                     	{!lineItem.Type__c}
+                                    </aura:set>
+                                </aura:if>
+                        	</div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!lineItem.Best_Rate__c}">
+                                <aura:if isTrue="{!and(v.quoteLine.allowBestRateEdit, or(lineItem.Type__c == 'Normal', lineItem.Type__c == 'Revision'))}">
+                                    <lightning:input type="number" name="input1"  value="{!lineItem.Best_Rate__c}" class="{!lineItem.Id}" onblur="{!c.updateTotalOfferPrice}"/>
+                                    <aura:set attribute="else">
+                                    	{!lineItem.Best_Rate__c}
+                                	</aura:set>
+                                </aura:if>
+                                
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" title="{!lineItem.Offered_Price_Rate__c}">
+                                <aura:if isTrue="{!or(lineItem.Type__c == 'Normal', lineItem.Type__c == 'Revision')}">
+                                    <lightning:input type="number" name="input1"  value="{!lineItem.Offer_Price__c}" class="{!lineItem.Id}" onblur="{!c.updateTotalOfferPrice}"/>
+                                    <aura:set attribute="else">
+                                      {!lineItem.Offer_Price__c}
+                                    </aura:set>
+                                 </aura:if> 
+                                
+                            </div>
+                        </td>
+                        <td>
+                            <div class="slds-truncate" >
+                                <aura:if isTrue="{!greaterthanorequal(lineItem.Total_Best_Rate__c , lineItem.Total_Offered_Price__c)}">
+                                    <lightning:formattedNumber value="{!(lineItem.Total_Best_Rate__c - lineItem.Total_Offered_Price__c)/lineItem.Total_Best_Rate__c *100}" maximumFractionDigits="2"/>%
+                                    <!--{!(lineItem.quoteLineItem.Total_Best_Rate__c - lineItem.quoteLineItem.Total_Offered_Price__c)/lineItem.quoteLineItem.Total_Best_Rate__c *100} -->
+                                    <aura:set attribute="else">
+                                        Upsell   
+                                    </aura:set>
+                                </aura:if>
+                                
+                            </div>
+                        </td>
+                        <td><div class="slds-truncate" title="{!lineItem.quoteLineItem.Total_Best_Rate__c}">{!lineItem.Total_Best_Rate__c}</div></td>
+                        <td><div class="slds-truncate" title="{!lineItem.quoteLineItem.Total_Offered_Price__c}">{!lineItem.Total_Offered_Price__c}</div></td>
+                        <td><div class="slds-truncate" title="{!lineItem.quoteLineItem.DOA_Discount2__c}">{!lineItem.DOA_Discount2__c}</div></td>
+                    </tr>
+                </aura:iteration>
+                
+            </tbody>
+        </table>
+    </div>
+</aura:component>

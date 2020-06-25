@@ -1,0 +1,2069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CreatePdf</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CreatePdf</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CreatePdf</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailQuote</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailQuote</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailQuote</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewQuote</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewQuote</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewQuote</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SyncQuote</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SyncQuote</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SyncQuote</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Large</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Quote_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <formFactor>Small</formFactor>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>Quote_Compact_Layout</compactLayoutAssignment>
+    <compactLayouts>
+        <fullName>Quote_Compact_Layout</fullName>
+        <fields>Name</fields>
+        <fields>QuoteNumber</fields>
+        <fields>OpportunityId</fields>
+        <fields>Total_Best_Rate_Roll_Up_Summary__c</fields>
+        <fields>Total_Offered_Price_Roll_Up_Summary__c</fields>
+        <fields>Total_Charge_Price__c</fields>
+        <fields>Total_Quote_Amount__c</fields>
+        <label>Quote Compact Layout</label>
+    </compactLayouts>
+    <enableFeeds>true</enableFeeds>
+    <externalSharingModel>ControlledByParent</externalSharingModel>
+    <fields>
+        <fullName>AccountId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AdditionalName</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Additional_GP_Discount_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional GP Discount Amount</label>
+        <summarizedField>QuoteLineItem.Additional_GP_Discount_Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>QuoteLineItem.Type__c</field>
+            <operation>equals</operation>
+            <value>Normal</value>
+        </summaryFilterItems>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>BilledAmount_Rental__c</fullName>
+        <externalId>false</externalId>
+        <label>BilledAmount Rental</label>
+        <summarizedField>Payment_Schedule__c.BilledAmount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Payment_Schedule__c.Description__c</field>
+            <operation>equals</operation>
+            <value>Rental Income - Office,Rent Discount,Grace Period - Office Leases</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Payment_Schedule__c.Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>BilledAmount_Service_Charge__c</fullName>
+        <externalId>false</externalId>
+        <label>BilledAmount Service Charge</label>
+        <summarizedField>Payment_Schedule__c.BilledAmount__c</summarizedField>
+        <summaryFilterItems>
+            <field>Payment_Schedule__c.Description__c</field>
+            <operation>equals</operation>
+            <value>Service Charge</value>
+        </summaryFilterItems>
+        <summaryForeignKey>Payment_Schedule__c.Quote__c</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>BillingName</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Booking_expiry_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Booking expiry Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Building__c</fullName>
+        <externalId>false</externalId>
+        <label>Building</label>
+        <length>80</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CCL_Sign_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>CCL Sign Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Cancellation_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Cancellation Reason</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Product Unavailable</fullName>
+                    <default>false</default>
+                    <label>Product Unavailable</label>
+                </value>
+                <value>
+                    <fullName>Unit Already Soft Booked</fullName>
+                    <default>false</default>
+                    <label>Unit Already Soft Booked</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <length>100</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContactId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact_Account_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Contact.AccountId</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Account ID</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Contact_Name__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Contact__r.FirstName + &quot; &quot; + Opportunity.Contact__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Contact Name</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ContractId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DOA_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>DOA Approver</label>
+        <referenceTo>DOA_Approver__c</referenceTo>
+        <relationshipLabel>Quotes</relationshipLabel>
+        <relationshipName>Quotes</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>DOA_Discount_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>DOA Discount Amount</label>
+        <summarizedField>QuoteLineItem.DOA_Discount_Amount__c</summarizedField>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>DOA_Discount_Roll_Up_Summary__c</fullName>
+        <externalId>false</externalId>
+        <label>DOA Discount</label>
+        <summarizedField>QuoteLineItem.DOA_Discount2__c</summarizedField>
+        <summaryFilterItems>
+            <field>QuoteLineItem.Type__c</field>
+            <operation>equals</operation>
+            <value>Normal</value>
+        </summaryFilterItems>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>DOA_Discount__c</fullName>
+        <externalId>false</externalId>
+        <formula>If( Total_Best_Rate__c &lt;&gt;0, (DOA_Discount_Amount__c+ Additional_GP_Discount_Amount__c -Total_Negative_GP_Discount_Amount__c- Total_Upselling_Discount_Amount__c)/(Total_Best_Rate__c+ Total_Best_Rate_for_Proposed_GP__c ) , 
+IF(AND(Total_Best_Rate__c=0,TotalPrice=0),1,0) 
+)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DOA Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>DOA_Discount_percent__c</fullName>
+        <description>DOA Discount percentage of the total best rate</description>
+        <externalId>false</externalId>
+        <formula>(Offer_Best_Discount_Amount__c +  Additional_GP_Discount_Amount__c) /  Total_Best_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>DOA Discount %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Default_GP_Discount_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Default GP Discount Amount</label>
+        <summarizedField>QuoteLineItem.Default_GP_Discount_Amount__c</summarizedField>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Discount</fullName>
+    </fields>
+    <fields>
+        <fullName>Discount_Percentage__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Total_Best_Rate_Roll_Up_Summary__c  - Total_Offered_Price_Roll_Up_Summary__c )/ Total_Best_Rate_Roll_Up_Summary__c</formula>
+        <label>Discount Percentage</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Discount__c</fullName>
+        <externalId>false</externalId>
+        <label>Discount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Expansion_Separate_Amendment_Terms__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Opportunity.Expansion_Separate_Amendment_Terms__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Expansion Separate Amendment Terms</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ExpirationDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Fax</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Grace_Period_Mechanism__c</fullName>
+        <externalId>false</externalId>
+        <label>Grace Period Mechanism</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>initial</fullName>
+                    <default>false</default>
+                    <label>initial</label>
+                </value>
+                <value>
+                    <fullName>every</fullName>
+                    <default>false</default>
+                    <label>every</label>
+                </value>
+                <value>
+                    <fullName>end</fullName>
+                    <default>false</default>
+                    <label>end</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Grace_Period_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Grace Period (period)</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>days</fullName>
+                    <default>false</default>
+                    <label>days</label>
+                </value>
+                <value>
+                    <fullName>months</fullName>
+                    <default>false</default>
+                    <label>months</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Grace_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Grace Period</label>
+        <precision>5</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>GrandTotal</fullName>
+    </fields>
+    <fields>
+        <fullName>Integration_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Integration Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Ready To Sync</fullName>
+                    <default>false</default>
+                    <label>Ready To Sync</label>
+                </value>
+                <value>
+                    <fullName>Synched</fullName>
+                    <default>false</default>
+                    <label>Synched</label>
+                </value>
+                <value>
+                    <fullName>Failed</fullName>
+                    <default>false</default>
+                    <label>Failed</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>IsSyncing</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Lease_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Lease_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Lease Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Legal_Terms_Changed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Legal Terms Changed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Level_1_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Level 1 Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Quotes</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Level_2_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Level 2 Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Quotes1</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Level_3_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Level 3 Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Quotes2</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Level_4_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Level 4 Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Quotes3</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Level_5_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Level 5 Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Quotes4</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Level_6_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Level 6 Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Quotes5</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>LineItemCount</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Manually_submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used as part of the approval process to validate that the submit for approval is manually submitted. This will be used as a validation rule, prevent the user from changing the status manually to submitted.</description>
+        <externalId>false</externalId>
+        <label>Manually submitted?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Number_Of_Payments__c</fullName>
+        <externalId>false</externalId>
+        <label>Number Of Payments</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_Of_Products__c</fullName>
+        <externalId>false</externalId>
+        <label>Number Of Products</label>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Quote_Line_Items__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Quote Line Items</label>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Revisions__c</fullName>
+        <externalId>false</externalId>
+        <label>Number of Revisions</label>
+        <summaryForeignKey>Quote_Revision__c.Quote__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Offer_Best_Discount_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Offer/Best Discount Amount</label>
+        <summarizedField>QuoteLineItem.Offer_Best_Discount_Amount__c</summarizedField>
+        <summaryFilterItems>
+            <field>QuoteLineItem.Type__c</field>
+            <operation>equals</operation>
+            <value>Normal</value>
+        </summaryFilterItems>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>OpportunityId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>MasterDetail</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Id__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Id</formula>
+        <label>Opportunity Id</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Type__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Opportunity.Type)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Type</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Owners_Manager_Email__c</fullName>
+        <description>Populated as part of the approval process for Soft Booking Extension.</description>
+        <externalId>false</externalId>
+        <label>Owners Manager Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payment_Terms__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Payment Terms</label>
+        <referenceTo>Payment_Term__c</referenceTo>
+        <relationshipLabel>Quotes</relationshipLabel>
+        <relationshipName>Quotes</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Pre_Approval_Allowed__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Pre Approval Allowed</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Previous_Quote__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Previous Quote</label>
+        <referenceTo>Quote</referenceTo>
+        <relationshipLabel>Quotes</relationshipLabel>
+        <relationshipName>Quotes</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Price_List_Number_Of_Payments__c</fullName>
+        <externalId>false</externalId>
+        <label>Price List Number Of Payments</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Product_Code__c</fullName>
+        <description>Product Code pushed from the Quote Line Item for Integration</description>
+        <externalId>false</externalId>
+        <label>Product Code</label>
+        <length>8</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Proposed_Booking_Expiry_Ext_Date__c</fullName>
+        <externalId>false</externalId>
+        <formula>Booking_expiry_Date__c +15</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Proposed Booking Expiry Extension</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_Booking_Expiry_Extension__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed Booking Expiry Extension</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed End Date</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Proposed_Grace_Period_Months__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed Grace Period Months</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Proposed_Grace_Period__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed Grace Period (Days)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Proposed_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Proposed Start Date</label>
+        <required>true</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>QuoteToName</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Quote_Approved_Via_Approval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This will be used to capture that the approval has been completed via the approval process, this will be used to enforce a validation rule so users can not change to approved without going through the approval process.</description>
+        <externalId>false</externalId>
+        <label>Quote Approved Via Approval?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Quote_Rejected_Via_Approval__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Quote Rejected Via Approval?</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Sales_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Sales Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Accessories &amp; Footwear</fullName>
+                    <default>false</default>
+                    <label>Accessories &amp; Footwear</label>
+                </value>
+                <value>
+                    <fullName>Artists-Artisans</fullName>
+                    <default>false</default>
+                    <label>Artists-Artisans</label>
+                </value>
+                <value>
+                    <fullName>F&amp;B, Cold Kitchen</fullName>
+                    <default>false</default>
+                    <label>F&amp;B, Cold Kitchen</label>
+                </value>
+                <value>
+                    <fullName>F&amp;B, Hot Kitchen</fullName>
+                    <default>false</default>
+                    <label>F&amp;B, Hot Kitchen</label>
+                </value>
+                <value>
+                    <fullName>F&amp;B, Licensed</fullName>
+                    <default>false</default>
+                    <label>F&amp;B, Licensed</label>
+                </value>
+                <value>
+                    <fullName>Fashion</fullName>
+                    <default>false</default>
+                    <label>Fashion</label>
+                </value>
+                <value>
+                    <fullName>Food-Grocery</fullName>
+                    <default>false</default>
+                    <label>Food-Grocery</label>
+                </value>
+                <value>
+                    <fullName>Gym</fullName>
+                    <default>false</default>
+                    <label>Gym</label>
+                </value>
+                <value>
+                    <fullName>Health &amp; Beauty</fullName>
+                    <default>false</default>
+                    <label>Health &amp; Beauty</label>
+                </value>
+                <value>
+                    <fullName>Home &amp; Electricals</fullName>
+                    <default>false</default>
+                    <label>Home &amp; Electricals</label>
+                </value>
+                <value>
+                    <fullName>Home Accessories</fullName>
+                    <default>false</default>
+                    <label>Home Accessories</label>
+                </value>
+                <value>
+                    <fullName>Leisure</fullName>
+                    <default>false</default>
+                    <label>Leisure</label>
+                </value>
+                <value>
+                    <fullName>Local Services</fullName>
+                    <default>false</default>
+                    <label>Local Services</label>
+                </value>
+                <value>
+                    <fullName>Not Applicable</fullName>
+                    <default>false</default>
+                    <label>Not Applicable</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Performing Arts</fullName>
+                    <default>false</default>
+                    <label>Performing Arts</label>
+                </value>
+                <value>
+                    <fullName>Facility</fullName>
+                    <default>false</default>
+                    <label>Facility</label>
+                </value>
+                <value>
+                    <fullName>Nursery</fullName>
+                    <default>false</default>
+                    <label>Nursery</label>
+                </value>
+                <value>
+                    <fullName>Bakeries</fullName>
+                    <default>false</default>
+                    <label>Bakeries</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ShippingHandling</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>ShippingName</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Soft_Book__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Soft Book</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Soft_Booking_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Soft Booking Date/Time</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Soft_Booking_Extension_Submitted__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Soft Booking Extension Submitted</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subtotal</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Tax</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Termination_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Termination Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>TotalPrice</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Total_Best_Rate_Roll_Up_Summary__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Best Rate</label>
+        <summarizedField>QuoteLineItem.Total_Best_Rate__c</summarizedField>
+        <summaryFilterItems>
+            <field>QuoteLineItem.Type__c</field>
+            <operation>equals</operation>
+            <value>Normal, Revision</value>
+        </summaryFilterItems>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Best_Rate__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Rent Best Rate</label>
+        <summarizedField>QuoteLineItem.Total_Best_Rate__c</summarizedField>
+        <summaryFilterItems>
+            <field>QuoteLineItem.Parent_Quote_Line_Item__c</field>
+            <operation>equals</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Best_Rate_for_Proposed_GP__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Best Rate for Proposed GP</label>
+        <summarizedField>QuoteLineItem.Best_Rate_for_Proposed_GP__c</summarizedField>
+        <summaryFilterItems>
+            <field>QuoteLineItem.Revision_Number__c</field>
+            <operation>equals</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Charge_Price__c</fullName>
+        <description>Total price for all quote line items with any charge type</description>
+        <externalId>false</externalId>
+        <label>Total Charge Price</label>
+        <summarizedField>QuoteLineItem.Total_Best_Rate__c</summarizedField>
+        <summaryFilterItems>
+            <field>QuoteLineItem.Type__c</field>
+            <operation>equals</operation>
+            <value>Revision, Normal</value>
+        </summaryFilterItems>
+        <summaryFilterItems>
+            <field>QuoteLineItem.Parent_Quote_Line_Item__c</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Discount__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Discount</label>
+        <summarizedField>QuoteLineItem.TOTAL_Discount__c</summarizedField>
+        <summaryFilterItems>
+            <field>QuoteLineItem.Type__c</field>
+            <operation>equals</operation>
+            <value>Normal</value>
+        </summaryFilterItems>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Discount_percent__c</fullName>
+        <description>Total Discount Percentage</description>
+        <externalId>false</externalId>
+        <formula>(Offer_Best_Discount_Amount__c +  Default_GP_Discount_Amount__c +  Additional_GP_Discount_Amount__c ) /  Total_Best_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Discount %</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Total_Negative_GP_Discount_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Negative GP Discount Amount</label>
+        <summarizedField>QuoteLineItem.Negative_GP_Discount_Amount__c</summarizedField>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Offer_Price__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Offer Price</label>
+        <summarizedField>QuoteLineItem.Total_Offered_Price__c</summarizedField>
+        <summaryFilterItems>
+            <field>QuoteLineItem.Parent_Quote_Line_Item__c</field>
+            <operation>equals</operation>
+            <value></value>
+        </summaryFilterItems>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Offered_Price_Roll_Up_Summary__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Offered Price</label>
+        <summarizedField>QuoteLineItem.Total_Offered_Price__c</summarizedField>
+        <summaryFilterItems>
+            <field>QuoteLineItem.Type__c</field>
+            <operation>equals</operation>
+            <value>Normal, Grace Period, Revision</value>
+        </summaryFilterItems>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>Total_Quote_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_Offered_Price_Roll_Up_Summary__c +  Total_Charge_Price__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Quote Amount</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_Upselling_Discount_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Total Upselling Discount Amount</label>
+        <summarizedField>QuoteLineItem.Upselling_Discount_Amount__c</summarizedField>
+        <summaryForeignKey>QuoteLineItem.QuoteId</summaryForeignKey>
+        <summaryOperation>sum</summaryOperation>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>TurnOver_Rent__c</fullName>
+        <externalId>false</externalId>
+        <label>TurnOver Rent</label>
+        <precision>7</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Transaction Type</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>New</fullName>
+                    <default>false</default>
+                    <label>New</label>
+                </value>
+                <value>
+                    <fullName>Renewal</fullName>
+                    <default>false</default>
+                    <label>Renewal</label>
+                </value>
+                <value>
+                    <fullName>Expansion</fullName>
+                    <default>false</default>
+                    <label>Expansion</label>
+                </value>
+                <value>
+                    <fullName>Downsize</fullName>
+                    <default>false</default>
+                    <label>Downsize</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Unit_Sub_Category__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Unit Sub-Category</label>
+        <referenceTo>Unit_Sub_Category__c</referenceTo>
+        <relationshipLabel>Quotes</relationshipLabel>
+        <relationshipName>Quotes</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Yardi_Brand_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>Opportunity.Account.Yardi_Account_Id__c</formula>
+        <label>Yardi Brand Code</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Customer_Code__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISBLANK(Contact.Account.ParentId), Contact.Account.Yardi_Account_Id__c ,  Contact.Account.Parent.Yardi_Account_Id__c )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Yardi Customer Code</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Yardi_Integration_Error_Message__c</fullName>
+        <externalId>false</externalId>
+        <label>Yardi Integration Error Message</label>
+        <length>131072</length>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Yardi_Integration_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Yardi Integration Status</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Ready for Integration</fullName>
+                    <default>false</default>
+                    <label>Ready for Integration</label>
+                </value>
+                <value>
+                    <fullName>Success</fullName>
+                    <default>false</default>
+                    <label>Success</label>
+                </value>
+                <value>
+                    <fullName>Error</fullName>
+                    <default>false</default>
+                    <label>Error</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <listViews>
+        <fullName>mine</fullName>
+        <columns>QUOTE.NAME</columns>
+        <columns>OPPORTUNITY.NAME</columns>
+        <columns>QUOTE.STATUS</columns>
+        <columns>QUOTE.ISSYNCING</columns>
+        <columns>QUOTE.EXPIRATIONDATE</columns>
+        <columns>QUOTE.SUBTOTAL</columns>
+        <columns>QUOTE.TOTALPRICE</columns>
+        <filterScope>Mine</filterScope>
+        <label>My Quotes</label>
+    </listViews>
+    <recordTypeTrackFeedHistory>false</recordTypeTrackFeedHistory>
+    <recordTypes>
+        <fullName>Approved_Quote</fullName>
+        <active>true</active>
+        <label>Approved Quote</label>
+        <picklistValues>
+            <picklist>Cancellation_Reason__c</picklist>
+            <values>
+                <fullName>Product Unavailable</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Grace_Period_Mechanism__c</picklist>
+            <values>
+                <fullName>end</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>every</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>initial</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Grace_Period_Period__c</picklist>
+            <values>
+                <fullName>days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>months</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Integration_Status__c</picklist>
+            <values>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready To Sync</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Synched</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sales_Type__c</picklist>
+            <values>
+                <fullName>Accessories %26 Footwear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Artists-Artisans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bakeries</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F%26B%2C Cold Kitchen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F%26B%2C Hot Kitchen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F%26B%2C Licensed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fashion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food-Grocery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gym</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health %26 Beauty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home %26 Electricals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Accessories</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leisure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Local Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Performing Arts</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Synched</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Downsize</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expansion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Yardi_Integration_Status__c</picklist>
+            <values>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready for Integration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Success</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>New_Quote</fullName>
+        <active>true</active>
+        <label>New Quote</label>
+        <picklistValues>
+            <picklist>Cancellation_Reason__c</picklist>
+            <values>
+                <fullName>Product Unavailable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Unit Already Soft Booked</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Grace_Period_Mechanism__c</picklist>
+            <values>
+                <fullName>end</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>every</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>initial</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Grace_Period_Period__c</picklist>
+            <values>
+                <fullName>days</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>months</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Integration_Status__c</picklist>
+            <values>
+                <fullName>Failed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready To Sync</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Synched</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Sales_Type__c</picklist>
+            <values>
+                <fullName>Accessories %26 Footwear</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Artists-Artisans</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Bakeries</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F%26B%2C Cold Kitchen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F%26B%2C Hot Kitchen</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>F%26B%2C Licensed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Facility</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Fashion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Food-Grocery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gym</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Health %26 Beauty</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home %26 Electricals</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Home Accessories</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leisure</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Local Services</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Nursery</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Performing Arts</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status</picklist>
+            <values>
+                <fullName>Accepted</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Draft</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Synched</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Under Approval</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Type__c</picklist>
+            <values>
+                <fullName>Downsize</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Expansion</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>New</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Yardi_Integration_Status__c</picklist>
+            <values>
+                <fullName>Error</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Ready for Integration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Success</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>QUOTE.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OPPORTUNITY.NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>QUOTE.ISSYNCING</customTabListAdditionalFields>
+        <customTabListAdditionalFields>QUOTE.EXPIRATIONDATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>QUOTE.SUBTOTAL</customTabListAdditionalFields>
+        <customTabListAdditionalFields>QUOTE.TOTALPRICE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>QUOTE.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OPPORTUNITY.NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>QUOTE.ISSYNCING</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>QUOTE.EXPIRATIONDATE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>QUOTE.SUBTOTAL</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>QUOTE.TOTALPRICE</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OPPORTUNITY.NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.ISSYNCING</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.EXPIRATIONDATE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.SUBTOTAL</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.TOTALPRICE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>QUOTE.PHONE</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>QUOTE.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OPPORTUNITY.NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>QUOTE.ISSYNCING</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>QUOTE.EXPIRATIONDATE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>QUOTE.SUBTOTAL</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>QUOTE.TOTALPRICE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Description_field_cannot_exceed_2000</fullName>
+        <active>true</active>
+        <errorConditionFormula>$Profile.Name &lt;&gt; &quot;Integration User Profile&quot; &amp;&amp;
+$Profile.Name &lt;&gt; &quot;System Administrator&quot; &amp;&amp;
+LEN(Description )  &gt;=  2000</errorConditionFormula>
+        <errorDisplayField>Description</errorDisplayField>
+        <errorMessage>The description cannot be longer than 2000 characters.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Do_not_allow_creation_of_new_Opportunity</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISNEW() &amp;&amp;  NOT(ISBLANK(Opportunity.SyncedQuoteId))&amp;&amp;
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;</errorConditionFormula>
+        <errorMessage>Opportunity selected by you already have synced quote. Please choose another</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>End_Date_not_before_Start_Date</fullName>
+        <active>true</active>
+        <description>Validate that the Lease End Date can not be before the Lease Start Date or TODAY.</description>
+        <errorConditionFormula>$Profile.Name &lt;&gt; &quot;Integration User Profile&quot; &amp;&amp; 
+OR( Proposed_End_Date__c &lt; Proposed_Start_Date__c , 
+Proposed_End_Date__c = Proposed_Start_Date__c )</errorConditionFormula>
+        <errorMessage>The Proposed End Date can not be the same or before the Proposed Start Date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lock_quote_when_approved_forSystem_Admin</fullName>
+        <active>false</active>
+        <description>Throws error if user tries to edit record after approval.</description>
+        <errorConditionFormula>AND( ISPICKVAL(PRIORVALUE(Status),&quot;Approved&quot;),
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+$Profile.Name == &apos;System Administrator&apos;,  
+Soft_Book__c == false,
+OR(   
+ISPICKVAL(Status, &quot;Approved&quot;),
+ISPICKVAL(Status, &quot;Accepted&quot;), 
+ISPICKVAL(Status, &quot;Synched&quot;), 
+ISPICKVAL(Status, &quot;Rejected&quot;), 
+ISPICKVAL(Status, &quot;Cancelled&quot;), 
+ISPICKVAL(Status, &quot;CCL Acceptance&quot;))
+)</errorConditionFormula>
+        <errorDisplayField>AccountId</errorDisplayField>
+        <errorMessage>Cannot edit quote once approved.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Opp_Required_Fields_before_quote_create</fullName>
+        <active>false</active>
+        <errorConditionFormula>$Profile.Name &lt;&gt; &quot;Integration User Profile&quot; &amp;&amp;
+OR(Opportunity.Business_Park__c = &quot;&quot;, 
+  ISPICKVAL( Opportunity.Lease_Type__c, &quot;&quot;)
+)</errorConditionFormula>
+        <errorMessage>Please complete Business Park, Opportunity Type and Lease Type before creating a new Quote.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Opportunity_cannot_be_closed_lost</fullName>
+        <active>true</active>
+        <description>Quote cannot be created if the related opportunity is closed lost.</description>
+        <errorConditionFormula>$Profile.Name &lt;&gt; &quot;Integration User Profile&quot; &amp;&amp; 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot; &amp;&amp; ISNEW() &amp;&amp; ISPICKVAL(Opportunity.StageName, &apos;Closed Lost&apos;)</errorConditionFormula>
+        <errorMessage>You cannot create a quote against a &apos;Closed Lost&apos; Opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Quote_Synched</fullName>
+        <active>true</active>
+        <description>Don&apos;t allow for creation of Quote when another is synched,</description>
+        <errorConditionFormula>$Profile.Name &lt;&gt; &apos;System Administrator&apos; &amp;&amp;
+NOT(ISPICKVAL(Status , &quot;Cancelled&quot;)) &amp;&amp; Opportunity.SyncedQuoteId != NULL &amp;&amp; Opportunity.SyncedQuoteId!= Id</errorConditionFormula>
+        <errorMessage>Creation of a new Quote is not allowed if there is a synched quote.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Quote_cannot_be_be_updated_back_to_draft</fullName>
+        <active>true</active>
+        <description>The quote cannot be be updated back to draft.</description>
+        <errorConditionFormula>$Profile.Name &lt;&gt; &quot;Integration User Profile&quot; &amp;&amp;
+$Profile.Name &lt;&gt; &quot;System Administrator&quot; &amp;&amp;
+ISPICKVAL(Opportunity.StageName, &quot;Closed Lost&quot;) &amp;&amp;
+ISPICKVAL( PRIORVALUE(Status) , &quot;Cancelled&quot;) &amp;&amp;
+ISPICKVAL(Status, &quot;Draft&quot;)</errorConditionFormula>
+        <errorMessage>The quote cannot be be updated back to draft.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Quote_must_be_Submitted_for_Approval</fullName>
+        <active>false</active>
+        <description>Will enforce the user to submit for approval through the button and not through the change of status.</description>
+        <errorConditionFormula>$Profile.Name &lt;&gt; &quot;Integration User Profile&quot; 
+&amp;&amp; 
+$Profile.Name &lt;&gt; &quot;System Administrator&quot; 
+&amp;&amp; 
+ISCHANGED(Status)
+&amp;&amp; 
+ISPICKVAL(Status, &quot;Under ApprovaL&quot;)
+&amp;&amp;
+(Manually_submitted__c = FALSE)</errorConditionFormula>
+        <errorMessage>Approval needs to be requested by clicking the &apos;Submit for Approval&apos; button.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Specify_Grace_period</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(ISPICKVAL( Status , &quot;Cancelled&quot;)) &amp;&amp; $Profile.Name &lt;&gt; &quot;Integration User Profile&quot; &amp;&amp;
+OR(
+AND(Grace_Period__c &gt; 0,
+ISBLANK(TEXT(Grace_Period_Period__c))),
+
+AND(Grace_Period__c &gt; 0,
+ISBLANK(TEXT(Grace_Period_Mechanism__c))
+)
+)</errorConditionFormula>
+        <errorMessage>Please specify Grace Period (Period) and Grace Period Mechanism.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Start_Sync_Stop_Sync_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>$Profile.Name &lt;&gt; &quot;System Administrator&quot; &amp;&amp;
+ISPICKVAL( Status , &apos;Cancelled&apos;) &amp;&amp;  IsSyncing == True</errorConditionFormula>
+        <errorMessage>Cancelled Quote cant be synced</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_Validation_Accepted</fullName>
+        <active>true</active>
+        <description>Quote in Accepted Status:
+ Can only move to Synched as a manual change.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+ISCHANGED(Status), 
+ISPICKVAL(PRIORVALUE(Status),&quot;Accepted&quot;), 
+OR( 
+ISPICKVAL(Status, &quot;Draft&quot;), 
+ISPICKVAL(Status, &quot;Under Approval&quot;), 
+ISPICKVAL(Status, &quot;Approved&quot;),  
+ISPICKVAL(Status, &quot;Rejected&quot;), 
+ISPICKVAL(Status, &quot;Cancelled&quot;),
+ISPICKVAL(Status, &quot;CCL Acceptance&quot;)
+) 
+)</errorConditionFormula>
+        <errorMessage>An accepted quote can be moved to Synched only.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_Validation_Accepted_CLC</fullName>
+        <active>true</active>
+        <description>This validation rule prevents a quote to be accepted if the CLC document was not accepted.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+ISCHANGED(Status), 
+ISPICKVAL(Status,&quot;Accepted&quot;), 
+ISBLANK(CCL_Sign_Date__c)
+)</errorConditionFormula>
+        <errorDisplayField>AccountId</errorDisplayField>
+        <errorMessage>Please ensure that the CLC document has been accepted prior to approving a quote.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_Validation_Approved</fullName>
+        <active>true</active>
+        <description>Quote in Approved Status:
+Can only move to either Draft or Cancelled as a manual change.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+ISCHANGED(Status), 
+ISPICKVAL(PRIORVALUE(Status),&quot;Approved&quot;), 
+OR(
+   ISPICKVAL(Status, &quot;Under Approval&quot;), 
+   ISPICKVAL(Status, &quot;Accepted&quot;), 
+   ISPICKVAL(Status, &quot;Synched&quot;), 
+   ISPICKVAL(Status, &quot;Rejected&quot;),
+   ISPICKVAL(Status, &quot;CCL Acceptance&quot;)
+) 
+)</errorConditionFormula>
+        <errorMessage>An approved quote can only be changed to Cancelled or Draft only</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_Validation_Approved_AP</fullName>
+        <active>true</active>
+        <description>Enforces that the status of the quote can only be changed to approved, once it has been through the approval process, otherwise can not be updated.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+ISCHANGED(Status),
+ISPICKVAL(Status, &quot;Approved&quot;),
+(Quote_Approved_Via_Approval__c = FALSE)
+)</errorConditionFormula>
+        <errorDisplayField>AccountId</errorDisplayField>
+        <errorMessage>Approval can only be updated after submission through the approval process.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_Validation_Cancelled</fullName>
+        <active>true</active>
+        <description>A cancelled quote can be moved to Draft only.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+ISCHANGED(Status), 
+ISPICKVAL(PRIORVALUE(Status),&quot;Cancelled&quot;), 
+OR( 
+ISPICKVAL(Status, &quot;Under Approval&quot;), 
+ISPICKVAL(Status, &quot;Approved&quot;), 
+ISPICKVAL(Status, &quot;Accepted&quot;), 
+ISPICKVAL(Status, &quot;Synched&quot;), 
+ISPICKVAL(Status, &quot;Rejected&quot;) 
+) 
+)</errorConditionFormula>
+        <errorMessage>Quote in Cancelled Status: 
+Can only move to Draft as a manual change.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_Validation_Change_Cancelled</fullName>
+        <active>true</active>
+        <description>Quote in Cancelled Status
+1) All quotes can move from their current status to this status except for Accepted.
+2) Only allow change to Status Cancelled when Opp is closed lost</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+ISCHANGED(Status),
+!ISPICKVAL(Opportunity.StageName, &quot;Closed Lost&quot;),
+ISPICKVAL(Status, &quot;Cancelled&quot;),
+ISPICKVAL(PRIORVALUE(Status),&quot;Accepted&quot;)
+)</errorConditionFormula>
+        <errorMessage>You can only change the Status to Cancelled for a Closed Lost Opportunity for non-accepted Quotes.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_Validation_Draft</fullName>
+        <active>true</active>
+        <description>Throws error if user tries to change status from draft to any other status except UA</description>
+        <errorConditionFormula>AND(
+    $Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+    $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+    ISCHANGED(Status),
+    ISPICKVAL(PRIORVALUE(Status),&quot;Draft&quot;),
+    OR(
+       ISPICKVAL(Status, &quot;Approved&quot;),
+       ISPICKVAL(Status, &quot;Accepted&quot;),
+       ISPICKVAL(Status, &quot;Synched&quot;),
+       ISPICKVAL(Status, &quot;Rejected&quot;),
+       ISPICKVAL(Status, &quot;CCL Acceptance&quot;)
+   ) 
+)</errorConditionFormula>
+        <errorMessage>Drafted quote status can be changed to Under Approval status only.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_Validation_Rejected</fullName>
+        <active>true</active>
+        <description>Quote in Rejected Status:
+Can only move to either Draft or Cancelled as a manual change.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+ISCHANGED(Status), 
+ISPICKVAL(PRIORVALUE(Status),&quot;Rejected&quot;), 
+OR( 
+ISPICKVAL(Status, &quot;Under Approval&quot;), 
+ISPICKVAL(Status, &quot;Approved&quot;), 
+ISPICKVAL(Status, &quot;Accepted&quot;), 
+ISPICKVAL(Status, &quot;Synched&quot;),  
+ISPICKVAL(Status, &quot;CCL Acceptance&quot;) 
+) 
+)</errorConditionFormula>
+        <errorMessage>A rejected quote can only be updated to either Draft or Cancelled only.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_Validation_Rejected_AP</fullName>
+        <active>true</active>
+        <description>Enforces that the status of the quote can only be changed to rejected, once it has been through the approval process, otherwise can not be updated.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+ISCHANGED(Status),
+ISPICKVAL(Status, &quot;Rejected&quot;), 
+(Quote_Rejected_Via_Approval__c = FALSE) 
+)</errorConditionFormula>
+        <errorMessage>Rejection can only be updated after submission through the approval process.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_Validation_Synched</fullName>
+        <active>true</active>
+        <description>Quote in Synched Status: 
+Cannot move to any of the other statuses</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+ISCHANGED(Status), 
+ISPICKVAL(PRIORVALUE(Status),&quot;Synched&quot;)
+)</errorConditionFormula>
+        <errorMessage>You cannot change the status once it&apos;s Synched</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_Validation_Under_Approval</fullName>
+        <active>true</active>
+        <description>Throws an error when Under approval status changes to any other status except Approval or rejected.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+ISCHANGED(Status), 
+ISPICKVAL(PRIORVALUE(Status),&quot;Under Approval&quot;), 
+ OR( 
+    ISPICKVAL(Status, &quot;Draft&quot;),  
+    ISPICKVAL(Status, &quot;Accepted&quot;), 
+    ISPICKVAL(Status, &quot;Synched&quot;),
+    ISPICKVAL(Status, &quot;CCL Acceptance&quot;)
+   ) 
+)</errorConditionFormula>
+        <errorMessage>Status can be only changed to Approved or Rejected from Under Approval.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Status_Validation_Under_Approval_AP</fullName>
+        <active>true</active>
+        <description>A quote could only go to under approval once it was submitted for approval.</description>
+        <errorConditionFormula>AND(
+$Profile.Name &lt;&gt; &quot;Integration User Profile&quot;,
+$Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+ISCHANGED(Status),
+ISPICKVAL(Status, &quot;Under Approval&quot;),
+(Manually_submitted__c = FALSE) 
+)</errorConditionFormula>
+        <errorMessage>Please submit for approval</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Generate_CCL</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Generate CCL</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+
+var qouteIdVar = &apos;{!Quote.Id}&apos;;
+sforce.apex.execute(&quot;GenerateCCLDocument&quot;,&quot;createDocument&quot;,{qouteId:qouteIdVar});</url>
+    </webLinks>
+</CustomObject>

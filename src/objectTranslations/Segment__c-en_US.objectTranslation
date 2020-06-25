@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Segment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Segments</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- CRM Segment ID --></label>
+        <name>CRM_Segment_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>Case__c</name>
+        <relationshipLabel><!-- Segments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Integration Error Message --></label>
+        <name>Integration_Error_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Integration Status --></label>
+        <name>Integration_Status__c</name>
+        <picklistValues>
+            <masterLabel>Failed</masterLabel>
+            <translation><!-- Failed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NA</masterLabel>
+            <translation><!-- NA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Processing</masterLabel>
+            <translation><!-- Processing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ready</masterLabel>
+            <translation><!-- Ready --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Synced</masterLabel>
+            <translation><!-- Synced --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Is Deleted --></label>
+        <name>Is_Deleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marketing Segment Description --></label>
+        <name>Marketing_Segment_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Marketing Segment Name --></label>
+        <name>Marketing_Segment_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- ORACLE SEGMENT ID --></label>
+        <name>ORACLE_SEGMENT_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- RnL Segment SF ID --></label>
+        <name>RnL_Segment_SF_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Segment Name (Arabic) --></label>
+        <name>Segment_Name_Arabic__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

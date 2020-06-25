@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignments>
+        <name>Assign_Field_Updates_to_Quote_Record</name>
+        <label>Assign Field Updates to Quote Record</label>
+        <locationX>343</locationX>
+        <locationY>50</locationY>
+        <assignmentItems>
+            <assignToReference>vQuoteRecord.Proposed_Booking_Expiry_Extension__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>ProposedSoftBookExtensionDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Proposed_Soft_Booking_Expiry</targetReference>
+        </connector>
+    </assignments>
+    <formulas>
+        <name>ProposedSoftBookExtensionDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()</expression>
+    </formulas>
+    <interviewLabel>Soft Booking Extension {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Soft Booking Extension</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>pull back expiry dates to reference</description>
+        <name>Search_ID</name>
+        <label>Search ID</label>
+        <locationX>169</locationX>
+        <locationY>50</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Assign_Field_Updates_to_Quote_Record</targetReference>
+        </connector>
+        <object>Quote</object>
+        <outputReference>vQuoteRecord</outputReference>
+        <queriedFields>Id</queriedFields>
+        <queriedFields>Booking_expiry_Date__c</queriedFields>
+        <queriedFields>Proposed_Booking_Expiry_Extension__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <description>Takes the booking expiry date + 15days and populates the proposed date.</description>
+        <name>Update_Proposed_Soft_Booking_Expiry</name>
+        <label>Update Proposed Soft Booking Expiry</label>
+        <locationX>525</locationX>
+        <locationY>50</locationY>
+        <inputReference>vQuoteRecord</inputReference>
+    </recordUpdates>
+    <startElementReference>Search_ID</startElementReference>
+    <status>Draft</status>
+    <variables>
+        <name>OppRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>QuoteID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>vQuoteId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>vQuoteRecord</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Quote</objectType>
+    </variables>
+</Flow>

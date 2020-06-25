@@ -1,0 +1,90 @@
+<aura:component controller="WorkOrderToolbarHandler" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="workorder" type="Object" />
+    <aura:attribute name="settings" type="List" />
+    <aura:attribute name="units" type="List" />
+    <aura:attribute name="msg" type="String" default=""/>
+    <aura:attribute name="successMsg" type="String" default=""/>
+    <aura:attribute name="IsMoveToNextVisible" type="Boolean" default="false"/>
+    <aura:attribute name="IsConvertTrustAccountVisible" type="Boolean" default="false"/>
+    <aura:dependency resource="markup://force:editRecord" type="EVENT" />
+    <aura:handler event="force:refreshView" action="{!c.doInit}" />
+    <aura:handler event="force:showToast" action="{!c.doInit}"/>
+    <aura:attribute name="selectRegAddress" type="boolean" default="false"/>
+    <aura:attribute name="selectedUnitId" type="String" />
+
+    <div class="slds-box">
+        <aura:if isTrue="{!not(empty(v.msg))}">
+            <div class="demo-only" style="height:4rem">
+                <div class="slds-notify_container slds-is-relative">
+                    <div class="slds-notify slds-notify_toast slds-theme_error" role="status">
+                        <span class="slds-assistive-text">error</span>
+                        <div class="slds-notify__content">
+                            <h2 class="slds-text-heading_small "><aura:unescapedHtml value="{!v.msg}" /></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+        
+        <aura:if isTrue="{!not(empty(v.successMsg))}">
+            <div class="demo-only" style="height:4rem">
+                <div class="slds-notify_container slds-is-relative">
+                    <div class="slds-notify slds-notify_toast slds-theme_success" role="status">
+                        <span class="slds-assistive-text">success</span>
+                        <div class="slds-notify__content">
+                            <h2 class="slds-text-heading_small "><aura:unescapedHtml value="{!v.successMsg}" /></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aura:if>
+        
+        <aura:if isTrue="{!v.selectRegAddress}">
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModal}"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Select registered address</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered">
+                            <tr class="slds-line-height_reset">
+                                <th></th>
+                                <th class="slds-text-title_caps">Aggrement No</th>
+                                <th class="slds-text-title_caps">Product Name</th>
+                                <th class="slds-text-title_caps">Property Unit</th>
+                            </tr>
+                            <aura:iteration items="{!v.units}" var="unit">
+                                <tr class="slds-line-height_reset">
+                                    <th><ui:inputRadio aura:id="{!unit.Id}" name="{!unit.Id}" label="" change="{!c.onGroup}"/></th>
+                                    <th class="slds-text-title_caps">{!unit.Quote.Opportunity.AG_Number__c}</th>
+                                    <th class="slds-text-title_caps">{!unit.Product2.Name}</th>
+                                    <th class="slds-text-title_caps">{!unit.Product2.Unit__r.Name}</th>
+                                </tr>
+                            </aura:iteration>
+                        </table>
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" label="Cancel" title="Cancel" onclick="{! c.closeModal}"/>
+                        <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.saveRegAddress}"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </aura:if>
+        
+        <div class="slds-grid slds-grid_vertical slds-align_absolute-center" >
+            <aura:if isTrue="{!v.IsMoveToNextVisible}">
+                <lightning:button variant="brand" label="Move to Next Step" onclick="{!c.moveToNextStatus}" />
+            </aura:if>
+            <aura:if isTrue="{!v.IsConvertTrustAccountVisible}">
+                <lightning:button variant="brand" label="Convert to Trust Account" onclick="{!c.getData}" />
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,10 @@
+Dear {!Quote.OwnerFirstName}, 
+
+Your Quote {!Quote.Name} for {!Opportunity.Name} has been Expired. 
+
+{!Quote.Link} 
+
+This unit is available again
+
+Kind regards, 
+Salesforce Team
